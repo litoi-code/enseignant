@@ -78,8 +78,8 @@ export default function HomeScreen() {
         <View style={styles.header}>
           <View style={styles.headerContent}>
             <View style={styles.headerText}>
-              <Text style={styles.title}>Tableau de Bord</Text>
-              <Text style={styles.date}>
+              {/*<Text style={styles.title}>Tableau de Bord</Text>*/}
+              <Text style={styles.title}>
                 {format(new Date(), 'EEEE d MMMM yyyy', { locale: fr })}
               </Text>
             </View>

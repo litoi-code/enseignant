@@ -1,3 +1,4 @@
+import CopyrightNotice from '@/components/CopyrightNotice';
 import UserGuide from '@/components/UserGuide';
 import React, { useState } from 'react';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
@@ -81,6 +82,11 @@ export default function SettingsScreen() {
             <Text style={styles.settingLabel}>Développé pour</Text>
             <Text style={styles.settingValue}>Enseignants français</Text>
           </View>
+        </View>
+
+        {/* Copyright and License Information */}
+        <View style={styles.section}>
+          <CopyrightNotice variant="full" showLicense={true} />
         </View>
       </ScrollView>
 

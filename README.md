@@ -173,9 +173,32 @@ We welcome contributions to improve the French Teacher Classroom Management Syst
 - Add appropriate comments and documentation
 - Test on both iOS and Android
 
-## 📄 License
+## 📄 License and Copyright
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+**© 2024 Litoi Code. All rights reserved.**
+
+This software is protected by copyright law and is licensed under a **Custom Educational License with Restrictions**.
+
+### **✅ Permitted Uses:**
+- ✅ Use in Cameroonian educational institutions (schools, colleges, universities)
+- ✅ Installation on teacher devices for classroom management
+- ✅ Educational customization within Cameroon
+- ✅ Distribution within Cameroonian educational networks
+- ✅ Academic research and educational development
+
+### **❌ Restrictions:**
+- ❌ Commercial redistribution or sale is strictly prohibited
+- ❌ Use outside of Cameroonian educational institutions requires written permission
+- ❌ Removal or modification of copyright notices is prohibited
+- ❌ Reverse engineering for competitive purposes is prohibited
+- ❌ Creating derivative works for commercial distribution is prohibited
+
+### **📋 Attribution Required:**
+Any use must include: "Powered by French Teacher Classroom Management System © 2024 Litoi Code"
+
+**For licensing inquiries:** teacher.app@education.cm
+
+See the [LICENSE](LICENSE) file for complete terms and conditions.
 
 ## 🙏 Acknowledgments
 

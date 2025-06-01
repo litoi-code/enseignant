@@ -26,7 +26,7 @@ export default function ClassCreationModal({ visible, onClose, onClassCreated }:
     name: '',
     level: '',
     subject: '',
-    year: '2024-2025',
+    year: '2025-2026',
     description: ''
   });
 
@@ -37,7 +37,7 @@ export default function ClassCreationModal({ visible, onClose, onClassCreated }:
       name: '',
       level: '',
       subject: '',
-      year: '2024-2025',
+      year: '2025-2026',
       description: ''
     });
     setSelectedCategory('Primaire');

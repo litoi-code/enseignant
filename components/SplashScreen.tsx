@@ -84,7 +84,10 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
             <Text style={styles.title}>Enseignant</Text>
             <Text style={styles.subtitle}>Gestion de Classe</Text>
             <Text style={styles.description}>
-              Système de gestion pour enseignants français
+              Système de gestion pour enseignants
+            </Text>
+            <Text style={styles.copyright}>
+              © 2024 Litoi Code
             </Text>
           </Animated.View>
 
@@ -177,6 +180,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingHorizontal: 40,
     lineHeight: 24,
+  },
+  copyright: {
+    fontSize: 12,
+    color: 'rgba(255, 255, 255, 0.6)',
+    textAlign: 'center',
+    marginTop: 16,
+    fontWeight: '500',
   },
   flagContainer: {
     flexDirection: 'row',
