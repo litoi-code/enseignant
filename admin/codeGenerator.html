@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Codes - Enseignant App</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f8fafc;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .generator-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #374151;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .btn {
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #5a67d8;
+        }
+        .result {
+            background: #f0f9ff;
+            border: 2px solid #0ea5e9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .code-display {
+            font-family: 'Courier New', monospace;
+            font-size: 18px;
+            font-weight: bold;
+            color: #0ea5e9;
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            margin: 10px 0;
+            border: 1px solid #0ea5e9;
+        }
+        .sms-template {
+            background: #f9fafb;
+            border: 1px solid #d1d5db;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            font-family: monospace;
+            white-space: pre-line;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .stat-card {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+        }
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔑 Générateur de Codes de Déblocage</h1>
+        <p>French Teacher Classroom Management System</p>
+        <p><strong>© 2024 Litoi Code</strong></p>
+    </div>
+
+    <div class="generator-card">
+        <h2>📱 Générer un Code Unique</h2>
+        
+        <div class="form-group">
+            <label for="customerPhone">Numéro de téléphone du client</label>
+            <input type="tel" id="customerPhone" placeholder="+237674667234" value="+237674667234">
+        </div>
+
+        <div class="form-group">
+            <label for="customerName">Nom du client (optionnel)</label>
+            <input type="text" id="customerName" placeholder="Marie Dupont">
+        </div>
+
+        <div class="form-group">
+            <label for="codePattern">Type de code</label>
+            <select id="codePattern">
+                <option value="TEACH">TEACH (Standard)</option>
+                <option value="COFFEE">COFFEE (Achat café)</option>
+                <option value="SCHOOL">SCHOOL (École)</option>
+                <option value="TEACHER">TEACHER (Enseignant)</option>
+                <option value="PREMIUM">PREMIUM (Premium)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="maxDevices">Nombre d'appareils autorisés</label>
+            <select id="maxDevices">
+                <option value="1">1 appareil (Standard)</option>
+                <option value="2">2 appareils</option>
+                <option value="5">5 appareils (École)</option>
+                <option value="10">10 appareils (Institution)</option>
+            </select>
+        </div>
+
+        <button class="btn" onclick="generateCode()">🔑 Générer le Code</button>
+
+        <div id="result" style="display: none;"></div>
+    </div>
+
+    <div class="generator-card">
+        <h2>📊 Statistiques</h2>
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalCodes">0</div>
+                <div class="stat-label">Codes générés</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="todayCodes">0</div>
+                <div class="stat-label">Aujourd'hui</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2000</div>
+                <div class="stat-label">FCFA par code</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalRevenue">0</div>
+                <div class="stat-label">FCFA total</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Code generation logic
+        function generateCode() {
+            const phone = document.getElementById('customerPhone').value;
+            const name = document.getElementById('customerName').value;
+            const pattern = document.getElementById('codePattern').value;
+            const maxDevices = document.getElementById('maxDevices').value;
+
+            if (!phone) {
+                alert('Veuillez entrer le numéro de téléphone du client');
+                return;
+            }
+
+            // Generate unique code
+            const timestamp = Date.now().toString(36).toUpperCase();
+            const random = Math.random().toString(36).substring(2, 6).toUpperCase();
+            const customerHash = hashString(phone + name).substring(0, 3).toUpperCase();
+            
+            const code = `${pattern}_${customerHash}_${timestamp}_${random}`;
+
+            // Display result
+            displayResult(code, phone, name, maxDevices);
+
+            // Update statistics
+            updateStats();
+        }
+
+        function hashString(str) {
+            let hash = 0;
+            for (let i = 0; i < str.length; i++) {
+                const char = str.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char;
+                hash = hash & hash;
+            }
+            return Math.abs(hash).toString(36);
+        }
+
+        function displayResult(code, phone, name, maxDevices) {
+            const customerInfo = name ? `${name} (${phone})` : phone;
+            const smsTemplate = `🎉 Merci pour votre soutien !
+
+Votre code de déblocage ENSEIGNANT APP:
+${code}
+
+⚠️ IMPORTANT: Ce code fonctionne sur ${maxDevices} appareil(s) uniquement.
+
+Instructions:
+1. Ouvrez l'app sur VOTRE appareil
+2. Appuyez "☕ Upgrade"
+3. Entrez: ${code}
+4. Appuyez "Débloquer"
+
+🔒 Sécurisé: Impossible de partager le code
+
+Support: +237674667234
+© 2024 Litoi Code`;
+
+            const resultHTML = `
+                <div class="result">
+                    <h3>✅ Code généré avec succès</h3>
+                    <p><strong>Client:</strong> ${customerInfo}</p>
+                    <p><strong>Appareils autorisés:</strong> ${maxDevices}</p>
+                    <p><strong>Généré le:</strong> ${new Date().toLocaleString('fr-FR')}</p>
+                    
+                    <div class="code-display">${code}</div>
+                    
+                    <button class="copy-btn" onclick="copyToClipboard('${code}')">📋 Copier le code</button>
+                    
+                    <h4>📱 Message SMS à envoyer:</h4>
+                    <div class="sms-template">${smsTemplate}</div>
+                    
+                    <button class="copy-btn" onclick="copyToClipboard(\`${smsTemplate.replace(/`/g, '\\`')}\`)">📋 Copier le SMS</button>
+                </div>
+            `;
+
+            document.getElementById('result').innerHTML = resultHTML;
+            document.getElementById('result').style.display = 'block';
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Copié dans le presse-papiers !');
+            }).catch(() => {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                alert('Copié dans le presse-papiers !');
+            });
+        }
+
+        function updateStats() {
+            // Get current stats from localStorage
+            let totalCodes = parseInt(localStorage.getItem('totalCodes') || '0');
+            let todayCodes = parseInt(localStorage.getItem('todayCodes') || '0');
+            const lastDate = localStorage.getItem('lastDate');
+            const today = new Date().toDateString();
+
+            // Reset today's count if it's a new day
+            if (lastDate !== today) {
+                todayCodes = 0;
+                localStorage.setItem('lastDate', today);
+            }
+
+            // Increment counters
+            totalCodes++;
+            todayCodes++;
+
+            // Save to localStorage
+            localStorage.setItem('totalCodes', totalCodes.toString());
+            localStorage.setItem('todayCodes', todayCodes.toString());
+
+            // Update display
+            document.getElementById('totalCodes').textContent = totalCodes;
+            document.getElementById('todayCodes').textContent = todayCodes;
+            document.getElementById('totalRevenue').textContent = (totalCodes * 2000).toLocaleString();
+        }
+
+        // Load stats on page load
+        window.onload = function() {
+            const totalCodes = parseInt(localStorage.getItem('totalCodes') || '0');
+            let todayCodes = parseInt(localStorage.getItem('todayCodes') || '0');
+            const lastDate = localStorage.getItem('lastDate');
+            const today = new Date().toDateString();
+
+            // Reset today's count if it's a new day
+            if (lastDate !== today) {
+                todayCodes = 0;
+                localStorage.setItem('todayCodes', '0');
+                localStorage.setItem('lastDate', today);
+            }
+
+            document.getElementById('totalCodes').textContent = totalCodes;
+            document.getElementById('todayCodes').textContent = todayCodes;
+            document.getElementById('totalRevenue').textContent = (totalCodes * 2000).toLocaleString();
+        };
+    </script>
+</body>
+</html>

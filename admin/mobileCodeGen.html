@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📱 Générateur Mobile - Enseignant App</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 10px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 { font-size: 20px; margin-bottom: 5px; }
+        .header p { font-size: 14px; opacity: 0.9; }
+        .form {
+            padding: 20px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 5px;
+        }
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+        .input-group input:focus, .input-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .generate-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .generate-btn:active {
+            transform: scale(0.98);
+        }
+        .result {
+            background: #f0f9ff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid #0ea5e9;
+            display: none;
+        }
+        .code-box {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 15px 0;
+            border: 1px solid #0ea5e9;
+        }
+        .code-text {
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            font-weight: bold;
+            color: #0ea5e9;
+            word-break: break-all;
+        }
+        .action-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .action-btn {
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+        }
+        .sms-btn {
+            background: #f59e0b;
+            color: white;
+        }
+        .stats {
+            background: #f8fafc;
+            padding: 15px;
+            margin: 20px;
+            border-radius: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .stat {
+            text-align: center;
+            padding: 10px;
+            background: white;
+            border-radius: 10px;
+        }
+        .stat-number {
+            font-size: 20px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 5px;
+        }
+        .quick-actions {
+            padding: 20px;
+            background: #f8fafc;
+        }
+        .quick-btn {
+            width: 100%;
+            background: white;
+            border: 2px solid #e5e7eb;
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .quick-btn:active {
+            background: #f3f4f6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔑 Générateur de Codes</h1>
+            <p>Enseignant App - Litoi Code</p>
+        </div>
+
+        <div class="form">
+            <div class="input-group">
+                <label>📱 Numéro client</label>
+                <input type="tel" id="phone" placeholder="+237674667234" value="+237674667234">
+            </div>
+
+            <div class="input-group">
+                <label>👤 Nom (optionnel)</label>
+                <input type="text" id="name" placeholder="Marie Dupont">
+            </div>
+
+            <div class="input-group">
+                <label>🏷️ Type de code</label>
+                <select id="pattern">
+                    <option value="COFFEE">☕ COFFEE (Standard)</option>
+                    <option value="TEACH">🎓 TEACH (Enseignant)</option>
+                    <option value="SCHOOL">🏫 SCHOOL (École)</option>
+                    <option value="PREMIUM">⭐ PREMIUM (Premium)</option>
+                </select>
+            </div>
+
+            <button class="generate-btn" onclick="generateCode()">
+                🔑 Générer le Code
+            </button>
+        </div>
+
+        <div id="result" class="result">
+            <h3>✅ Code généré !</h3>
+            <div class="code-box">
+                <div class="code-text" id="generatedCode"></div>
+            </div>
+            <div class="action-buttons">
+                <button class="action-btn copy-btn" onclick="copyCode()">📋 Copier</button>
+                <button class="action-btn sms-btn" onclick="sendSMS()">📱 SMS</button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number" id="totalCodes">0</div>
+                <div class="stat-label">Total codes</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="todayRevenue">0</div>
+                <div class="stat-label">FCFA aujourd'hui</div>
+            </div>
+        </div>
+
+        <div class="quick-actions">
+            <h3 style="margin-bottom: 15px; font-size: 16px;">⚡ Actions rapides</h3>
+            <button class="quick-btn" onclick="quickGenerate('COFFEE')">☕ Code Café Standard</button>
+            <button class="quick-btn" onclick="quickGenerate('SCHOOL')">🏫 Code École (5 appareils)</button>
+            <button class="quick-btn" onclick="viewAllCodes()">📋 Voir tous les codes</button>
+        </div>
+    </div>
+
+    <script>
+        let currentCode = '';
+        let currentPhone = '';
+
+        function generateCode() {
+            const phone = document.getElementById('phone').value;
+            const name = document.getElementById('name').value;
+            const pattern = document.getElementById('pattern').value;
+
+            if (!phone) {
+                alert('❌ Veuillez entrer le numéro de téléphone');
+                return;
+            }
+
+            // Generate unique code
+            const timestamp = Date.now().toString(36).toUpperCase();
+            const random = Math.random().toString(36).substring(2, 4).toUpperCase();
+            const hash = hashString(phone + name).substring(0, 2).toUpperCase();
+            
+            currentCode = `${pattern}_${hash}_${timestamp}_${random}`;
+            currentPhone = phone;
+
+            // Display result
+            document.getElementById('generatedCode').textContent = currentCode;
+            document.getElementById('result').style.display = 'block';
+
+            // Update stats
+            updateStats();
+
+            // Save to history
+            saveToHistory(currentCode, phone, name, pattern);
+        }
+
+        function quickGenerate(pattern) {
+            const phone = document.getElementById('phone').value || '+237674667234';
+            const timestamp = Date.now().toString(36).toUpperCase();
+            const random = Math.random().toString(36).substring(2, 4).toUpperCase();
+            const hash = hashString(phone).substring(0, 2).toUpperCase();
+            
+            currentCode = `${pattern}_${hash}_${timestamp}_${random}`;
+            currentPhone = phone;
+
+            document.getElementById('generatedCode').textContent = currentCode;
+            document.getElementById('result').style.display = 'block';
+            updateStats();
+            saveToHistory(currentCode, phone, '', pattern);
+        }
+
+        function copyCode() {
+            navigator.clipboard.writeText(currentCode).then(() => {
+                alert('✅ Code copié !');
+            }).catch(() => {
+                // Fallback
+                const textArea = document.createElement('textarea');
+                textArea.value = currentCode;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                alert('✅ Code copié !');
+            });
+        }
+
+        function sendSMS() {
+            const message = `🎉 Merci pour votre soutien !
+
+Votre code ENSEIGNANT APP:
+${currentCode}
+
+⚠️ Ce code fonctionne sur 1 appareil uniquement.
+
+Instructions:
+1. Ouvrez l'app
+2. Appuyez "☕ Upgrade"  
+3. Entrez: ${currentCode}
+4. Appuyez "Débloquer"
+
+Support: +237674667234
+© 2024 Litoi Code`;
+
+            const smsUrl = `sms:${currentPhone}?body=${encodeURIComponent(message)}`;
+            window.open(smsUrl, '_blank');
+        }
+
+        function hashString(str) {
+            let hash = 0;
+            for (let i = 0; i < str.length; i++) {
+                const char = str.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char;
+                hash = hash & hash;
+            }
+            return Math.abs(hash).toString(36);
+        }
+
+        function updateStats() {
+            let total = parseInt(localStorage.getItem('totalCodes') || '0');
+            let todayRevenue = parseInt(localStorage.getItem('todayRevenue') || '0');
+            const lastDate = localStorage.getItem('lastDate');
+            const today = new Date().toDateString();
+
+            if (lastDate !== today) {
+                todayRevenue = 0;
+                localStorage.setItem('lastDate', today);
+            }
+
+            total++;
+            todayRevenue += 2000;
+
+            localStorage.setItem('totalCodes', total.toString());
+            localStorage.setItem('todayRevenue', todayRevenue.toString());
+
+            document.getElementById('totalCodes').textContent = total;
+            document.getElementById('todayRevenue').textContent = todayRevenue.toLocaleString();
+        }
+
+        function saveToHistory(code, phone, name, pattern) {
+            const history = JSON.parse(localStorage.getItem('codeHistory') || '[]');
+            history.unshift({
+                code,
+                phone,
+                name,
+                pattern,
+                timestamp: new Date().toISOString()
+            });
+            
+            // Keep only last 50 codes
+            if (history.length > 50) {
+                history.splice(50);
+            }
+            
+            localStorage.setItem('codeHistory', JSON.stringify(history));
+        }
+
+        function viewAllCodes() {
+            const history = JSON.parse(localStorage.getItem('codeHistory') || '[]');
+            if (history.length === 0) {
+                alert('📋 Aucun code généré encore');
+                return;
+            }
+
+            let message = '📋 Derniers codes générés:\n\n';
+            history.slice(0, 10).forEach((item, index) => {
+                const date = new Date(item.timestamp).toLocaleDateString('fr-FR');
+                message += `${index + 1}. ${item.code}\n`;
+                message += `   📱 ${item.phone}\n`;
+                message += `   📅 ${date}\n\n`;
+            });
+
+            alert(message);
+        }
+
+        // Load stats on page load
+        window.onload = function() {
+            const total = parseInt(localStorage.getItem('totalCodes') || '0');
+            let todayRevenue = parseInt(localStorage.getItem('todayRevenue') || '0');
+            const lastDate = localStorage.getItem('lastDate');
+            const today = new Date().toDateString();
+
+            if (lastDate !== today) {
+                todayRevenue = 0;
+                localStorage.setItem('todayRevenue', '0');
+                localStorage.setItem('lastDate', today);
+            }
+
+            document.getElementById('totalCodes').textContent = total;
+            document.getElementById('todayRevenue').textContent = todayRevenue.toLocaleString();
+        };
+    </script>
+</body>
+</html>
