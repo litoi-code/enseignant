@@ -1,4 +1,5 @@
 import CopyrightNotice from '@/components/CopyrightNotice';
+import DataExportImportComponent from '@/components/DataExportImport';
 import UserGuide from '@/components/UserGuide';
 import React, { useState } from 'react';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
@@ -6,6 +7,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function SettingsScreen() {
   const [showUserGuide, setShowUserGuide] = useState(false);
+  const [showDataExport, setShowDataExport] = useState(false);
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
@@ -42,7 +44,14 @@ export default function SettingsScreen() {
         </View>
 
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Sauvegarde</Text>
+          <Text style={styles.sectionTitle}>Sauvegarde et Export</Text>
+          <TouchableOpacity
+            style={styles.settingItem}
+            onPress={() => setShowDataExport(true)}
+          >
+            <Text style={styles.settingLabel}>📤 Export / Import des données</Text>
+            <Text style={styles.settingValue}>›</Text>
+          </TouchableOpacity>
           <TouchableOpacity style={styles.settingItem}>
             <Text style={styles.settingLabel}>Sauvegarde automatique</Text>
             <Text style={styles.settingValue}>Activée</Text>
@@ -93,6 +102,11 @@ export default function SettingsScreen() {
       <UserGuide
         visible={showUserGuide}
         onClose={() => setShowUserGuide(false)}
+      />
+
+      <DataExportImportComponent
+        visible={showDataExport}
+        onClose={() => setShowDataExport(false)}
       />
     </SafeAreaView>
   );

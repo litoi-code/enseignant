@@ -1,4 +1,5 @@
 import { useAppStore } from '@/lib/store';
+import { TrialManager } from '@/lib/trialManager';
 import { Student } from '@/types';
 import React, { useEffect, useState } from 'react';
 import { Alert, Modal, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
@@ -68,11 +69,21 @@ export default function StudentsScreen() {
     setEditingStudent(null);
   };
 
-  const handleAddStudent = () => {
+  const handleAddStudent = async () => {
     if (!selectedClassId) {
       Alert.alert('Erreur', 'Veuillez sélectionner une classe');
       return;
     }
+
+    // Check trial limitations
+    const currentStudentCount = students.filter(s => s.classId === selectedClassId).length;
+    const canAdd = await TrialManager.canPerformAction('add_student', currentStudentCount);
+
+    if (!canAdd.allowed) {
+      Alert.alert('Limite atteinte', canAdd.reason || 'Limite d\'essai atteinte');
+      return;
+    }
+
     resetForm();
     setShowAddModal(true);
   };

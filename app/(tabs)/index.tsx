@@ -1,8 +1,11 @@
 import ClassCreationModal from '@/components/ClassCreationModal';
+import PremiumUnlock from '@/components/PremiumUnlock';
+import TrialBanner from '@/components/TrialBanner';
 import UserGuide from '@/components/UserGuide';
 import { BorderRadius, Colors, EducationTheme, Shadows, Spacing, Typography } from '@/constants/Theme';
 import { getEducationCategory } from '@/lib/gradeCalculations';
 import { useAppStore } from '@/lib/store';
+import { TrialManager } from '@/lib/trialManager';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
 import React, { useEffect, useState } from 'react';
@@ -12,6 +15,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 export default function HomeScreen() {
   const [showClassModal, setShowClassModal] = useState(false);
   const [showUserGuide, setShowUserGuide] = useState(false);
+  const [showPremiumUnlock, setShowPremiumUnlock] = useState(false);
 
   const {
     classes,
@@ -36,6 +40,8 @@ export default function HomeScreen() {
 
   useEffect(() => {
     loadClasses();
+    // Initialize trial on app start
+    TrialManager.initializeTrial();
   }, [loadClasses]);
 
   useEffect(() => {
@@ -91,6 +97,9 @@ export default function HomeScreen() {
             </TouchableOpacity>
           </View>
         </View>
+
+        {/* Trial Status Banner */}
+        <TrialBanner onUpgradePress={() => setShowPremiumUnlock(true)} />
 
         {/* Class Selection */}
         <View style={styles.section}>
@@ -235,6 +244,15 @@ export default function HomeScreen() {
       <UserGuide
         visible={showUserGuide}
         onClose={() => setShowUserGuide(false)}
+      />
+
+      <PremiumUnlock
+        visible={showPremiumUnlock}
+        onClose={() => setShowPremiumUnlock(false)}
+        onUnlocked={() => {
+          // Refresh the page to update trial status
+          loadClasses();
+        }}
       />
     </SafeAreaView>
   );
