@@ -232,7 +232,7 @@ export default function LicenseInfo({ visible, onClose }: LicenseInfoProps) {
               Pour toute question sur votre licence ou pour signaler un problème :
             </Text>
             <Text style={styles.supportContact}>
-              📧 teacher.app@education.cm{'\n'}
+              📧 teacher.litoilinop@hotmail.com{'\n'}
               📱 +237674667234
             </Text>
           </View>

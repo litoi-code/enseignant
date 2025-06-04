@@ -1,4 +1,4 @@
-package com.litoicode.enseignant
+package com.litoicode.classcm
 
 import android.app.Application
 import android.content.res.Configuration

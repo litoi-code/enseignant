@@ -1,12 +1,12 @@
 /**
- * ClassMaster - Teacher Classroom Management System
+ * ClassCM - Assistant Pédagogique Camerounais
  * Copyright (c) 2024 Litoi Code. All rights reserved.
- * 
+ *
  * This software is available under a freemium license model:
  * - Free trial: 1 month with full functionality
  * - Premium unlock: "Buy a cup of coffee" payment model
- * - Educational use encouraged worldwide
- * 
+ * - Designed specifically for Cameroonian educators
+ *
  * For support and premium unlock: +237674667234 (Mobile Money)
  */
 
@@ -19,13 +19,13 @@ interface CopyrightNoticeProps {
   showLicense?: boolean;
 }
 
-export default function CopyrightNotice({ 
-  variant = 'compact', 
-  showLicense = false 
+export default function CopyrightNotice({
+  variant = 'compact',
+  showLicense = false
 }: CopyrightNoticeProps) {
   const [showLicenseModal, setShowLicenseModal] = useState(false);
   const [showPremiumModal, setShowPremiumModal] = useState(false);
-  
+
   const showLicenseInfo = () => {
     if (Platform.OS === 'web') {
       // Use custom modal for web
@@ -34,11 +34,11 @@ export default function CopyrightNotice({
       // Use native alert for mobile
       Alert.alert(
         'Informations de Licence',
-        'ClassMaster - Assistant Pédagogique\n\n' +
+        'ClassCM - Assistant Pédagogique Camerounais\n\n' +
         '© 2024 Litoi Code. Tous droits réservés.\n\n' +
         '📋 MODÈLE FREEMIUM :\n' +
         '• Essai gratuit : 1 mois avec toutes les fonctionnalités\n' +
-        '• Déblocage premium : "Offrir un café" au développeur\n' +
+        '• Déblocage premium : "Offrir un café" aux développeurs\n' +
         '• Usage éducatif encouragé dans le monde entier\n\n' +
         '💰 DÉBLOCAGE PREMIUM :\n' +
         '• Paiement Mobile Money : +237674667234\n' +
@@ -57,10 +57,9 @@ export default function CopyrightNotice({
               Alert.alert(
                 'Déblocage Premium',
                 'Pour débloquer la version premium :\n\n' +
-                '1. Envoyez un paiement Mobile Money au +237674667234\n' +
-                '2. Montant suggéré : 2000 FCFA (prix d\'un café)\n' +
-                '3. Contactez-nous avec votre numéro de transaction\n' +
-                '4. Recevez votre code de déblocage instantanément\n\n' +
+                '1. Envoyez ce que vous estimez au +237674667234\n' +
+                '2. Contactez-nous avec votre numéro de transaction\n' +
+                '3. Recevez votre code de déblocage instantanément\n\n' +
                 'Merci de soutenir le développement ! ☕',
                 [{ text: 'Compris', style: 'default' }]
               );
@@ -78,10 +77,9 @@ export default function CopyrightNotice({
       Alert.alert(
         'Déblocage Premium',
         'Pour débloquer la version premium :\n\n' +
-        '1. Envoyez un paiement Mobile Money au +237674667234\n' +
-        '2. Montant suggéré : 2000 FCFA (prix d\'un café)\n' +
-        '3. Contactez-nous avec votre numéro de transaction\n' +
-        '4. Recevez votre code de déblocage instantanément\n\n' +
+        '1. Envoyez ce que vous estimez au +237674667234\n' +
+        '2. Contactez-nous avec votre numéro de transaction\n' +
+        '3. Recevez votre code de déblocage instantanément\n\n' +
         'Merci de soutenir le développement ! ☕',
         [{ text: 'Compris', style: 'default' }]
       );
@@ -100,35 +98,35 @@ export default function CopyrightNotice({
         <View style={styles.modalContainer}>
           <ScrollView style={styles.modalContent}>
             <Text style={styles.modalTitle}>Informations de Licence</Text>
-            <Text style={styles.modalSubtitle}>ClassMaster - Assistant Pédagogique</Text>
-            
+            <Text style={styles.modalSubtitle}>ClassCM - Assistant Pédagogique Camerounais</Text>
+
             <Text style={styles.modalText}>© 2024 Litoi Code. Tous droits réservés.</Text>
-            
+
             <Text style={styles.sectionTitle}>📋 MODÈLE FREEMIUM :</Text>
             <Text style={styles.modalText}>• Essai gratuit : 1 mois avec toutes les fonctionnalités</Text>
             <Text style={styles.modalText}>• Déblocage premium : "Offrir un café" au développeur</Text>
             <Text style={styles.modalText}>• Usage éducatif encouragé dans le monde entier</Text>
-            
+
             <Text style={styles.sectionTitle}>💰 DÉBLOCAGE PREMIUM :</Text>
             <Text style={styles.modalText}>• Paiement Mobile Money : +237674667234</Text>
             <Text style={styles.modalText}>• Classes et élèves illimités</Text>
             <Text style={styles.modalText}>• Export/Import complet des données</Text>
             <Text style={styles.modalText}>• Support technique prioritaire</Text>
-            
+
             <Text style={styles.sectionTitle}>📞 SUPPORT :</Text>
             <Text style={styles.modalText}>WhatsApp/Appel : +237674667234</Text>
             <Text style={styles.modalText}>Développé avec ❤️ pour les enseignants</Text>
           </ScrollView>
-          
+
           <View style={styles.modalButtons}>
-            <TouchableOpacity 
-              style={[styles.modalButton, styles.cancelButton]} 
+            <TouchableOpacity
+              style={[styles.modalButton, styles.cancelButton]}
               onPress={() => setShowLicenseModal(false)}
             >
               <Text style={styles.cancelButtonText}>Fermer</Text>
             </TouchableOpacity>
-            <TouchableOpacity 
-              style={[styles.modalButton, styles.premiumButton]} 
+            <TouchableOpacity
+              style={[styles.modalButton, styles.premiumButton]}
               onPress={() => {
                 setShowLicenseModal(false);
                 setShowPremiumModal(true);
@@ -154,20 +152,20 @@ export default function CopyrightNotice({
         <View style={styles.modalContainer}>
           <ScrollView style={styles.modalContent}>
             <Text style={styles.modalTitle}>Déblocage Premium</Text>
-            
+
             <Text style={styles.modalText}>Pour débloquer la version premium :</Text>
-            
-            <Text style={styles.stepText}>1. Envoyez un paiement Mobile Money au +237674667234</Text>
-            <Text style={styles.stepText}>2. Montant suggéré : 2000 FCFA (prix d'un café)</Text>
+
+            <Text style={styles.stepText}>1. Envoyez ce que vous estimez</Text>
+            <Text style={styles.stepText}>2. Via Mobile Money au +237674667234</Text>
             <Text style={styles.stepText}>3. Contactez-nous avec votre numéro de transaction</Text>
             <Text style={styles.stepText}>4. Recevez votre code de déblocage instantanément</Text>
-            
+
             <Text style={styles.thankYouText}>Merci de soutenir le développement ! ☕</Text>
           </ScrollView>
-          
+
           <View style={styles.modalButtons}>
-            <TouchableOpacity 
-              style={[styles.modalButton, styles.cancelButton]} 
+            <TouchableOpacity
+              style={[styles.modalButton, styles.cancelButton]}
               onPress={() => setShowPremiumModal(false)}
             >
               <Text style={styles.cancelButtonText}>Compris</Text>
@@ -182,8 +180,8 @@ export default function CopyrightNotice({
     return (
       <>
         <View style={styles.fullContainer}>
-          <Text style={styles.appTitle}>ClassMaster</Text>
-          <Text style={styles.subtitle}>Assistant Pédagogique Intelligent</Text>
+          <Text style={styles.appTitle}>ClassCM</Text>
+          <Text style={styles.subtitle}>Assistant Pédagogique Camerounais</Text>
           <View style={styles.copyrightContainer}>
             <Text style={styles.copyrightText}>© 2024 Litoi Code. Tous droits réservés.</Text>
             <Text style={styles.licenseText}>
@@ -196,7 +194,7 @@ export default function CopyrightNotice({
             </TouchableOpacity>
           )}
           <View style={styles.attributionContainer}>
-            <Text style={styles.attributionText}>🎓 Pour les enseignants du monde entier</Text>
+            <Text style={styles.attributionText}>🎓 Pour les enseignants</Text>
             <Text style={styles.contactText}>Support: +237674667234 (WhatsApp)</Text>
           </View>
         </View>
@@ -211,7 +209,7 @@ export default function CopyrightNotice({
       <>
         <View style={styles.footerContainer}>
           <Text style={styles.footerText}>
-            © 2024 Litoi Code • ClassMaster - Assistant Pédagogique
+            © 2024 Litoi Code • ClassCM - Assistant Pédagogique Camerounais
           </Text>
           {showLicense && (
             <TouchableOpacity onPress={showLicenseInfo}>
@@ -230,7 +228,7 @@ export default function CopyrightNotice({
     <>
       <View style={styles.compactContainer}>
         <Text style={styles.compactText}>
-          © 2024 Litoi Code • ClassMaster - Assistant Pédagogique
+          © 2024 Litoi Code • ClassCM - Assistant Pédagogique Camerounais
         </Text>
         {showLicense && (
           <TouchableOpacity onPress={showLicenseInfo} style={styles.compactLicenseButton}>

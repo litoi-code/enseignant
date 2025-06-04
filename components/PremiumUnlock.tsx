@@ -88,13 +88,12 @@ export default function PremiumUnlock({ visible, onClose, onUnlocked }: PremiumU
     Alert.alert(
       '☕ Soutenez le développement',
       'Merci de vouloir soutenir le développement de cette application !\n\n' +
-      '💰 Pour débloquer la version complète :\n' +
-      '1. Envoyez 2000 FCFA via Mobile Money\n' +
-      '2. Numéro : +237674667234\n' +
-      '3. Nom : LITOI CODE\n' +
-      '4. Mentionnez "ENSEIGNANT APP"\n' +
-      '5. Recevez votre code de déblocage par SMS\n\n' +
-      '📧 Ou contactez-nous : teacher.app@education.cm\n\n' +
+      'Pour débloquer la version complète :\n' +
+      '1. Envoyez votre 💰 via Mobile Money: +237674667234\n' +
+      '2. Nom : Njen Josué Guy\n' +
+      '3. Mentionnez "ENSEIGNANT APP"\n' +
+      '4. Recevez votre code de déblocage par SMS\n\n' +
+      '📧 Ou contactez-nous : litoilinop@hotmail.com\n\n' +
       '🔓 Codes de test disponibles pour développeurs',
       [
         { text: 'Plus tard', style: 'cancel' },
@@ -156,7 +155,7 @@ export default function PremiumUnlock({ visible, onClose, onUnlocked }: PremiumU
             <Text style={styles.coffeeIcon}>☕</Text>
             <Text style={styles.coffeeTitle}>Soutenez le développement</Text>
             <Text style={styles.coffeeDescription}>
-              Cette application est développée avec passion pour les enseignants camerounais. 
+              Cette application est développée avec passion pour les enseignants. 
               Votre soutien nous aide à continuer d'améliorer l'outil et à ajouter de nouvelles fonctionnalités.
             </Text>
             <TouchableOpacity style={styles.coffeeButton} onPress={openCoffeeLink}>
@@ -210,7 +209,7 @@ export default function PremiumUnlock({ visible, onClose, onUnlocked }: PremiumU
             </Text>
             <TouchableOpacity 
               style={styles.supportButton}
-              onPress={() => Linking.openURL('mailto:teacher.app@education.cm')}
+              onPress={() => Linking.openURL('mailto:litoilinop@hotmail.com')}
             >
               <Text style={styles.supportButtonText}>📧 Contacter le support</Text>
             </TouchableOpacity>

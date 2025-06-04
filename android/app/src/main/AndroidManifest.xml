@@ -25,8 +25,8 @@
         <action android:name="android.intent.action.VIEW"/>
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
-        <data android:scheme="enseignant"/>
-        <data android:scheme="exp+enseignant"/>
+        <data android:scheme="classcm"/>
+        <data android:scheme="exp+classcm"/>
       </intent-filter>
     </activity>
   </application>

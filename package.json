@@ -1,8 +1,8 @@
 {
-  "name": "enseignant",
+  "name": "classcm",
   "main": "expo-router/entry",
   "version": "1.0.0",
-  "description": "French Teacher Classroom Management System for Cameroon",
+  "description": "ClassCM - Assistant Pédagogique Camerounais pour la gestion de classe",
   "author": "Litoi Code",
   "license": "SEE LICENSE IN LICENSE",
   "copyright": "© 2024 Litoi Code. All rights reserved.",

@@ -60,13 +60,13 @@ export class DataExportImport {
           totalCourses: courses.length,
           totalAttendance: attendance.length,
           appVersion: '1.1.0',
-          exportFormat: 'ClassMaster-JSON',
+          exportFormat: 'ClassCM-JSON',
         }
       };
 
       const jsonData = JSON.stringify(exportData, null, 2);
       const timestamp = new Date().toISOString().split('T')[0];
-      const fileName = `ClassMaster_backup_${timestamp}.json`;
+      const fileName = `ClassCM_backup_${timestamp}.json`;
       const fileUri = FileSystem.documentDirectory + fileName;
 
       // Check available storage space
@@ -86,7 +86,7 @@ export class DataExportImport {
       if (await Sharing.isAvailableAsync()) {
         await Sharing.shareAsync(fileUri, {
           mimeType: 'application/json',
-          dialogTitle: 'Exporter les données ClassMaster',
+          dialogTitle: 'Exporter les données ClassCM',
           UTI: 'public.json',
         });
       } else {
@@ -231,7 +231,7 @@ export class DataExportImport {
       if (!this.validateImportData(importData)) {
         Alert.alert(
           'Fichier de sauvegarde invalide',
-          'Le fichier sélectionné n\'est pas un fichier de sauvegarde ClassMaster valide ou est incompatible avec cette version.'
+          'Le fichier sélectionné n\'est pas un fichier de sauvegarde ClassCM valide ou est incompatible avec cette version.'
         );
         return null;
       }

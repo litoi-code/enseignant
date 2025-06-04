@@ -1,4 +1,4 @@
-package com.litoicode.enseignant
+package com.litoicode.classcm
 import expo.modules.splashscreen.SplashScreenManager
 
 import android.os.Build

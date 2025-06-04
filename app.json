@@ -1,19 +1,19 @@
 {
   "expo": {
-    "name": "Enseignant - Gestion de Classe",
-    "slug": "enseignant",
+    "name": "ClassCM",
+    "slug": "classcm",
     "version": "1.0.0",
-    "description": "Système de gestion de classe professionnel pour enseignants camerounais. Fonctionnalités complètes avec licence sécurisée par appareil. © 2024 Litoi Code.",
+    "description": "ClassCM - Assistant pédagogique intelligent pour enseignants camerounais. Gestion complète de classe avec fonctionnalités premium. © 2024 Litoi Code.",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "enseignant",
+    "scheme": "classcm",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
     },
     "android": {
-      "package": "com.litoicode.enseignant",
+      "package": "com.litoicode.classcm",
       "versionCode": 1,
       "compileSdkVersion": 34,
       "targetSdkVersion": 34,
@@ -31,7 +31,7 @@
       ],
       "allowBackup": true,
       "softwareKeyboardLayoutMode": "pan",
-      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.litoicode.enseignant"
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.litoicode.classcm"
     },
     "web": {
       "bundler": "metro",
