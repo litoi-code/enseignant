@@ -89,9 +89,9 @@ export default function CoursesScreen() {
       date: course.date,
       startTime: course.startTime,
       endTime: course.endTime,
-      subject: course.subject || '',
-      room: course.room || '',
-      notes: course.notes || '',
+      subject: '', // These fields don't exist in Course type
+      room: '',    // These fields don't exist in Course type
+      notes: '',   // These fields don't exist in Course type
       classId: course.classId
     });
     setEditingCourse(course);
@@ -111,13 +111,29 @@ export default function CoursesScreen() {
 
     try {
       if (editingCourse) {
-        await updateCourse(editingCourse.id, formData);
-      } else {
-        await createCourse({
-          ...formData,
+        // Filter out extra fields for update
+        const updateData = {
+          title: formData.title,
+          description: formData.description,
+          date: formData.date,
+          startTime: formData.startTime,
+          endTime: formData.endTime,
           classId: selectedClassId!,
-          status: 'planned'
-        });
+          status: 'planned' as const
+        };
+        await updateCourse(editingCourse.id, updateData);
+      } else {
+        // Filter out extra fields for create
+        const courseData = {
+          title: formData.title,
+          description: formData.description,
+          date: formData.date,
+          startTime: formData.startTime,
+          endTime: formData.endTime,
+          classId: selectedClassId!,
+          status: 'planned' as const
+        };
+        await createCourse(courseData);
       }
       setShowAddModal(false);
       resetForm();
@@ -252,13 +268,7 @@ export default function CoursesScreen() {
                       </View>
                     </View>
 
-                    {course.subject && (
-                      <Text style={styles.courseSubject}>Matière: {course.subject}</Text>
-                    )}
-
-                    {course.room && (
-                      <Text style={styles.courseRoom}>Salle: {course.room}</Text>
-                    )}
+                    {/* Subject and room fields don't exist in Course type - removing for now */}
 
                     {course.description && (
                       <Text style={styles.courseDescription} numberOfLines={2}>

@@ -38,7 +38,8 @@ const guideSteps: GuideStep[] = [
       'Sélectionnez la matière principale',
       'Donnez un nom à votre classe',
       'Ajoutez une description (optionnel)',
-      'Appuyez sur "Sauvegarder"'
+      'Appuyez sur "Sauvegarder"',
+      'Votre classe apparaît maintenant dans tous les onglets'
     ]
   },
   {
@@ -49,11 +50,14 @@ const guideSteps: GuideStep[] = [
     category: 'Gestion des élèves',
     details: [
       'Allez dans l\'onglet "Élèves"',
-      'Sélectionnez votre classe',
+      'Sélectionnez votre classe dans la liste horizontale',
       'Appuyez sur "Ajouter un élève"',
-      'Remplissez les informations : nom, prénom, date de naissance',
-      'Ajoutez les informations de contact des parents',
-      'Sauvegardez les informations'
+      'Remplissez les informations obligatoires : nom et prénom',
+      'Ajoutez la date de naissance (optionnel)',
+      'Saisissez les informations de contact des parents',
+      'Ajoutez des notes personnelles si nécessaire',
+      'Sauvegardez les informations',
+      'L\'élève apparaît dans la liste avec son avatar coloré'
     ]
   },
   {
@@ -65,12 +69,13 @@ const guideSteps: GuideStep[] = [
     details: [
       'Accédez à l\'onglet "Cours"',
       'Sélectionnez votre classe',
-      'Choisissez la date du cours',
+      'Naviguez entre les dates avec les flèches ou "Aujourd\'hui"',
       'Appuyez sur "Ajouter un cours"',
-      'Définissez le titre et la matière',
-      'Indiquez les heures de début et fin',
-      'Ajoutez la salle et une description',
-      'Enregistrez le cours'
+      'Définissez le titre du cours (obligatoire)',
+      'Indiquez les heures de début et fin (format 24h)',
+      'Ajoutez une description détaillée',
+      'Enregistrez le cours',
+      'Le cours apparaît avec un code couleur selon son statut'
     ]
   },
   {
@@ -81,13 +86,16 @@ const guideSteps: GuideStep[] = [
     category: 'Évaluation',
     details: [
       'Ouvrez l\'onglet "Notes"',
-      'Sélectionnez la classe',
-      'Choisissez un élève et appuyez sur "+ Note"',
-      'Sélectionnez le type d\'évaluation',
-      'Entrez la note sur 20 (ou autre échelle)',
-      'Définissez le coefficient',
-      'Ajoutez une description',
-      'Sauvegardez la note'
+      'Sélectionnez la classe concernée',
+      'Choisissez un élève dans la liste',
+      'Appuyez sur "Ajouter une note"',
+      'Sélectionnez le type d\'évaluation (contrôle, devoir, oral, etc.)',
+      'Entrez la note sur l\'échelle 0-20',
+      'Définissez le coefficient (importance de la note)',
+      'Précisez la matière et la date',
+      'Ajoutez une description ou commentaire',
+      'Sauvegardez la note',
+      'La moyenne se calcule automatiquement'
     ]
   },
   {
@@ -99,13 +107,19 @@ const guideSteps: GuideStep[] = [
     details: [
       'Rendez-vous dans l\'onglet "Présences"',
       'Sélectionnez votre classe',
-      'Vérifiez la date (aujourd\'hui par défaut)',
-      'Pour chaque élève, appuyez sur le statut approprié :',
-      '  • ✓ Présent (vert)',
-      '  • ✗ Absent (rouge)',
-      '  • ⏰ Retard (orange)',
-      '  • 📝 Excusé (bleu)',
-      'Appuyez sur "Enregistrer les présences"'
+      'Naviguez entre les dates avec les flèches ‹ ›',
+      'Utilisez "Aujourd\'hui" pour revenir à la date actuelle',
+      'Actions rapides disponibles :',
+      '  • "✓ Tous présents" pour marquer toute la classe',
+      '  • "✗ Tous absents" pour les jours d\'absence',
+      '  • "📊 Historique" pour voir les tendances',
+      'Pour chaque élève, choisissez le statut :',
+      '  • ✓ Présent (vert) - élève en classe',
+      '  • ✗ Absent (rouge) - élève absent',
+      '  • ⏰ Retard (orange) - arrivée tardive',
+      '  • 📝 Excusé (bleu) - absence justifiée',
+      'Consultez les statistiques en temps réel',
+      'Appuyez sur "💾 Enregistrer les présences"'
     ]
   },
   {
@@ -116,16 +130,153 @@ const guideSteps: GuideStep[] = [
     category: 'Analyse',
     details: [
       'Sur l\'écran d\'accueil, consultez le tableau de bord',
-      'Visualisez le nombre total d\'élèves',
+      'Visualisez le nombre total d\'élèves par classe',
       'Vérifiez le taux de présence du jour',
-      'Consultez les moyennes de classe',
-      'Accédez aux détails dans chaque section',
-      'Utilisez ces données pour adapter votre enseignement'
+      'Consultez les moyennes générales de classe',
+      'Dans l\'onglet Présences, voir les stats quotidiennes',
+      'Accédez à l\'historique des présences',
+      'Analysez les tendances hebdomadaires',
+      'Utilisez ces données pour adapter votre enseignement',
+      'Identifiez les élèves nécessitant un suivi particulier'
+    ]
+  },
+  {
+    id: '7',
+    title: 'Navigation entre les dates',
+    description: 'Maîtrisez la navigation temporelle dans l\'application',
+    icon: '📅',
+    category: 'Navigation',
+    details: [
+      'Dans les onglets Cours et Présences, utilisez les contrôles de date',
+      'Flèche gauche ‹ : jour précédent',
+      'Flèche droite › : jour suivant',
+      'Bouton "Aujourd\'hui" : retour à la date actuelle',
+      'La date s\'affiche en français complet',
+      'Les données se rechargent automatiquement',
+      'Naviguez librement dans le passé et le futur',
+      'Planifiez vos cours à l\'avance',
+      'Consultez l\'historique des présences'
+    ]
+  },
+  {
+    id: '8',
+    title: 'Actions rapides et raccourcis',
+    description: 'Gagnez du temps avec les fonctionnalités avancées',
+    icon: '⚡',
+    category: 'Productivité',
+    details: [
+      'Présences : utilisez "Tous présents" pour une classe complète',
+      'Présences : "Tous absents" pour les jours fériés ou sorties',
+      'Cours : dupliquez un cours en le modifiant',
+      'Élèves : les avatars colorés facilitent l\'identification',
+      'Notes : le coefficient permet de pondérer les évaluations',
+      'Classes : organisez par matière et niveau',
+      'Sauvegarde automatique de toutes vos données',
+      'Interface intuitive avec codes couleur',
+      'Recherche rapide dans les listes d\'élèves'
+    ]
+  },
+  {
+    id: '9',
+    title: 'Système d\'essai et version premium',
+    description: 'Comprenez les limitations et fonctionnalités premium',
+    icon: '💎',
+    category: 'Premium',
+    details: [
+      'Version d\'essai : 1 mois gratuit avec toutes les fonctionnalités',
+      'Limitations d\'essai après expiration :',
+      '  • Maximum 2 classes',
+      '  • Maximum 10 élèves par classe',
+      '  • Maximum 50 notes au total',
+      '  • Maximum 100 présences au total',
+      'Fonctionnalités premium exclusives :',
+      '  • Classes et élèves illimités',
+      '  • Notes et présences illimitées',
+      '  • Export/Import complet des données',
+      '  • Historique détaillé des présences',
+      '  • Statistiques avancées',
+      'Déblocage : "Offrir un café" au développeur',
+      'Paiement sécurisé via Mobile Money (+237674667234)',
+      'Activation instantanée après paiement'
+    ]
+  },
+  {
+    id: '10',
+    title: 'Export et sauvegarde des données',
+    description: 'Protégez et partagez vos données pédagogiques',
+    icon: '💾',
+    category: 'Sauvegarde',
+    details: [
+      'Accédez aux Paramètres > Export/Import des données',
+      'Export complet : toutes vos classes, élèves, notes, présences',
+      'Format JSON sécurisé et portable',
+      'Sauvegarde sur votre appareil ou cloud',
+      'Import : restaurez vos données sur un nouvel appareil',
+      'Fonctionnalité premium : export illimité',
+      'Version d\'essai : export limité pour test',
+      'Sauvegarde automatique locale en continu',
+      'Recommandation : export hebdomadaire de sécurité'
+    ]
+  },
+  {
+    id: '11',
+    title: 'Types d\'évaluations françaises',
+    description: 'Utilisez le système d\'évaluation adapté au contexte français',
+    icon: '🎯',
+    category: 'Évaluation',
+    details: [
+      'Contrôle : évaluation courte en classe',
+      'Devoir surveillé : évaluation longue et formelle',
+      'Devoir maison : travail à faire à domicile',
+      'Oral : présentation ou interrogation orale',
+      'Projet : travail de longue durée',
+      'Participation : évaluation de l\'engagement en classe',
+      'Dictée : spécifique au primaire',
+      'Lecture : évaluation de la lecture (primaire)',
+      'Calcul : évaluation mathématique (primaire)',
+      'Rédaction : expression écrite (primaire)',
+      'Évaluation : terme générique',
+      'Autre : pour les cas spéciaux'
+    ]
+  },
+  {
+    id: '12',
+    title: 'Résolution des problèmes courants',
+    description: 'Solutions aux difficultés fréquemment rencontrées',
+    icon: '🔧',
+    category: 'Dépannage',
+    details: [
+      'Problème : "Limite d\'essai atteinte"',
+      '  → Débloquez la version premium ou supprimez des données',
+      'Problème : "Élève non trouvé"',
+      '  → Vérifiez que l\'élève est dans la bonne classe',
+      'Problème : "Cours ne s\'affiche pas"',
+      '  → Vérifiez la date sélectionnée et la classe',
+      'Problème : "Notes ne se sauvegardent pas"',
+      '  → Vérifiez la connexion et les champs obligatoires',
+      'Problème : "Application lente"',
+      '  → Redémarrez l\'application, libérez de la mémoire',
+      'Problème : "Données perdues"',
+      '  → Utilisez la fonction d\'import si vous avez un export',
+      'Support : contactez le développeur via les paramètres'
     ]
   }
 ];
 
-const categories = ['Tous', 'Démarrage', 'Gestion des élèves', 'Gestion des cours', 'Évaluation', 'Suivi quotidien', 'Analyse'];
+const categories = [
+  'Tous',
+  'Démarrage',
+  'Gestion des élèves',
+  'Gestion des cours',
+  'Évaluation',
+  'Suivi quotidien',
+  'Analyse',
+  'Navigation',
+  'Productivité',
+  'Premium',
+  'Sauvegarde',
+  'Dépannage'
+];
 
 export default function UserGuide({ visible, onClose }: UserGuideProps) {
   const [selectedCategory, setSelectedCategory] = useState('Tous');
@@ -194,10 +345,21 @@ export default function UserGuide({ visible, onClose }: UserGuideProps) {
 
             <View style={styles.tipContainer}>
               <Text style={styles.tipIcon}>💡</Text>
-              <Text style={styles.tipText}>
-                Conseil : Prenez votre temps pour vous familiariser avec chaque fonctionnalité.
-                L'application sauvegarde automatiquement vos données.
-              </Text>
+              <View style={styles.tipContent}>
+                <Text style={styles.tipTitle}>Conseils d'expert</Text>
+                <Text style={styles.tipText}>
+                  • Commencez par créer vos classes et ajouter vos élèves
+                </Text>
+                <Text style={styles.tipText}>
+                  • Utilisez les actions rapides pour gagner du temps
+                </Text>
+                <Text style={styles.tipText}>
+                  • Exportez régulièrement vos données pour les sauvegarder
+                </Text>
+                <Text style={styles.tipText}>
+                  • L'application sauvegarde automatiquement toutes vos modifications
+                </Text>
+              </View>
             </View>
           </ScrollView>
         </SafeAreaView>
@@ -223,11 +385,17 @@ export default function UserGuide({ visible, onClose }: UserGuideProps) {
 
           <View style={styles.introContainer}>
             <Text style={styles.introIcon}>📖</Text>
-            <Text style={styles.introTitle}>Bienvenue dans votre assistant pédagogique</Text>
+            <Text style={styles.introTitle}>Guide complet de votre assistant pédagogique</Text>
             <Text style={styles.introText}>
-              Ce guide vous accompagne dans la découverte de toutes les fonctionnalités
-              de votre application de gestion de classe.
+              Ce guide détaillé vous accompagne dans la maîtrise complète de votre application
+              de gestion de classe. Découvrez toutes les fonctionnalités, des bases aux
+              fonctions avancées, y compris le système d'essai et les options premium.
             </Text>
+            <View style={styles.introStats}>
+              <Text style={styles.introStatsText}>
+                📚 12 guides détaillés • 🎯 9 catégories • ⚡ Conseils d'expert
+              </Text>
+            </View>
           </View>
 
           <View style={styles.categoriesContainer}>
@@ -318,6 +486,19 @@ const styles = StyleSheet.create({
     color: Colors.textSecondary,
     textAlign: 'center',
     lineHeight: Typography.relaxed * Typography.base,
+    marginBottom: Spacing.md,
+  },
+  introStats: {
+    backgroundColor: Colors.surfaceVariant,
+    paddingHorizontal: Spacing.lg,
+    paddingVertical: Spacing.sm,
+    borderRadius: BorderRadius.full,
+  },
+  introStatsText: {
+    fontSize: Typography.xs,
+    color: Colors.textSecondary,
+    fontWeight: Typography.medium,
+    textAlign: 'center',
   },
   categoriesContainer: {
     paddingHorizontal: Spacing.lg,
@@ -496,11 +677,21 @@ const styles = StyleSheet.create({
   tipIcon: {
     fontSize: 24,
     marginRight: Spacing.md,
+    marginTop: 2,
+  },
+  tipContent: {
+    flex: 1,
+  },
+  tipTitle: {
+    fontSize: Typography.base,
+    fontWeight: Typography.semibold,
+    color: Colors.text,
+    marginBottom: Spacing.sm,
   },
   tipText: {
-    flex: 1,
     fontSize: Typography.sm,
     color: Colors.textSecondary,
     lineHeight: Typography.relaxed * Typography.sm,
+    marginBottom: 4,
   },
 });

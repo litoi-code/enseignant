@@ -37,3 +37,11 @@ yarn-error.*
 *.tsbuildinfo
 
 app-example
+
+# Admin logs and sensitive data
+admin/codes_generated.log
+admin/*.log
+*.log
+
+# French Teacher App specific
+# © 2024 Litoi Code

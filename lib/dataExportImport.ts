@@ -4,16 +4,16 @@
  * © 2024 Litoi Code
  */
 
+import { Attendance, Class, Course, Grade, Student } from '@/types';
+import * as DocumentPicker from 'expo-document-picker';
 import * as FileSystem from 'expo-file-system';
 import * as Sharing from 'expo-sharing';
-import * as DocumentPicker from 'expo-document-picker';
 import { Alert } from 'react-native';
-import { Class, Student, Course, Grade, Attendance } from '@/types';
 
 export interface ExportData {
   version: string;
   exportDate: string;
-  classes: Class[];
+  classes: (Class & { educationLevel?: string })[];
   students: Student[];
   courses: Course[];
   grades: Grade[];
@@ -24,6 +24,8 @@ export interface ExportData {
     totalGrades: number;
     totalCourses: number;
     totalAttendance: number;
+    appVersion: string;
+    exportFormat: string;
   };
 }
 
@@ -37,10 +39,16 @@ export class DataExportImport {
     attendance: Attendance[]
   ): Promise<boolean> {
     try {
+      // Add compatibility fields to classes
+      const compatibleClasses = classes.map(cls => ({
+        ...cls,
+        educationLevel: cls.level, // Add compatibility field
+      }));
+
       const exportData: ExportData = {
-        version: '1.0.0',
+        version: '1.1.0',
         exportDate: new Date().toISOString(),
-        classes,
+        classes: compatibleClasses,
         students,
         courses,
         grades,
@@ -51,24 +59,42 @@ export class DataExportImport {
           totalGrades: grades.length,
           totalCourses: courses.length,
           totalAttendance: attendance.length,
+          appVersion: '1.1.0',
+          exportFormat: 'ClassMaster-JSON',
         }
       };
 
       const jsonData = JSON.stringify(exportData, null, 2);
-      const fileName = `enseignant_backup_${new Date().toISOString().split('T')[0]}.json`;
+      const timestamp = new Date().toISOString().split('T')[0];
+      const fileName = `ClassMaster_backup_${timestamp}.json`;
       const fileUri = FileSystem.documentDirectory + fileName;
 
+      // Check available storage space
+      const fileInfo = await FileSystem.getInfoAsync(FileSystem.documentDirectory);
+      if (!fileInfo.exists) {
+        throw new Error('Document directory not accessible');
+      }
+
       await FileSystem.writeAsStringAsync(fileUri, jsonData);
+
+      // Verify file was written correctly
+      const writtenFile = await FileSystem.getInfoAsync(fileUri);
+      if (!writtenFile.exists || writtenFile.size === 0) {
+        throw new Error('Failed to write export file');
+      }
 
       if (await Sharing.isAvailableAsync()) {
         await Sharing.shareAsync(fileUri, {
           mimeType: 'application/json',
-          dialogTitle: 'Exporter les données de l\'application',
+          dialogTitle: 'Exporter les données ClassMaster',
+          UTI: 'public.json',
         });
       } else {
         Alert.alert(
           'Export réussi',
-          `Données exportées vers: ${fileName}\n\nFichier sauvegardé dans le dossier Documents de l'application.`
+          `Données exportées vers: ${fileName}\n\n` +
+          `Taille: ${(writtenFile.size / 1024).toFixed(1)} KB\n` +
+          `Fichier sauvegardé dans le dossier Documents de l'application.`
         );
       }
 
@@ -151,22 +177,61 @@ export class DataExportImport {
   static async importData(): Promise<ExportData | null> {
     try {
       const result = await DocumentPicker.getDocumentAsync({
-        type: 'application/json',
+        type: ['application/json', 'text/plain'],
         copyToCacheDirectory: true,
+        multiple: false,
       });
 
       if (result.canceled) {
         return null;
       }
 
-      const fileContent = await FileSystem.readAsStringAsync(result.assets[0].uri);
-      const importData: ExportData = JSON.parse(fileContent);
+      const selectedFile = result.assets[0];
+
+      // Check file size (max 50MB)
+      if (selectedFile.size && selectedFile.size > 50 * 1024 * 1024) {
+        Alert.alert(
+          'Fichier trop volumineux',
+          'Le fichier sélectionné est trop volumineux (max 50MB).'
+        );
+        return null;
+      }
+
+      // Check file extension
+      if (!selectedFile.name?.toLowerCase().endsWith('.json')) {
+        Alert.alert(
+          'Format de fichier incorrect',
+          'Veuillez sélectionner un fichier JSON (.json).'
+        );
+        return null;
+      }
+
+      const fileContent = await FileSystem.readAsStringAsync(selectedFile.uri);
+
+      if (!fileContent || fileContent.trim().length === 0) {
+        Alert.alert(
+          'Fichier vide',
+          'Le fichier sélectionné est vide ou illisible.'
+        );
+        return null;
+      }
+
+      let importData: ExportData;
+      try {
+        importData = JSON.parse(fileContent);
+      } catch (parseError) {
+        Alert.alert(
+          'Fichier JSON invalide',
+          'Le fichier sélectionné n\'est pas un fichier JSON valide.'
+        );
+        return null;
+      }
 
       // Validate import data structure
       if (!this.validateImportData(importData)) {
         Alert.alert(
-          'Fichier invalide',
-          'Le fichier sélectionné n\'est pas un fichier de sauvegarde valide.'
+          'Fichier de sauvegarde invalide',
+          'Le fichier sélectionné n\'est pas un fichier de sauvegarde ClassMaster valide ou est incompatible avec cette version.'
         );
         return null;
       }
@@ -176,25 +241,56 @@ export class DataExportImport {
       console.error('Import error:', error);
       Alert.alert(
         'Erreur d\'import',
-        'Impossible d\'importer les données. Vérifiez que le fichier est valide.'
+        'Impossible d\'importer les données. Vérifiez que le fichier est accessible et valide.'
       );
       return null;
     }
   }
 
   private static validateImportData(data: any): data is ExportData {
-    return (
-      data &&
-      typeof data === 'object' &&
-      data.version &&
-      data.exportDate &&
-      Array.isArray(data.classes) &&
-      Array.isArray(data.students) &&
-      Array.isArray(data.courses) &&
-      Array.isArray(data.grades) &&
-      Array.isArray(data.attendance) &&
-      data.metadata
-    );
+    try {
+      if (!data || typeof data !== 'object') {
+        console.log('Invalid data: not an object');
+        return false;
+      }
+
+      // Check required fields
+      const requiredFields = ['version', 'exportDate', 'classes', 'students', 'courses', 'grades', 'attendance', 'metadata'];
+      for (const field of requiredFields) {
+        if (!(field in data)) {
+          console.log(`Missing required field: ${field}`);
+          return false;
+        }
+      }
+
+      // Check arrays
+      const arrayFields = ['classes', 'students', 'courses', 'grades', 'attendance'];
+      for (const field of arrayFields) {
+        if (!Array.isArray(data[field])) {
+          console.log(`Field ${field} is not an array`);
+          return false;
+        }
+      }
+
+      // Check metadata
+      if (!data.metadata || typeof data.metadata !== 'object') {
+        console.log('Invalid metadata');
+        return false;
+      }
+
+      // Check version compatibility
+      const supportedVersions = ['1.0.0', '1.1.0'];
+      if (!supportedVersions.includes(data.version)) {
+        console.log(`Unsupported version: ${data.version}`);
+        return false;
+      }
+
+      console.log('Import data validation passed');
+      return true;
+    } catch (error) {
+      console.error('Error validating import data:', error);
+      return false;
+    }
   }
 
   private static generateHTMLReport(

@@ -8,6 +8,7 @@ import { useAppStore } from '@/lib/store';
 import { TrialManager } from '@/lib/trialManager';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
+import { router } from 'expo-router';
 import React, { useEffect, useState } from 'react';
 import { Alert, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -77,6 +78,39 @@ export default function HomeScreen() {
   const presentToday = todayAttendance.filter(a => a.status === 'present').length;
   const attendanceRate = todayAttendance.length > 0 ? (presentToday / todayAttendance.length) * 100 : 0;
 
+  // Navigation handlers for rapid actions
+  const handleNavigateToGrades = () => {
+    if (!selectedClassId) {
+      Alert.alert('Erreur', 'Veuillez sélectionner une classe');
+      return;
+    }
+    router.push('/grades');
+  };
+
+  const handleNavigateToAttendance = () => {
+    if (!selectedClassId) {
+      Alert.alert('Erreur', 'Veuillez sélectionner une classe');
+      return;
+    }
+    router.push('/attendance');
+  };
+
+  const handleNavigateToCourses = () => {
+    if (!selectedClassId) {
+      Alert.alert('Erreur', 'Veuillez sélectionner une classe');
+      return;
+    }
+    router.push('/courses');
+  };
+
+  const handleNavigateToStudents = () => {
+    if (!selectedClassId) {
+      Alert.alert('Erreur', 'Veuillez sélectionner une classe');
+      return;
+    }
+    router.push('/students');
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollContent}>
@@ -103,7 +137,14 @@ export default function HomeScreen() {
 
         {/* Class Selection */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Classe Sélectionnée</Text>
+          <View style={styles.sectionHeader}>
+            <Text style={styles.sectionTitle}>Classe Sélectionnée</Text>
+            {classes.length > 0 && (
+              <TouchableOpacity style={styles.addClassButton} onPress={() => setShowClassModal(true)}>
+                <Text style={styles.addClassButtonText}>+ Nouvelle Classe</Text>
+              </TouchableOpacity>
+            )}
+          </View>
           {classes.length === 0 ? (
             <View style={styles.emptyState}>
               <Text style={styles.emptyText}>Aucune classe créée</Text>
@@ -147,6 +188,12 @@ export default function HomeScreen() {
                   </Text>
                 </TouchableOpacity>
               ))}
+
+              {/* Add Class Card */}
+              <TouchableOpacity style={styles.addClassCard} onPress={() => setShowClassModal(true)}>
+                <Text style={styles.addClassIcon}>+</Text>
+                <Text style={styles.addClassText}>Nouvelle{'\n'}Classe</Text>
+              </TouchableOpacity>
             </ScrollView>
           )}
         </View>
@@ -214,16 +261,16 @@ export default function HomeScreen() {
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Actions Rapides</Text>
               <View style={styles.actionsGrid}>
-                <TouchableOpacity style={styles.actionButton}>
+                <TouchableOpacity style={styles.actionButton} onPress={handleNavigateToGrades}>
                   <Text style={styles.actionText}>📝 Nouvelle Note</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.actionButton}>
+                <TouchableOpacity style={styles.actionButton} onPress={handleNavigateToAttendance}>
                   <Text style={styles.actionText}>✅ Prendre Présences</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.actionButton}>
+                <TouchableOpacity style={styles.actionButton} onPress={handleNavigateToCourses}>
                   <Text style={styles.actionText}>📚 Nouveau Cours</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.actionButton}>
+                <TouchableOpacity style={styles.actionButton} onPress={handleNavigateToStudents}>
                   <Text style={styles.actionText}>👥 Gérer Élèves</Text>
                 </TouchableOpacity>
               </View>
@@ -307,11 +354,29 @@ const styles = StyleSheet.create({
   section: {
     marginBottom: Spacing.xxl,
   },
+  sectionHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: Spacing.md,
+  },
   sectionTitle: {
     fontSize: Typography.xl,
     fontWeight: Typography.semibold,
     color: Colors.text,
-    marginBottom: Spacing.md,
+    flex: 1,
+  },
+  addClassButton: {
+    backgroundColor: Colors.primary,
+    paddingHorizontal: Spacing.md,
+    paddingVertical: Spacing.sm,
+    borderRadius: BorderRadius.sm,
+    ...Shadows.sm,
+  },
+  addClassButtonText: {
+    color: Colors.surface,
+    fontSize: Typography.sm,
+    fontWeight: Typography.semibold,
   },
   emptyState: {
     backgroundColor: Colors.surface,
@@ -384,6 +449,31 @@ const styles = StyleSheet.create({
   },
   selectedClassSubject: {
     color: Colors.primaryDark,
+  },
+  addClassCard: {
+    backgroundColor: Colors.surface,
+    padding: Spacing.lg,
+    borderRadius: BorderRadius.lg,
+    marginRight: Spacing.md,
+    minWidth: 160,
+    borderWidth: 2,
+    borderColor: Colors.primary,
+    borderStyle: 'dashed',
+    alignItems: 'center',
+    justifyContent: 'center',
+    ...Shadows.sm,
+  },
+  addClassIcon: {
+    fontSize: 32,
+    color: Colors.primary,
+    marginBottom: Spacing.xs,
+    fontWeight: Typography.bold,
+  },
+  addClassText: {
+    fontSize: Typography.sm,
+    color: Colors.primary,
+    textAlign: 'center',
+    fontWeight: Typography.medium,
   },
   statsGrid: {
     flexDirection: 'row',

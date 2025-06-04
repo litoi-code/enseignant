@@ -1,5 +1,6 @@
+import { format } from 'date-fns';
 import { create } from 'zustand';
-import { Student, Class, Course, Grade, Attendance, Settings } from '../types';
+import { Attendance, Class, Course, Grade, Settings, Student } from '../types';
 import * as DataAccess from './dataAccess';
 import { initDatabase } from './database';
 
@@ -246,7 +247,7 @@ export const useAppStore = create<AppState>((set, get) => ({
     try {
       set({ isLoading: true, error: null });
       const id = await DataAccess.createCourse(courseData);
-      await get().loadCourses(courseData.classId);
+      await get().loadCourses(courseData.classId, courseData.date);
       return id;
     } catch (error) {
       console.error('Failed to create course:', error);
@@ -261,9 +262,12 @@ export const useAppStore = create<AppState>((set, get) => ({
     try {
       set({ isLoading: true, error: null });
       await DataAccess.updateCourse(id, updates);
-      // Reload courses for the current class
+      // Reload courses for the current class and date
       const currentClassId = get().selectedClassId;
-      await get().loadCourses(currentClassId || undefined);
+      const currentDate = updates.date || format(new Date(), 'yyyy-MM-dd');
+      if (currentClassId) {
+        await get().loadCourses(currentClassId, currentDate);
+      }
     } catch (error) {
       console.error('Failed to update course:', error);
       set({ error: 'Erreur lors de la mise à jour du cours' });
@@ -277,9 +281,12 @@ export const useAppStore = create<AppState>((set, get) => ({
     try {
       set({ isLoading: true, error: null });
       await DataAccess.deleteCourse(id);
-      // Reload courses for the current class
+      // Reload courses for the current class and current date
       const currentClassId = get().selectedClassId;
-      await get().loadCourses(currentClassId || undefined);
+      const currentDate = format(new Date(), 'yyyy-MM-dd');
+      if (currentClassId) {
+        await get().loadCourses(currentClassId, currentDate);
+      }
     } catch (error) {
       console.error('Failed to delete course:', error);
       set({ error: 'Erreur lors de la suppression du cours' });
@@ -437,5 +444,32 @@ export const useAppStore = create<AppState>((set, get) => ({
 
   setLoading: (loading) => {
     set({ isLoading: loading });
+  },
+
+  clearAllData: async () => {
+    try {
+      set({ isLoading: true, error: null });
+
+      // Clear all data from database
+      await DataAccess.clearAllData();
+
+      // Reset store state
+      set({
+        classes: [],
+        students: [],
+        courses: [],
+        grades: [],
+        attendance: [],
+        selectedClassId: null,
+        isLoading: false,
+        error: null,
+      });
+    } catch (error) {
+      console.error('Failed to clear all data:', error);
+      set({ error: 'Erreur lors de la suppression des données' });
+      throw error;
+    } finally {
+      set({ isLoading: false });
+    }
   },
 }));

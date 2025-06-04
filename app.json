@@ -3,7 +3,7 @@
     "name": "Enseignant - Gestion de Classe",
     "slug": "enseignant",
     "version": "1.0.0",
-    "description": "© 2024 Litoi Code. Educational software for Cameroonian teachers. Licensed for educational use in Cameroon only.",
+    "description": "Système de gestion de classe professionnel pour enseignants camerounais. Fonctionnalités complètes avec licence sécurisée par appareil. © 2024 Litoi Code.",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "enseignant",
@@ -13,8 +13,11 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.enseignant.classroommanagement",
+      "package": "com.litoicode.enseignant",
       "versionCode": 1,
+      "compileSdkVersion": 34,
+      "targetSdkVersion": 34,
+      "minSdkVersion": 23,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -22,10 +25,13 @@
       "edgeToEdgeEnabled": true,
       "permissions": [
         "android.permission.WRITE_EXTERNAL_STORAGE",
-        "android.permission.READ_EXTERNAL_STORAGE"
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE"
       ],
       "allowBackup": true,
-      "softwareKeyboardLayoutMode": "pan"
+      "softwareKeyboardLayoutMode": "pan",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.litoicode.enseignant"
     },
     "web": {
       "bundler": "metro",
@@ -48,7 +54,8 @@
         {
           "enableFTS": true
         }
-      ]
+      ],
+      "expo-build-properties"
     ],
     "experiments": {
       "typedRoutes": true

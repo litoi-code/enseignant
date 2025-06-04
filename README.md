@@ -1,6 +1,12 @@
-# 🎓 French Teacher Classroom Management System for Cameroon
+# 🇨🇲 French Teacher Classroom Management System
 
-A comprehensive mobile application designed specifically for French-speaking teachers in Cameroon, providing complete classroom management tools following French educational standards.
+> **Système de Gestion de Classe Professionnel pour Enseignants Camerounais**
+> Complete classroom management app with device-specific licensing, data export/import, and freemium business model.
+
+[![React Native](https://img.shields.io/badge/React%20Native-0.74-blue.svg)](https://reactnative.dev/)
+[![Expo](https://img.shields.io/badge/Expo-51-black.svg)](https://expo.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue.svg)](https://www.typescriptlang.org/)
+[![License](https://img.shields.io/badge/License-Proprietary-red.svg)](#license)
 
 ## 🇨🇲 Features
 
@@ -43,6 +49,20 @@ A comprehensive mobile application designed specifically for French-speaking tea
 - Modern, clean interface
 - Education-level specific color themes
 - Professional icons and typography
+
+### 💰 **Business Features (NEW)**
+- 🔒 **Device-Specific Licensing** - One code per device (anti-piracy)
+- ⏰ **30-Day Trial** - Full month trial period
+- ☕ **Coffee Purchase Model** - 2000 FCFA unlock via Mobile Money
+- 📱 **Mobile Money Integration** - +237674667234 payment
+- 🔄 **License Transfer** - Move between devices securely
+
+### 📤 **Data Export/Import (PREMIUM)**
+- 📊 **Complete JSON Export** - All data with metadata
+- 📄 **Professional PDF Reports** - Detailed statistics and formatting
+- 📈 **CSV Export** - Spreadsheet-compatible grade exports
+- 📥 **Full Data Import** - Complete backup and restore
+- 🔄 **Cross-Device Transfer** - Move data between devices
 
 ## 🔧 Technical Features
 
@@ -102,6 +122,54 @@ A comprehensive mobile application designed specifically for French-speaking tea
    - Press `a` for Android emulator
    - Press `i` for iOS simulator
 
+## 💰 Business Model
+
+### **🆓 Trial System**
+- **Duration**: 30 days (1 month)
+- **Limitations**: 10 students, 2 classes, 50 grades, 20 courses
+- **Export**: Disabled during trial
+- **Banner**: Shows remaining days
+
+### **☕ Premium Unlock**
+- **Price**: 2000 FCFA via Mobile Money
+- **Payment**: +237674667234 (LITOI CODE)
+- **Message**: "ENSEIGNANT APP"
+- **Delivery**: Unique code via SMS within 24h
+- **Device Lock**: One code = one device only
+
+### **✨ Premium Features**
+- ✅ **Unlimited**: Students, classes, grades, courses
+- ✅ **Export/Import**: Complete data management
+- ✅ **PDF Reports**: Professional reporting
+- ✅ **Priority Support**: Direct assistance
+- ✅ **License Transfer**: Move to new device
+
+### **🏫 Institutional Pricing**
+- **5-10 licenses**: 1500 FCFA/license
+- **11-25 licenses**: 1200 FCFA/license
+- **25+ licenses**: 1000 FCFA/license
+- **Training**: Included free
+
+## 🔑 Admin Tools
+
+### **Code Generation System**
+```bash
+# Mobile generator (recommended for daily use)
+open admin/mobileCodeGen.html
+
+# Desktop generator (bulk operations)
+open admin/codeGenerator.html
+
+# Command line (automation)
+./admin/quickCode.sh +237698765432 "Customer Name" COFFEE
+```
+
+### **Customer Management**
+- **Track all codes** generated and used
+- **SMS templates** for code delivery
+- **Support tools** for troubleshooting
+- **Revenue tracking** and analytics
+
 ## 📖 User Guide
 
 The application includes a comprehensive interactive user guide covering:
@@ -116,6 +184,12 @@ The application includes a comprehensive interactive user guide covering:
 Access the guide through:
 - 📖 Help button on the home screen
 - Settings → "Guide d'utilisation"
+
+## 📚 Documentation
+
+- **[📖 Unlock Guide](UNLOCK_GUIDE.md)** - Complete user unlock instructions
+- **[🔑 Admin Guide](admin/ADMIN_GUIDE.md)** - Code generation and customer management
+- **[🛠️ Technical Docs](docs/)** - Implementation details and API reference
 
 ## 🎯 Educational Standards
 
@@ -209,9 +283,20 @@ See the [LICENSE](LICENSE) file for complete terms and conditions.
 
 ## 📞 Support
 
-For support, questions, or feature requests:
-- Create an issue on GitHub
-- Contact: teacher.app@education.cm
+### **Customer Support**
+- **Phone/SMS**: +237674667234
+- **Email**: teacher.app@education.cm
+- **Hours**: Monday-Friday 8AM-6PM (WAT)
+
+### **Technical Support**
+- **Bug Reports**: Create GitHub issue
+- **Feature Requests**: Contact support email
+- **Documentation**: Check guides first
+
+### **Business Inquiries**
+- **Institutional Licensing**: Volume discounts available
+- **Custom Development**: Enterprise solutions
+- **Partnership**: Distribution opportunities
 
 ---
 

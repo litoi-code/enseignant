@@ -1,16 +1,18 @@
 /**
- * French Teacher Classroom Management System
+ * ClassMaster - Teacher Classroom Management System
  * Copyright (c) 2024 Litoi Code. All rights reserved.
  * 
- * This software is licensed for educational use in Cameroonian institutions only.
- * Commercial use, redistribution, or use outside of Cameroon requires written permission.
+ * This software is available under a freemium license model:
+ * - Free trial: 1 month with full functionality
+ * - Premium unlock: "Buy a cup of coffee" payment model
+ * - Educational use encouraged worldwide
  * 
- * For licensing inquiries: teacher.app@education.cm
+ * For support and premium unlock: +237674667234 (Mobile Money)
  */
 
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
-import { Colors, Typography, Spacing } from '@/constants/Theme';
+import { Colors, Spacing, Typography } from '@/constants/Theme';
+import React, { useState } from 'react';
+import { Alert, Modal, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 interface CopyrightNoticeProps {
   variant?: 'full' | 'compact' | 'footer';
@@ -21,72 +23,224 @@ export default function CopyrightNotice({
   variant = 'compact', 
   showLicense = false 
 }: CopyrightNoticeProps) {
+  const [showLicenseModal, setShowLicenseModal] = useState(false);
+  const [showPremiumModal, setShowPremiumModal] = useState(false);
   
   const showLicenseInfo = () => {
-    Alert.alert(
-      'Informations de Licence',
-      'French Teacher Classroom Management System\n\n' +
-      '© 2024 Litoi Code. Tous droits réservés.\n\n' +
-      'Ce logiciel est sous licence pour un usage éducatif dans les institutions camerounaises uniquement.\n\n' +
-      'Usage commercial, redistribution, ou utilisation en dehors du Cameroun nécessite une autorisation écrite.\n\n' +
-      'Pour les demandes de licence: teacher.app@education.cm',
-      [
-        { text: 'Compris', style: 'default' }
-      ]
-    );
+    if (Platform.OS === 'web') {
+      // Use custom modal for web
+      setShowLicenseModal(true);
+    } else {
+      // Use native alert for mobile
+      Alert.alert(
+        'Informations de Licence',
+        'ClassMaster - Assistant Pédagogique\n\n' +
+        '© 2024 Litoi Code. Tous droits réservés.\n\n' +
+        '📋 MODÈLE FREEMIUM :\n' +
+        '• Essai gratuit : 1 mois avec toutes les fonctionnalités\n' +
+        '• Déblocage premium : "Offrir un café" au développeur\n' +
+        '• Usage éducatif encouragé dans le monde entier\n\n' +
+        '💰 DÉBLOCAGE PREMIUM :\n' +
+        '• Paiement Mobile Money : +237674667234\n' +
+        '• Classes et élèves illimités\n' +
+        '• Export/Import complet des données\n' +
+        '• Support technique prioritaire\n\n' +
+        '📞 SUPPORT :\n' +
+        'WhatsApp/Appel : +237674667234\n' +
+        'Développé avec ❤️ pour les enseignants',
+        [
+          { text: 'Fermer', style: 'cancel' },
+          {
+            text: 'Débloquer Premium',
+            style: 'default',
+            onPress: () => {
+              Alert.alert(
+                'Déblocage Premium',
+                'Pour débloquer la version premium :\n\n' +
+                '1. Envoyez un paiement Mobile Money au +237674667234\n' +
+                '2. Montant suggéré : 2000 FCFA (prix d\'un café)\n' +
+                '3. Contactez-nous avec votre numéro de transaction\n' +
+                '4. Recevez votre code de déblocage instantanément\n\n' +
+                'Merci de soutenir le développement ! ☕',
+                [{ text: 'Compris', style: 'default' }]
+              );
+            }
+          }
+        ]
+      );
+    }
   };
+
+  const showPremiumInfo = () => {
+    if (Platform.OS === 'web') {
+      setShowPremiumModal(true);
+    } else {
+      Alert.alert(
+        'Déblocage Premium',
+        'Pour débloquer la version premium :\n\n' +
+        '1. Envoyez un paiement Mobile Money au +237674667234\n' +
+        '2. Montant suggéré : 2000 FCFA (prix d\'un café)\n' +
+        '3. Contactez-nous avec votre numéro de transaction\n' +
+        '4. Recevez votre code de déblocage instantanément\n\n' +
+        'Merci de soutenir le développement ! ☕',
+        [{ text: 'Compris', style: 'default' }]
+      );
+    }
+  };
+
+  // License Modal for Web
+  const LicenseModal = () => (
+    <Modal
+      visible={showLicenseModal}
+      animationType="fade"
+      transparent={true}
+      onRequestClose={() => setShowLicenseModal(false)}
+    >
+      <View style={styles.modalOverlay}>
+        <View style={styles.modalContainer}>
+          <ScrollView style={styles.modalContent}>
+            <Text style={styles.modalTitle}>Informations de Licence</Text>
+            <Text style={styles.modalSubtitle}>ClassMaster - Assistant Pédagogique</Text>
+            
+            <Text style={styles.modalText}>© 2024 Litoi Code. Tous droits réservés.</Text>
+            
+            <Text style={styles.sectionTitle}>📋 MODÈLE FREEMIUM :</Text>
+            <Text style={styles.modalText}>• Essai gratuit : 1 mois avec toutes les fonctionnalités</Text>
+            <Text style={styles.modalText}>• Déblocage premium : "Offrir un café" au développeur</Text>
+            <Text style={styles.modalText}>• Usage éducatif encouragé dans le monde entier</Text>
+            
+            <Text style={styles.sectionTitle}>💰 DÉBLOCAGE PREMIUM :</Text>
+            <Text style={styles.modalText}>• Paiement Mobile Money : +237674667234</Text>
+            <Text style={styles.modalText}>• Classes et élèves illimités</Text>
+            <Text style={styles.modalText}>• Export/Import complet des données</Text>
+            <Text style={styles.modalText}>• Support technique prioritaire</Text>
+            
+            <Text style={styles.sectionTitle}>📞 SUPPORT :</Text>
+            <Text style={styles.modalText}>WhatsApp/Appel : +237674667234</Text>
+            <Text style={styles.modalText}>Développé avec ❤️ pour les enseignants</Text>
+          </ScrollView>
+          
+          <View style={styles.modalButtons}>
+            <TouchableOpacity 
+              style={[styles.modalButton, styles.cancelButton]} 
+              onPress={() => setShowLicenseModal(false)}
+            >
+              <Text style={styles.cancelButtonText}>Fermer</Text>
+            </TouchableOpacity>
+            <TouchableOpacity 
+              style={[styles.modalButton, styles.premiumButton]} 
+              onPress={() => {
+                setShowLicenseModal(false);
+                setShowPremiumModal(true);
+              }}
+            >
+              <Text style={styles.premiumButtonText}>Débloquer Premium</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </View>
+    </Modal>
+  );
+
+  // Premium Modal for Web
+  const PremiumModal = () => (
+    <Modal
+      visible={showPremiumModal}
+      animationType="fade"
+      transparent={true}
+      onRequestClose={() => setShowPremiumModal(false)}
+    >
+      <View style={styles.modalOverlay}>
+        <View style={styles.modalContainer}>
+          <ScrollView style={styles.modalContent}>
+            <Text style={styles.modalTitle}>Déblocage Premium</Text>
+            
+            <Text style={styles.modalText}>Pour débloquer la version premium :</Text>
+            
+            <Text style={styles.stepText}>1. Envoyez un paiement Mobile Money au +237674667234</Text>
+            <Text style={styles.stepText}>2. Montant suggéré : 2000 FCFA (prix d'un café)</Text>
+            <Text style={styles.stepText}>3. Contactez-nous avec votre numéro de transaction</Text>
+            <Text style={styles.stepText}>4. Recevez votre code de déblocage instantanément</Text>
+            
+            <Text style={styles.thankYouText}>Merci de soutenir le développement ! ☕</Text>
+          </ScrollView>
+          
+          <View style={styles.modalButtons}>
+            <TouchableOpacity 
+              style={[styles.modalButton, styles.cancelButton]} 
+              onPress={() => setShowPremiumModal(false)}
+            >
+              <Text style={styles.cancelButtonText}>Compris</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </View>
+    </Modal>
+  );
 
   if (variant === 'full') {
     return (
-      <View style={styles.fullContainer}>
-        <Text style={styles.appTitle}>French Teacher Classroom Management System</Text>
-        <Text style={styles.subtitle}>Système de Gestion de Classe pour le Cameroun</Text>
-        <View style={styles.copyrightContainer}>
-          <Text style={styles.copyrightText}>© 2024 Litoi Code. Tous droits réservés.</Text>
-          <Text style={styles.licenseText}>
-            Sous licence pour usage éducatif au Cameroun
-          </Text>
+      <>
+        <View style={styles.fullContainer}>
+          <Text style={styles.appTitle}>ClassMaster</Text>
+          <Text style={styles.subtitle}>Assistant Pédagogique Intelligent</Text>
+          <View style={styles.copyrightContainer}>
+            <Text style={styles.copyrightText}>© 2024 Litoi Code. Tous droits réservés.</Text>
+            <Text style={styles.licenseText}>
+              Modèle freemium - Essai gratuit 1 mois
+            </Text>
+          </View>
+          {showLicense && (
+            <TouchableOpacity style={styles.licenseButton} onPress={showLicenseInfo}>
+              <Text style={styles.licenseButtonText}>📄 Voir la licence</Text>
+            </TouchableOpacity>
+          )}
+          <View style={styles.attributionContainer}>
+            <Text style={styles.attributionText}>🎓 Pour les enseignants du monde entier</Text>
+            <Text style={styles.contactText}>Support: +237674667234 (WhatsApp)</Text>
+          </View>
         </View>
-        {showLicense && (
-          <TouchableOpacity style={styles.licenseButton} onPress={showLicenseInfo}>
-            <Text style={styles.licenseButtonText}>📄 Voir la licence</Text>
-          </TouchableOpacity>
-        )}
-        <View style={styles.attributionContainer}>
-          <Text style={styles.attributionText}>🇨🇲 Conçu pour les éducateurs camerounais</Text>
-          <Text style={styles.contactText}>Contact: teacher.app@education.cm</Text>
-        </View>
-      </View>
+        <LicenseModal />
+        <PremiumModal />
+      </>
     );
   }
 
   if (variant === 'footer') {
     return (
-      <View style={styles.footerContainer}>
-        <Text style={styles.footerText}>
-          © 2024 Litoi Code • Usage éducatif au Cameroun
-        </Text>
-        {showLicense && (
-          <TouchableOpacity onPress={showLicenseInfo}>
-            <Text style={styles.footerLinkText}>Licence</Text>
-          </TouchableOpacity>
-        )}
-      </View>
+      <>
+        <View style={styles.footerContainer}>
+          <Text style={styles.footerText}>
+            © 2024 Litoi Code • ClassMaster - Assistant Pédagogique
+          </Text>
+          {showLicense && (
+            <TouchableOpacity onPress={showLicenseInfo}>
+              <Text style={styles.footerLinkText}>Licence</Text>
+            </TouchableOpacity>
+          )}
+        </View>
+        <LicenseModal />
+        <PremiumModal />
+      </>
     );
   }
 
   // Compact variant (default)
   return (
-    <View style={styles.compactContainer}>
-      <Text style={styles.compactText}>
-        © 2024 Litoi Code • French Teacher Classroom Management System
-      </Text>
-      {showLicense && (
-        <TouchableOpacity onPress={showLicenseInfo} style={styles.compactLicenseButton}>
-          <Text style={styles.compactLicenseText}>ℹ️</Text>
-        </TouchableOpacity>
-      )}
-    </View>
+    <>
+      <View style={styles.compactContainer}>
+        <Text style={styles.compactText}>
+          © 2024 Litoi Code • ClassMaster - Assistant Pédagogique
+        </Text>
+        {showLicense && (
+          <TouchableOpacity onPress={showLicenseInfo} style={styles.compactLicenseButton}>
+            <Text style={styles.compactLicenseText}>ℹ️</Text>
+          </TouchableOpacity>
+        )}
+      </View>
+      <LicenseModal />
+      <PremiumModal />
+    </>
   );
 }
 
@@ -134,14 +288,22 @@ const styles = StyleSheet.create({
   licenseButton: {
     backgroundColor: Colors.primary + '20',
     paddingHorizontal: Spacing.lg,
-    paddingVertical: Spacing.sm,
-    borderRadius: 20,
+    paddingVertical: Spacing.md,
+    borderRadius: 25,
     marginBottom: Spacing.md,
+    borderWidth: 1,
+    borderColor: Colors.primary + '40',
+    shadowColor: 'rgba(0, 0, 0, 0.1)',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
   },
   licenseButtonText: {
     color: Colors.primary,
     fontSize: Typography.sm,
-    fontWeight: Typography.medium,
+    fontWeight: Typography.semibold,
+    textAlign: 'center',
   },
   attributionContainer: {
     alignItems: 'center',
@@ -191,5 +353,103 @@ const styles = StyleSheet.create({
   compactLicenseText: {
     fontSize: Typography.sm,
     color: Colors.primary,
+  },
+  // Modal styles for web compatibility
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: Spacing.lg,
+  },
+  modalContainer: {
+    backgroundColor: Colors.surface,
+    borderRadius: 12,
+    maxWidth: 500,
+    width: '100%',
+    maxHeight: '80%',
+    shadowColor: 'rgba(0, 0, 0, 0.3)',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 8,
+  },
+  modalContent: {
+    padding: Spacing.xl,
+    maxHeight: 400,
+  },
+  modalTitle: {
+    fontSize: Typography.xl,
+    fontWeight: Typography.bold,
+    color: Colors.primary,
+    textAlign: 'center',
+    marginBottom: Spacing.md,
+  },
+  modalSubtitle: {
+    fontSize: Typography.lg,
+    fontWeight: Typography.semibold,
+    color: Colors.text,
+    textAlign: 'center',
+    marginBottom: Spacing.lg,
+  },
+  modalText: {
+    fontSize: Typography.sm,
+    color: Colors.text,
+    marginBottom: Spacing.sm,
+    lineHeight: Typography.relaxed * Typography.sm,
+  },
+  sectionTitle: {
+    fontSize: Typography.base,
+    fontWeight: Typography.semibold,
+    color: Colors.primary,
+    marginTop: Spacing.md,
+    marginBottom: Spacing.sm,
+  },
+  stepText: {
+    fontSize: Typography.sm,
+    color: Colors.text,
+    marginBottom: Spacing.xs,
+    paddingLeft: Spacing.md,
+    lineHeight: Typography.relaxed * Typography.sm,
+  },
+  thankYouText: {
+    fontSize: Typography.base,
+    fontWeight: Typography.semibold,
+    color: Colors.primary,
+    textAlign: 'center',
+    marginTop: Spacing.lg,
+  },
+  modalButtons: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: Spacing.lg,
+    borderTopWidth: 1,
+    borderTopColor: Colors.border,
+    gap: Spacing.md,
+  },
+  modalButton: {
+    flex: 1,
+    paddingVertical: Spacing.md,
+    paddingHorizontal: Spacing.lg,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  cancelButton: {
+    backgroundColor: Colors.textTertiary + '20',
+    borderWidth: 1,
+    borderColor: Colors.textTertiary + '40',
+  },
+  cancelButtonText: {
+    color: Colors.textSecondary,
+    fontSize: Typography.sm,
+    fontWeight: Typography.medium,
+  },
+  premiumButton: {
+    backgroundColor: Colors.primary,
+  },
+  premiumButtonText: {
+    color: Colors.surface,
+    fontSize: Typography.sm,
+    fontWeight: Typography.semibold,
   },
 });

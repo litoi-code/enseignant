@@ -25,6 +25,8 @@ export default function AttendanceScreen() {
 
   const [selectedDate, setSelectedDate] = useState(format(new Date(), 'yyyy-MM-dd'));
   const [attendanceData, setAttendanceData] = useState<{[key: string]: string}>({});
+  const [showDatePicker, setShowDatePicker] = useState(false);
+  const [showAttendanceHistory, setShowAttendanceHistory] = useState(false);
 
   useEffect(() => {
     loadClasses();
@@ -33,7 +35,7 @@ export default function AttendanceScreen() {
   useEffect(() => {
     if (selectedClassId) {
       loadStudents(selectedClassId);
-      loadAttendance(selectedClassId, selectedDate);
+      loadAttendance(undefined, undefined, selectedClassId, selectedDate);
     }
   }, [selectedClassId, selectedDate, loadStudents, loadAttendance]);
 
@@ -77,12 +79,34 @@ export default function AttendanceScreen() {
       return;
     }
 
+    // Check trial limitations
+    const currentAttendanceCount = attendance.length;
+    const canAdd = await TrialManager.canPerformAction('add_attendance', currentAttendanceCount);
+
+    if (!canAdd.allowed) {
+      Alert.alert(
+        'Limite atteinte',
+        canAdd.reason || 'Limite d\'essai atteinte',
+        [
+          { text: 'OK', style: 'default' },
+          {
+            text: 'Débloquer',
+            onPress: () => {
+              console.log('Navigate to premium unlock');
+            }
+          }
+        ]
+      );
+      return;
+    }
+
     try {
       const attendancePromises = Object.entries(attendanceData).map(async ([studentId, status]) => {
         const existingAttendance = todayAttendance.find(a => a.studentId === studentId);
 
         const attendanceRecord = {
           studentId,
+          courseId: 'daily-attendance', // Placeholder for daily attendance
           classId: selectedClassId,
           date: selectedDate,
           status,
@@ -112,6 +136,38 @@ export default function AttendanceScreen() {
     const excused = Object.values(attendanceData).filter(status => status === 'excused').length;
 
     return { total, present, absent, late, excused };
+  };
+
+  // Bulk actions
+  const handleMarkAllPresent = () => {
+    const newData: {[key: string]: string} = {};
+    classStudents.forEach(student => {
+      newData[student.id] = 'present';
+    });
+    setAttendanceData(newData);
+  };
+
+  const handleMarkAllAbsent = () => {
+    const newData: {[key: string]: string} = {};
+    classStudents.forEach(student => {
+      newData[student.id] = 'absent';
+    });
+    setAttendanceData(newData);
+  };
+
+  // Date navigation
+  const handlePreviousDay = () => {
+    const prevDate = subDays(new Date(selectedDate), 1);
+    setSelectedDate(format(prevDate, 'yyyy-MM-dd'));
+  };
+
+  const handleNextDay = () => {
+    const nextDate = addDays(new Date(selectedDate), 1);
+    setSelectedDate(format(nextDate, 'yyyy-MM-dd'));
+  };
+
+  const handleToday = () => {
+    setSelectedDate(format(new Date(), 'yyyy-MM-dd'));
   };
 
   const getStatusColor = (status: string) => {
@@ -241,11 +297,35 @@ export default function AttendanceScreen() {
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>Date sélectionnée</Text>
             <View style={styles.dateContainer}>
-              <Text style={styles.selectedDate}>
-                {format(new Date(selectedDate), 'EEEE d MMMM yyyy', { locale: fr })}
-              </Text>
-              <TouchableOpacity style={styles.changeDateButton}>
-                <Text style={styles.changeDateText}>Changer</Text>
+              <TouchableOpacity style={styles.dateNavButton} onPress={handlePreviousDay}>
+                <Text style={styles.dateNavText}>‹</Text>
+              </TouchableOpacity>
+              <View style={styles.dateInfo}>
+                <Text style={styles.selectedDate}>
+                  {format(new Date(selectedDate), 'EEEE d MMMM yyyy', { locale: fr })}
+                </Text>
+                <TouchableOpacity style={styles.todayButton} onPress={handleToday}>
+                  <Text style={styles.todayButtonText}>Aujourd'hui</Text>
+                </TouchableOpacity>
+              </View>
+              <TouchableOpacity style={styles.dateNavButton} onPress={handleNextDay}>
+                <Text style={styles.dateNavText}>›</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+
+          {/* Bulk Actions */}
+          <View style={styles.section}>
+            <Text style={styles.sectionTitle}>Actions rapides</Text>
+            <View style={styles.bulkActionsContainer}>
+              <TouchableOpacity style={[styles.bulkActionButton, { backgroundColor: '#10b981' }]} onPress={handleMarkAllPresent}>
+                <Text style={styles.bulkActionText}>✓ Tous présents</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={[styles.bulkActionButton, { backgroundColor: '#ef4444' }]} onPress={handleMarkAllAbsent}>
+                <Text style={styles.bulkActionText}>✗ Tous absents</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={[styles.bulkActionButton, { backgroundColor: '#6366f1' }]} onPress={() => setShowAttendanceHistory(true)}>
+                <Text style={styles.bulkActionText}>📊 Historique</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -302,6 +382,52 @@ export default function AttendanceScreen() {
           <Text style={styles.emptySubtext}>Choisissez une classe pour gérer les présences</Text>
         </View>
       )}
+
+      {/* Attendance History Modal */}
+      <Modal
+        visible={showAttendanceHistory}
+        animationType="slide"
+        presentationStyle="pageSheet"
+      >
+        <SafeAreaView style={styles.modalContainer}>
+          <View style={styles.modalHeader}>
+            <TouchableOpacity onPress={() => setShowAttendanceHistory(false)}>
+              <Text style={styles.modalCloseButton}>Fermer</Text>
+            </TouchableOpacity>
+            <Text style={styles.modalTitle}>Historique des présences</Text>
+            <View style={styles.modalSpacer} />
+          </View>
+
+          <ScrollView style={styles.modalContent}>
+            <Text style={styles.historyTitle}>
+              {selectedClass?.name} - Historique
+            </Text>
+
+            {/* Weekly Summary */}
+            <View style={styles.historySummary}>
+              <Text style={styles.historySummaryTitle}>Résumé de la semaine</Text>
+              <View style={styles.historyStatsContainer}>
+                <View style={styles.historyStatCard}>
+                  <Text style={styles.historyStatNumber}>85%</Text>
+                  <Text style={styles.historyStatLabel}>Taux de présence</Text>
+                </View>
+                <View style={styles.historyStatCard}>
+                  <Text style={styles.historyStatNumber}>3</Text>
+                  <Text style={styles.historyStatLabel}>Jours cette semaine</Text>
+                </View>
+              </View>
+            </View>
+
+            {/* Recent Attendance */}
+            <View style={styles.historySection}>
+              <Text style={styles.historySectionTitle}>Présences récentes</Text>
+              <Text style={styles.historyNote}>
+                Fonctionnalité complète disponible dans la version premium
+              </Text>
+            </View>
+          </ScrollView>
+        </SafeAreaView>
+      </Modal>
     </SafeAreaView>
   );
 }
@@ -397,19 +523,56 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 3,
   },
+  dateNavButton: {
+    backgroundColor: '#f1f5f9',
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  dateNavText: {
+    fontSize: 20,
+    fontWeight: '600',
+    color: '#64748b',
+  },
+  dateInfo: {
+    flex: 1,
+    alignItems: 'center',
+    marginHorizontal: 16,
+  },
   selectedDate: {
     fontSize: 16,
     fontWeight: '600',
     color: '#1e293b',
     textTransform: 'capitalize',
+    marginBottom: 4,
   },
-  changeDateButton: {
+  todayButton: {
     backgroundColor: '#10b981',
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-    borderRadius: 8,
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    borderRadius: 12,
   },
-  changeDateText: {
+  todayButtonText: {
+    color: '#ffffff',
+    fontSize: 12,
+    fontWeight: '600',
+  },
+
+  // Bulk Actions
+  bulkActionsContainer: {
+    flexDirection: 'row',
+    gap: 12,
+  },
+  bulkActionButton: {
+    flex: 1,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  bulkActionText: {
     color: '#ffffff',
     fontSize: 14,
     fontWeight: '600',
@@ -542,5 +705,109 @@ const styles = StyleSheet.create({
   statusButtonText: {
     fontSize: 16,
     fontWeight: '600',
+  },
+
+  // Modal Styles
+  modalContainer: {
+    flex: 1,
+    backgroundColor: '#f8fafc',
+  },
+  modalHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    paddingVertical: 16,
+    backgroundColor: '#ffffff',
+    borderBottomWidth: 1,
+    borderBottomColor: '#e2e8f0',
+  },
+  modalCloseButton: {
+    fontSize: 16,
+    color: '#64748b',
+    fontWeight: '500',
+  },
+  modalTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#1e293b',
+  },
+  modalSpacer: {
+    width: 60,
+  },
+  modalContent: {
+    flex: 1,
+    paddingHorizontal: 20,
+    paddingVertical: 16,
+  },
+
+  // History Styles
+  historyTitle: {
+    fontSize: 24,
+    fontWeight: '700',
+    color: '#1e293b',
+    marginBottom: 20,
+  },
+  historySummary: {
+    backgroundColor: '#ffffff',
+    padding: 20,
+    borderRadius: 12,
+    marginBottom: 20,
+    shadowColor: 'rgba(0, 0, 0, 0.1)',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  historySummaryTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#1e293b',
+    marginBottom: 16,
+  },
+  historyStatsContainer: {
+    flexDirection: 'row',
+    gap: 16,
+  },
+  historyStatCard: {
+    flex: 1,
+    alignItems: 'center',
+    padding: 16,
+    backgroundColor: '#f8fafc',
+    borderRadius: 8,
+  },
+  historyStatNumber: {
+    fontSize: 24,
+    fontWeight: '700',
+    color: '#10b981',
+    marginBottom: 4,
+  },
+  historyStatLabel: {
+    fontSize: 12,
+    color: '#64748b',
+    textAlign: 'center',
+  },
+  historySection: {
+    backgroundColor: '#ffffff',
+    padding: 20,
+    borderRadius: 12,
+    shadowColor: 'rgba(0, 0, 0, 0.1)',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  historySectionTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#1e293b',
+    marginBottom: 12,
+  },
+  historyNote: {
+    fontSize: 14,
+    color: '#64748b',
+    fontStyle: 'italic',
+    textAlign: 'center',
+    padding: 20,
   },
 });

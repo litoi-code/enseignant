@@ -68,17 +68,48 @@ export default function SettingsScreen() {
             style={styles.settingItem}
             onPress={() => setShowUserGuide(true)}
           >
-            <Text style={styles.settingLabel}>📖 Guide d'utilisation</Text>
+            <Text style={styles.settingLabel}>📖 Guide d'utilisation complet</Text>
             <Text style={styles.settingValue}>›</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.settingItem}>
-            <Text style={styles.settingLabel}>📞 Contacter le support</Text>
-            <Text style={styles.settingValue}>›</Text>
-          </TouchableOpacity>
+          <View style={styles.settingItem}>
+            <Text style={styles.settingLabel}>📞 Support technique</Text>
+            <Text style={styles.settingValue}>+237674667234</Text>
+          </View>
+          <View style={styles.settingItem}>
+            <Text style={styles.settingLabel}>💬 WhatsApp</Text>
+            <Text style={styles.settingValue}>+237674667234</Text>
+          </View>
           <TouchableOpacity style={styles.settingItem}>
             <Text style={styles.settingLabel}>🔄 Vérifier les mises à jour</Text>
-            <Text style={styles.settingValue}>›</Text>
+            <Text style={styles.settingValue}>v1.0.0</Text>
           </TouchableOpacity>
+        </View>
+
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Conseils rapides</Text>
+          <View style={styles.tipCard}>
+            <Text style={styles.tipIcon}>💡</Text>
+            <View style={styles.tipContent}>
+              <Text style={styles.tipTitle}>Démarrage rapide</Text>
+              <Text style={styles.tipText}>
+                1. Créez votre première classe{'\n'}
+                2. Ajoutez vos élèves{'\n'}
+                3. Commencez à prendre les présences{'\n'}
+                4. Consultez le guide complet pour plus de fonctionnalités
+              </Text>
+            </View>
+          </View>
+          <View style={styles.tipCard}>
+            <Text style={styles.tipIcon}>⚡</Text>
+            <View style={styles.tipContent}>
+              <Text style={styles.tipTitle}>Actions rapides</Text>
+              <Text style={styles.tipText}>
+                • Utilisez "Tous présents" pour marquer toute la classe{'\n'}
+                • Naviguez entre les dates avec les flèches ‹ ›{'\n'}
+                • Exportez vos données régulièrement
+              </Text>
+            </View>
+          </View>
         </View>
 
         <View style={styles.section}>
@@ -177,5 +208,33 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#667eea',
     fontWeight: '600',
+  },
+  tipCard: {
+    flexDirection: 'row',
+    padding: 16,
+    backgroundColor: '#f8fafc',
+    marginHorizontal: 20,
+    marginBottom: 12,
+    borderRadius: 8,
+    alignItems: 'flex-start',
+  },
+  tipIcon: {
+    fontSize: 20,
+    marginRight: 12,
+    marginTop: 2,
+  },
+  tipContent: {
+    flex: 1,
+  },
+  tipTitle: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#1e293b',
+    marginBottom: 4,
+  },
+  tipText: {
+    fontSize: 13,
+    color: '#64748b',
+    lineHeight: 18,
   },
 });

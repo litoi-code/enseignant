@@ -42,6 +42,7 @@ export default function DataExportImportComponent({ visible, onClose }: DataExpo
     createCourse,
     createGrade,
     createAttendance,
+    clearAllData,
   } = useAppStore();
 
   const checkPremiumAccess = async (): Promise<boolean> => {
@@ -120,35 +121,105 @@ export default function DataExportImportComponent({ visible, onClose }: DataExpo
 
     if (importData) {
       try {
-        // Import classes
+        // Clear all existing data first
+        setLoadingMessage('Suppression des données existantes...');
+        await clearAllData();
+
+        // Create ID mapping for proper relationships
+        const classIdMap = new Map<string, string>();
+        const studentIdMap = new Map<string, string>();
+        const courseIdMap = new Map<string, string>();
+
+        // Import classes first
+        setLoadingMessage('Import des classes...');
         for (const cls of importData.classes) {
-          await createClass({
+          const newClassId = await createClass({
             name: cls.name,
             level: cls.level,
-            educationLevel: cls.educationLevel,
+            educationLevel: cls.educationLevel || cls.level, // Fallback for compatibility
             subject: cls.subject,
+            year: cls.year || new Date().getFullYear().toString(), // Use existing year or current year
             description: cls.description || '',
           });
+          classIdMap.set(cls.id, newClassId);
         }
 
-        // Import students
+        // Import students with mapped class IDs
+        setLoadingMessage('Import des élèves...');
         for (const student of importData.students) {
-          await createStudent(student);
+          const newClassId = classIdMap.get(student.classId);
+          if (newClassId) {
+            const newStudentId = await createStudent({
+              firstName: student.firstName,
+              lastName: student.lastName,
+              dateOfBirth: student.dateOfBirth,
+              email: student.email,
+              phone: student.phone,
+              parentContact: student.parentContact,
+              photo: student.photo,
+              notes: student.notes,
+              classId: newClassId,
+            });
+            studentIdMap.set(student.id, newStudentId);
+          }
         }
 
-        // Import courses
+        // Import courses with mapped class IDs
+        setLoadingMessage('Import des cours...');
         for (const course of importData.courses) {
-          await createCourse(course);
+          const newClassId = classIdMap.get(course.classId);
+          if (newClassId) {
+            const newCourseId = await createCourse({
+              title: course.title,
+              description: course.description,
+              classId: newClassId,
+              date: course.date,
+              startTime: course.startTime,
+              endTime: course.endTime,
+              objectives: course.objectives,
+              materials: course.materials,
+              homework: course.homework,
+              status: course.status,
+            });
+            courseIdMap.set(course.id, newCourseId);
+          }
         }
 
-        // Import grades
+        // Import grades with mapped student and course IDs
+        setLoadingMessage('Import des notes...');
         for (const grade of importData.grades) {
-          await createGrade(grade);
+          const newStudentId = studentIdMap.get(grade.studentId);
+          const newCourseId = courseIdMap.get(grade.courseId || '');
+          if (newStudentId) {
+            await createGrade({
+              studentId: newStudentId,
+              courseId: newCourseId || 'general', // Fallback for grades without course
+              subject: grade.subject,
+              type: grade.type,
+              value: grade.value,
+              maxValue: grade.maxValue,
+              coefficient: grade.coefficient,
+              date: grade.date,
+              description: grade.description,
+            });
+          }
         }
 
-        // Import attendance
+        // Import attendance with mapped student and course IDs
+        setLoadingMessage('Import des présences...');
         for (const att of importData.attendance) {
-          await createAttendance(att);
+          const newStudentId = studentIdMap.get(att.studentId);
+          const newCourseId = courseIdMap.get(att.courseId || '');
+          if (newStudentId) {
+            await createAttendance({
+              studentId: newStudentId,
+              courseId: newCourseId || 'daily-attendance', // Fallback for daily attendance
+              classId: classIdMap.get(att.classId) || '',
+              date: att.date,
+              status: att.status,
+              notes: att.notes,
+            });
+          }
         }
 
         Alert.alert(
@@ -162,7 +233,10 @@ export default function DataExportImportComponent({ visible, onClose }: DataExpo
         );
       } catch (error) {
         console.error('Import error:', error);
-        Alert.alert('Erreur d\'import', 'Une erreur est survenue lors de l\'import des données.');
+        Alert.alert(
+          'Erreur d\'import',
+          'Une erreur est survenue lors de l\'import des données. Vérifiez que le fichier est compatible avec cette version de l\'application.'
+        );
       }
     }
 

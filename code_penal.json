@@ -1,0 +1,1025 @@
+{
+    "collections": [
+        {
+            "collection_name": "Code Pénal",
+            "books": [
+                {
+                    "book_number": 1,
+                    "book_title": "Livre I",
+                    "titles": [
+                        {
+                            "title_number": 1,
+                            "title_title": "Titre I: De l'application de la loi pénale",
+                            "chapters": [
+                                {
+                                    "chapter_number": 1,
+                                    "chapter_title": "Chapître I: Dispositions préliminaires",
+                                    "sections": [
+                                        {
+                                            "section_number": "1.1",
+                                            "section_title": "",
+                                            "articles": [
+                                                {
+                                                    "article_number": "1.1.1",
+                                                    "article_title": "ARTICLE 1: Contenu",
+                                                    "content": "Le Code Pénal comprend: \n\n(a)- le LIVRE I, constitué des articles 1 à 101; \n\n(b)- le Livre II, constitué des articles 102 à 361;\n\n(c)- le décret portant partie réglementaire du Code Pénal définissant les contraventions des articles 362 à 370; \n\n(d)- les articles 371 et 372 fixant les dispositions transitoires et finales."
+                                                },
+                                                {
+                                                    "article_number": "1.1.2",
+                                                    "article_title": "ARTICLE 1-1: Aucune exemption",
+                                                    "content": "La loi pénale s'impose à tous."
+                                                },
+                                                {
+                                                    "article_number": "1.1.3",
+                                                    "article_title": "ARTICLE 2: Application générale et spéciale",
+                                                    "content": "(1)- les règles de droit international, ainsi que les traités dûment promulgués et publiés, s'impose au présent Code, ainsi qu'à toute disposition pénale.\n\n(2)- le présent Livre s'impose à toute autre disposition pénale, sauf disposition spéciale visant notamment l'interdiction du sursis et l'interdiction ou la limitation des circonstances atténuantes édictées même antérieurement à l'entrée en vigueur du présent Livre par une loi ou par un texte réglementaire ayant portée législative. \n\nLe présent alinéa rétroagit au 1er Octobre 1966 inclusivement.\n\n(3)- Lorsqu'une même matière fait l'objet à la fois d'une disposition générale non comprise dans le présent Livre et d'une disposition spéciale, cette dernière est seule applicable s'il n'en a pas été autrement disposé."
+                                                },
+                                                {
+                                                    "article_number": "1.1.2",
+                                                    "article_title": "Application générale et spéciale",
+                                                    "content": "When starting out, consider languages like Python..."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "1.2",
+                                            "section_title": "Setting Up Your Environment",
+                                            "articles": [
+                                                {
+                                                    "article_number": "1.2.1",
+                                                    "article_title": "Installing a Text Editor",
+                                                    "article_subtitle": "Installing a Text Editor",
+                                                    "content": "Popular editors include VS Code, Sublime Text..."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "chapter_number": 2,
+                                    "chapter_title": "Chapître II: De l'application de la loi pénale dans le temps",
+                                    "sections": [
+                                        {
+                                            "section_number": "2.1",
+                                            "section_title": "Variables and Data Types",
+                                            "articles": [
+                                                {
+                                                    "article_number": "2.1.1",
+                                                    "article_title": "ARTICLE 3: Non-rétroactivité",
+                                                    "content": "Ne sont pas soumis à la loi pénale, les faits commis antérieurement à son entrée en vigueur ou ceux qui n'ont pas été jugés avant son abrogation expresse ou écrite."
+                                                },
+                                                {
+                                                    "article_number": "2.1.2",
+                                                    "article_title": "ARTICLE 4: Loi moins rigoureuse",
+                                                    "content": "(1)- Toute disposition pénale nouvelle et moins rigoureuse s'applique aux infractions non definitivement jugées au jour de son entrée en vigueur. \n\n(2)- Si la disposition nouvelle est plus rigoureuse, les infractions commises avant son entrée en vigueur continuent à être jugées conformément à la loi ancienne."
+                                                },
+                                                {
+                                                    "article_number": "2.1.3",
+                                                    "article_title": "ARTICLE 5: Nouvelle mesure de sûreté",
+                                                    "content": "Toute loi édictant une mesure de sûreté est applicable aux faits non définitivement jugés au jour de son entrée en vigueur."
+                                                },
+                                                {
+                                                    "article_number": "2.1.4",
+                                                    "article_title": "ARTICLE 6: Abolition de l'infraction, de la peine ou de la mesure de sûreté",
+                                                    "content": "Cesse immédiatement de recevoir exécution, toute peine ou mesure de sûreté: \n\n(a)- prononcée à raison d'un fait qui ne constitue plus une infraction; \n\n(b)- abolie postérieusement à la condamnation."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "chapter_number": 3,
+                                    "chapter_title": "Chapître III: De l'application de la loi pénale dans l'espace",
+                                    "sections": [
+                                        {
+                                            "section_number": "3.1",
+                                            "section_title": "",
+                                            "articles": [
+                                                {
+                                                    "article_number": "3.1.1",
+                                                    "article_title": "ARTICLE 7: Infractions commises sur le térritoire",
+                                                    "content": "(1)- Le loi pénale de la République s'applique à tout fait commis sur son térritoire. \n\n(2)- Sont compris dans le térritoire de la République, les eaux térritoriales et l'espace aérien au-dessus de ce térritoire et de ses eaux, ainsi que les navires et aéronefs immatriculés dans la République. Toutefois, aucun membre de l'équipage d'un navire ou aéronef étrangers, auteur d'une infraction commise à leur bord au préjudice d'un autre membre de l'équipage, même à l'intérieur des eaux térritoriales ou de l'espace aérien ne peut être jugé par les juridictions de la République, à moins que le secours de l'autorité locale n'ait été reclamé ou que l'ordre public n'ait été compromis."
+                                                },
+                                                {
+                                                    "article_number": "3.1.2",
+                                                    "article_title": "ARTICLE 8: Infraction partiellement ou totalement commise a l'étranger",
+                                                    "content": "La loi pénale de la République s'applique: \n\n(a)- à toute infraction dont l'un des élements constitutifs s'est trouvé réalisé en tout ou en partie sur son térritoire;\n\n(b)- aux infractions d'atteintes à la sûreté de l'Etat, de contrefaçon du sceau de l'Etat ou de monnaies nationalesy ayant cours, commises même à l'étranger. \n\n Toutefois, aucun étranger ne peut être jugé par les juridictions de la République en application du paragraphe (b), à moins qu'il n'ait été arrêté sur le térritoire de la République ou qu'il n'y ait été extradé."
+                                                },
+                                                {
+                                                    "article_number": "3.1.3",
+                                                    "article_title": "ARTICLE 9: Complicité, conspiration, tentative",
+                                                    "content": "Sont soumis à la loi pénale de la République: \n\n(a) - les faits constitutifs de complicité, de conspiration et de tentative réalisés sur le térritoire de la République en vue de commettre une infraction à l'étranger, si cette infractin est également réprimés par la loi étrangère; \n\n(b) - les mêmes faits réalisés à l'étranger, en vue de commettre une infraction sur le térritoire de la République;"
+                                                },
+                                                {
+                                                    "article_number": "3.1.4",
+                                                    "article_title": "ARTICLE 10: Infraction commise a l'étranger par le citoyen ou résident",
+                                                    "content": "(1)- La loi pénale de la République s'applique aux faits commis à l'étranger par un citoyen ou par un résident, àcondition qu'ils soeint punissables par la loi du lieu de leur commission et soient qualifiés crimes ou délits par les lois de la République. \n\n Toutefois, la peine encourue ne peut être supérieure à celle prévue par la loi étrangère. \n\n(2)- Aucun citoyen ou résident coupable d'un délit commis contre un particulier ne peut, toutefois, être jugé par les juridictions de la République, en application du présent article, que sur la poursuite du Ministère Public saisi d'une plainte ou d'une dénonciation officielle du gouvernement de la République par le Gouvernement du pays ou le fait a été commis."
+                                                },
+                                                {
+                                                    "article_number": "3.1.5",
+                                                    "article_title": "ARTICLE 11: Infractions internationales",
+                                                    "content": "La loi pénale de la République s'applique au mercenariat, à la discrimination raciale, à la piraterie, au trafic des personnes, à la traite des personnes, à l'esclavage, au trafic des stupéfiants, au trafic des déchets toxiques, au blanchiment des capitaux, à la cybercriminalité, à la corruption et auw atteintes à la fortune publique commis même en dehors du térritoire de la République.\n\n Toutefois, aucun étranger ne peut $etre jugé sur le térritoire de la République, pour les faits visés au présent article commis à l'étranger, que s'il a été arrêté sur le térritoire de la République et n'a pas été extradé, et à condition que la poursuite soit engagée par le Ministère Public."
+                                                },
+                                                {
+                                                    "article_number": "3.1.6",
+                                                    "article_title": "ARTICLE 12: Compétence générale des juridictions de la République",
+                                                    "content": "Sous réserve des exceptions prévues au présent Chapître, les juridictions de la République sont compétentes pour connaître de toutes les infractions auxquelles s'applique sa loi pénale."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "chapter_number": 4,
+                                    "chapter_title": "Chapître IV: De la loi et des sentences pénales étrangères",
+                                    "sections": [
+                                        {
+                                            "section_number": "4.1",
+                                            "section_title": "",
+                                            "articles": [
+                                                {
+                                                    "article_number": "4.1.1",
+                                                    "article_title": "ARTICLE 13: ",
+                                                    "article_subtitle": "Exclusion de la loi étrangère",
+                                                    "content": "Sous réserves des articles 9 et 10 et du présent châpitre, la loi pénale étrangère est sans effet devant les juridictions de la République"
+                                                },
+                                                {
+                                                    "article_number": "4.1.1",
+                                                    "article_title": "ARTICLE 14: ",
+                                                    "article_subtitle": "Sentences étrangères",
+                                                    "content": "Les sentences pénales prononcées contre quiconque, par des juridictions étrangères, ne produisent d'effet sur le térritoire de la République que si:\n\n -le fait est qualifié crime ou délit de droit commun par la loi pénale de la République;\n - la régularité de la décision, son caractère définitifet sa conformité à l'ordre public de la République sont constatés par la juridiction saisie d'une poursuite à l'encontre de la même personne ou par la Cour d'Appel  du lieu de résidence du condamné saisie par le Ministère Public."
+                                                },
+                                                {
+                                                    "article_number": "4.1.2",
+                                                    "article_title": "ARTICLE 15: ",
+                                                    "article_subtitle": "Effets des sentences étrangères",
+                                                    "content": "Les sentences pénales étrangères :\n\n– Sont prises en considération pour la récidive et la relégation, pour l’octroi ou la révocation du sursis, pour la révocation de la libération conditionnelle, pour la réhabilitation et l’amnistie ;\n\n– Font obstacle à toute nouvelle poursuite pour les mêmes faits sur le territoire de la République, à condition qu’en cas de condamnation, la peine ait été subie ou prescrite ou que la grâce ait été accordée."
+                                                },
+                                                {
+                                                    "article_number": "4.1.3",
+                                                    "article_title": "ARTICLE 16: ",
+                                                    "article_subtitle": "Exécution des sentences étrangères",
+                                                    "content": "(1) - Lorsque les sentences visées et constatées dans les conditions prévues à l’article 14 ci-dessus ont été prononcées contre des citoyens ou des résidents et n’ont pas été exécutées dans un autre pays, elles sont exécutoires sur le territoire de la République, à moins que le condamné n’ait été libéré conditionnellement, gracié ou amnistié, ou qu’il n’ait prescrit sa peine.\n\n(2) - Il appartient à la juridiction saisie, dans les conditions prévues à l’article 14 ci-dessus d’ordonner l’exécution de cette peine et de prononcer, le cas échéant, les mesures de sûreté que la loi de la République attache auxdites infractions."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "chapter_number": 4,
+                                    "chapter_title": "Getting Started",
+                                    "sections": [
+                                        {
+                                            "section_number": "1.1",
+                                            "section_title": "Introduction to Programming",
+                                            "articles": [
+                                                {
+                                                    "article_number": "1.1.1",
+                                                    "article_title": "What is Programming?",
+                                                    "article_subtitle": "What is Programming?",
+                                                    "content": "Programming is the process of creating instructions..."
+                                                },
+                                                {
+                                                    "article_number": "1.1.2",
+                                                    "article_title": "Choosing Your First Language",
+                                                    "article_subtitle": "Choosing Your First Language",
+                                                    "content": "When starting out, consider languages like Python..."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "1.2",
+                                            "section_title": "Setting Up Your Environment",
+                                            "articles": [
+                                                {
+                                                    "article_number": "1.2.1",
+                                                    "article_title": "Installing a Text Editor",
+                                                    "article_subtitle": "Installing a Text Editor",
+                                                    "content": "Popular editors include VS Code, Sublime Text..."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title_number": 2,
+                            "title_title": "Titre II: Des peines et des mesures de surêté",
+                            "chapters": [
+                                {
+                                    "chapter_number": 1,
+                                    "chapter_title": "Chapître I: Dispositions préliminaires",
+                                    "sections": [
+                                        {
+                                            "section_number": "1.1",
+                                            "section_title": "",
+                                            "articles": [
+                                                {
+                                                    "article_number": "1.1.1",
+                                                    "article_title": "ARTICLE 17: Légalité des peines et des infractions",
+                                                    "content": "Les peines et les mesures sont fixées par la loi et ne sont prononcées qu’en raison des infractions légalement prévues."
+                                                },
+                                                {
+                                                    "article_number": "1.1.2",
+                                                    "article_title": "ARTICLE 18: Peines principales",
+                                                    "content": "Les peines principales sont :\n\na)- pour les personnes physiques :\n\n– la peine de mort ;\n\n– l’emprisonnement ;\n\n– l’amende ;\n\nb) - pour les personnes morales :\n\n– la dissolution ;\n\n– la fermeture temporaire ou définitive de l’établissement ;\n\n– l’amende."
+                                                },
+                                                {
+                                                    "article_number": "1.1.3",
+                                                    "article_title": "ARTICLE 18-1: Peines alternatives",
+                                                    "content": "Les peines alternatives sont :\n\n– le travail d’intérêt général ;\n\n– la sanction-réparation"
+                                                },
+                                                {
+                                                    "article_number": "1.1.3",
+                                                    "article_title": "ARTICLE 19: Peines accessoires",
+                                                    "content": "Les peines accessoires sont :\n\na)- pour les personnes physiques :\n\n– les déchéances ;\n\n– la publication de la décision ;\n\n– la fermeture de l’établissement ;\n\n– la confiscation\n\nb) - Pour les personnes morales\n\n– l’interdiction, pour une durée déterminée, de s’investir directement ou indirectement dans l’une ou plusieurs des activités prévues par son objet social ;\n\n– le placement sous surveillance judiciaire pendant une durée déterminée ;\n\n– la fermeture, pour une durée déterminée, des établissements ou succursales ayant servi à la commission des faits incriminés ;\n\n– La publication de la décision ou sa diffusion par voie de medias ;\n\n– toutes autres peines accessoires prévues par des textes spéciaux."
+                                                },
+                                                {
+                                                    "article_number": "1.1.4",
+                                                    "article_title": "ARTICLE 20: Mesures de surêté",
+                                                    "content": "Les mesures de sûreté sont :\n\na) - pour les personnes physiques :\n– l’interdiction de l’exercice de la profession ;\n– la relégation ;\n– les mesures de surveillance et d’assistance postpénales ;\n– l’internement dans une maison de santé ;\n– La confiscation\n\nb) - pour les personnes morales :\n– L’interdiction de s’investir dans une autre activité précise pour une durée déterminée ;\n– la confiscation ;\n– le placement sous surveillance judiciaire pour une durée déterminée."
+                                                },
+                                                {
+                                                    "article_number": "1.1.5",
+                                                    "article_title": "ARTICLE 21: ",
+                                                    "article_subtitle": "Classification des infractions",
+                                                    "content": "(1) - Les infractions sont classées en crimes, délits et contraventions selon les peines principales qui les sanctionnent :\n– sont qualifiées crimes, les infractions punies de la peine de mort ou d’une peine privative de liberté dont le maximum est supérieur à dix (10) ans et d’une amende lorsque la loi en dispose ainsi ;\n– sont qualifiées délits, les infractions punies d’une peine privative de liberté ou d’une amande lorsque la peine privative de liberté encourue est supérieure à dix (10) jours et n’excède pas dix (10) ans ou que le maximum de l’amende est supérieur à vingt-cinq mille (25 000) francs ;\n– sont qualifiées contraventions, les infractions punies d’un emprisonnement qui ne peut excéder dix (10) - jours ou d’une amende qui ne peut excéder vingt-cinq mille (25 000) francs.\n\n(2) - La nature d’une infraction n’est pas modifiée :\na) - Lorsque par suite de l’admission d’une excuse ou de circonstances atténuantes, la peine prononcée est celle afférente à une autre catégorie d’infractions ;\nb) - Dans les cas d’aggravation prévus aux articles 88 et 89 du présent Code."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "chapter_number": 2,
+                                    "chapter_title": "Chapître II: Des peines principales",
+                                    "sections": [
+                                        {
+                                            "section_number": "2.1",
+                                            "section_title": "Section I: De la peine de mort",
+                                            "articles": [
+                                                {
+                                                    "article_number": "2.1.1",
+                                                    "article_title": "ARTICLE 23: Exécution",
+                                                    "content": "(1) - Le condamné à mort est exécuté par fusillade ou pendaison suivant ce qui est décidé par l’arrêt portant condamnation. L’exécution est publique, sauf s’il en est autrement décidé par la décision de rejet du recours en grâce.\n\n(2) - Les corps des suppliciés sont remis à leurs familles si elles les réclament, à charge pour elles de les faire inhumer sans aucun appareil.\n\n(3) - Le procès-verbal d’exécution et éventuellement un communiqué officiel peuvent seuls être publiés dans la presse.\n\n(4) - Un décret fixe les conditions d’application du présent article."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "2.2",
+                                            "section_title": "Section II: De l'emprisonnement",
+                                            "articles": [
+                                                {
+                                                    "article_number": "2.2.1",
+                                                    "article_title": "ARTICLE 24: Emprisonnement",
+                                                    "content": "L’emprisonnement est une peine privative de liberté pendant laquelle le condamné est astreint au travail, sauf décision contraire et motivée de la juridiction."
+                                                },
+                                                {
+                                                    "article_number": "2.2.2",
+                                                    "article_title": "ARTICLE 25: Pécule",
+                                                    "content": "(1) - Le produit du travail du détenu est affecté ainsi qu’il suit :\n\n– 1/3 au Trésor Public ;\n\n– 2/3 à la constitution du pécule.\n\n(2) - Les modalités d’application du présent article, notamment les conditions de gestion du pécule, sont fixées par voie réglementaire."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "2.3",
+                                            "section_title": "Section III: De l'amende",
+                                            "articles": [
+                                                {
+                                                    "article_number": "2.3.1",
+                                                    "article_title": "ARTICLE 25-1: Amende",
+                                                    "content": "(1) - L’amende est une peine pécuniaire en vertu de laquelle le condamné, personne physique ou morale, verse ou fait verser au Trésor Public une somme d’argent déterminée par la loi.\n\n(2) - Le taux maximum de l’amende applicable aux personnes morales est égal au quintuple de celui prévu pour les personnes physiques.\n\n(3) - Lorsqu’une personne morale est coupable d’un crime pour lequel seule une peine d’emprisonnement est prévue, l’amende encourue est de un million (1 000 000) - à cinq cent millions (500 000 000) de francs."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "2.4",
+                                            "section_title": "Section IV: De la dissolution",
+                                            "articles": [
+                                                {
+                                                    "article_number": "2.4.1",
+                                                    "article_title": "ARTICLE 25-2: Dissolution",
+                                                    "content": "(1) - La dissolution est la peine capitale susceptible d’être prononcée contre une personne morale.\n\n(2) - La dissolution peut être prononcée à l’encontre d’une personne morale qui a agi en violation de son objet social.\n\n(3) - La décision prononçant la dissolution de la personne morale comporte le renvoi de celle-ci devant la juridiction compétente pour procéder à sa liquidation, à la diligence du Ministère Public."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "2.5",
+                                            "section_title": "Section V: De la fermeture de l'établissement",
+                                            "articles": [
+                                                {
+                                                    "article_number": "2.5.1",
+                                                    "article_title": "ARTICLE 25-3: Fermeture de l'établissement",
+                                                    "content": "La peine de fermeture de l’établissement consiste en la fermeture, temporaire ou définitive, d’un établissement entendu au sens d’une personne morale.\nCette peine comporte l’interdiction, pour la personne morale en cause, d’exercer l’activité à l’occasion de laquelle l’infraction a été commise.\nLa durée de la fermeture temporaire ne peut excéder cinq (05) - ans et le sursis ne peut être prononcé."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "2.6",
+                                            "section_title": "Section VI: Des peines alternatives",
+                                            "articles": [
+                                                {
+                                                    "article_number": "2.6.1",
+                                                    "article_title": "ARTICLE 26: Travail d'intérêt général",
+                                                    "content": "(1) - Le travail d’intérêt général est une peine applicable aux délits passibles d’un emprisonnement inférieur à deux (02) - ans ou d’une peine d’amende. Cette peine est exécutée en faveur, soit d’une personne morale de droit public, soit d’une personne morale de droit privé chargée d’une mission de service public, soit encore d’un organisme habilité à mettre en œuvre des travaux d’intérêt général.\n\n(2) - La peine prévue à l’alinéa 1 ci-dessus est prononcée par la juridiction de jugement à la place de l’emprisonnement ou de l’amende, après, la déclaration de culpabilité et sur consentement préalable du prévenu.\n\n(3) - La juridiction fixe la durée du travail d’intérêt général, qui ne peut être inférieur à deux cent (200) heures ou supérieure à deux cent quarante (240) heures, et le sursis ne peut être prononcé.\n\n(4) - Le travail d’intérêt général n’est pas rémunéré.\n\n(5) - La décision du juge prévoit la durée de l’emprisonnement encouru en cas d’inexécution de la peine de travail d’intérêt général ; cette peine d’emprisonnement ne peut être assortie de sursis.\n\n(6) - La liste des travaux d’intérêt général est fixée par un texte particulier."
+                                                },
+                                                {
+                                                    "article_number": "2.6.2",
+                                                    "article_title": "ARTICLE 26-1: Sanction - Réparation",
+                                                    "content": "(1) - La sanction-réparation est une peine applicable aux délits passibles d’un emprisonnement inférieur à deux (02) - ans ou d’une peine d’amende.\n\nElle consiste dans l’obligation, pour le condamné, de procéder à la réparation matérielle du préjudice subi par la victime dans le délai et selon les modalités fixées par la juridiction compétente.\n\n(2) - La peine prévue à l’alinéa 1 ci-dessus est prononcée par la juridiction de jugement à la place de l’emprisonnement ou de l’amende, après la déclaration de culpabilité, et le sursis ne peut être prononcé.\n\n(3) - La décision du juge prévoit la durée de l’emprisonnement encourue en cas d’inexécution de la peine de sanction-réparation ; cette peine d’emprisonnement ne peut être assortie de sursis."
+                                                },
+                                                {
+                                                    "article_number": "2.6.3",
+                                                    "article_title": "ARTICLE 26-2: Mise en oeuvre des peines alternatives",
+                                                    "content": "Les modalités d’application des peines alternatives sont fixées par un texte particulier."
+                                                },
+                                                {
+                                                    "article_number": "2.6.4",
+                                                    "article_title": "ARTICLE 26-3: Personnes exclues du bénéfice des peines alternatives",
+                                                    "content": "Les peines alternatives prévues aux articles 26 et 26-1 ci-dessus ne sont pas applicables aux auteurs d’infractions à la législation sur les armes, de même qu’aux auteurs d’offenses sexuelles et aux auteurs d’atteintes à l’intégrité corporelle prévues par le présent Code."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "2.7",
+                                            "section_title": "Section VII: Des dispositions communes aux peines privatives de liberté",
+                                            "articles": [
+                                                {
+                                                    "article_number": "2.7.1",
+                                                    "article_title": "ARTICLE 27: Début de la peine",
+                                                    "content": "(1) - Si le condamné n’est pas en état de détention provisoire ou si un mandat d’arrêt ou d’incarcération n’est pas décerné contre lui à l’audience, dans les conditions prévues par le Code de Procédure Pénale, la peine privative de liberté ne peut être mise à exécution que lorsque la condamnation est devenue définitive.\n\n(2) - Si une femme condamnée à une peine privative de liberté est enceinte ou vient d’accoucher, elle ne subit sa peine que six (06) - semaines après son accouchement.\n\n(3) - La femme enceinte placée en détention provisoire continue, jusqu’à l’expiration du délai visé à l’alinéa 2 ci-dessus, de bénéficier du régime de détention provisoire.\n\n(4) - Le mari et la femme condamnée même pour des infractions différentes à une peine d’emprisonnement inférieure à un (01) - an et non détenus au jour du jugement peuvent, sur leur demande, ne pas subir simultanément leur peine si, justifiant d’un domicile commun certain, ils ont à leur charge et sous leur garde un enfant âgé de moins de dix-huit (18) - ans."
+                                                },
+                                                {
+                                                    "article_number": "2.7.1",
+                                                    "article_title": "ARTICLE 28: Calcul de la peine",
+                                                    "content": "(1) - La peine privative de liberté exprimée en jours se calcule par vingt-quatre (24) - heures.\n\n(2) - La peine d’un mois est de trente (30) - jours.\n\n(3) - La peine exprimée en mois et en années se calcule de date à date.\n\n(4) - Sous réserve des dispositions de l’article 53 du présent Code, le point de départ de la peine est fixé :\n\na) - Au jour où le condamné est incarcéré en exécution de la condamnation ;\n\nb) - En cas de confusion de peines au jour de la première incarcération en exécution de l’une des condamnations confondues ;\n\n(5) - En cas d’évasion, la période pendant laquelle le condamné a été en fuite est exclue du calcul de la durée de la peine."
+                                                },
+                                                {
+                                                    "article_number": "2.7.1",
+                                                    "article_title": "ARTICLE 29: Séparation des mineurs",
+                                                    "content": "Les mineurs de dix-huit (18) - subissent leur peine privative de liberté dans des établissements spéciaux.\n\nA défaut, ils sont séparés des détenus majeurs."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "chapter_number": 3,
+                                    "chapter_title": "Chapître III: Des peines accessoires",
+                                    "sections": [
+                                        {
+                                            "section_number": "3.1",
+                                            "section_title": "Section I: Des déchéances",
+                                            "articles": [
+                                                {
+                                                    "article_number": "3.1.1",
+                                                    "article_title": "ARTICLE 30: Définitions",
+                                                    "content": "Les déchéances consistent en :\n\n(1) - la destitution et l’exclusion de toutes fonctions, emplois ou offices publics ;\n\n(2) - l’incapacité d’être juré, assesseur, expert, juré-expert ;\n\n(3) - l’interdiction d’être tuteur, curateur, subrogé tuteur ou conseil judiciaire, si ce n’est de ses propres enfants, ou membre d’un conseil de famille ;\n\n(4) - l’interdiction de porter toute décoration ;\n\n(5) - l’interdiction de servir dans les forces armées ;\n\n(6) - l’interdiction de tenir une école ou même d’enseigner dans un établissement d’instruction et, d’une façon générale, d’occuper des fonctions se rapportant à l’éducation ou la garde des enfants."
+                                                },
+                                                {
+                                                    "article_number": "3.1.2",
+                                                    "article_title": "ARTICLE 31: Application",
+                                                    "content": "(1) - La condamnation à une peine perpétuelle emporte à vie les déchéances prévues à l’article 30 ci-dessus.\n\n(2) - Toute autre condamnation pour crime emporte les mêmes déchéances, pendant la durée de la peine, et pendant les dix (10) ans qui suivent son expiration ou la libération conditionnelle si celle-ci n’a pas été révoquée.\n\n(3) - La juridiction compétente peut, dans tous les cas prévus à l’alinéa 2 ci-dessus, par décision motivée, relever le condamné de tout ou partie de ces déchéances et en réduire la durée jusqu’à deux (02) ans.\n\n(4) - En cas de condamnation pour délit et lorsque la loi les y autorise, les juridictions compétentes peuvent, par décision motivée, prononcer pour une durée de cinq (05)  ans au plus, tout ou partie des déchéances prévues à l’article 30 ci-dessus."
+                                                },
+                                                {
+                                                    "article_number": "3.1.3",
+                                                    "article_title": "ARTICLE 32: Déchéances et condamnation par défaut",
+                                                    "content": "En cas de condamnation par défaut, les déchéances sont encourues à partir du jour de l’accomplissement des mesures de publicité prévues par le Code de Procédure Pénale."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "3.2",
+                                            "section_title": "Section II: Des autres peines accessoires",
+                                            "articles": [
+                                                {
+                                                    "article_number": "3.2.1",
+                                                    "article_title": "ARTICLE 33: Publication de la décision",
+                                                    "content": "(1) - Dans le cas où la juridiction compétente peut ordonner la publication de sa décision, celle-ci est affichée dans les conditions qui sont fixées par décret pour une durée de deux (02) - mois au maximum en cas de condamnation pour crime ou délit, et de quinze (15) - jours au maximum en cas de contravention.\n\n(2) - Dans les mêmes cas, la juridiction compétente peut également ordonner la publication de sa décision par voie de médias qu’elle indique.\n\n(3) - Ces publications sont faites aux frais du condamné.\n\n(4) - L’affichage peut être limité au dispositif de la décision.\n\n(5) - Les dispositions prévues aux alinéas 1, 2, 3 et 4 ci-dessus s’appliquent également aux personnes morales.\n\n(6) - L’information par voie de presse écrite, de radio et de télévision ou sur internet, ainsi que les commentaires objectifs, sont libres."
+                                                },
+                                                {
+                                                    "article_number": "3.2.2",
+                                                    "article_title": "ARTICLE 34: Fermeture de l'établissement",
+                                                    "content": "Dans le cas où la juridiction compétente peut ordonner la fermeture d’un établissement commercial ou industriel ou d’un local, cette mesure emporte interdiction, pour le condamné ou pour le tiers, auquel le condamné a vendu, cédé ou loué l’établissement professionnel ou le local, d’exercer dans le même local, le même commerce, la même industrie ou la même profession."
+                                                },
+                                                {
+                                                    "article_number": "3.2.3",
+                                                    "article_title": "ARTICLE 34-1: Placement sous surveillance judiciaire",
+                                                    "content": "(1) - La peine de placement sous surveillance judiciaire est applicable aux personnes morales pénalement responsables et consiste dans la désignation d’un mandataire de justice dont la mission de contrôle et la durée sont précisées par la juridiction de jugement.\n\n(2) - La mission prévue à l’alinéa 1 ci-dessus ne peut porter que sur l’activité à l’occasion de laquelle l’infraction a été commise.\n\n(3) - Le mandataire de justice visé à l’alinéa 1 ci-dessus rend compte au Parquet compétent, aussi régulièrement que nécessaire, de l’accomplissement de sa mission.\n\n(4) - A la fin de la mission du mandataire de justice et au vu du compte rendu de celui-ci, le Parquet compétent saisit la juridiction qui a prononcé le placement sou surveillance judiciaire, laquelle relève la personne morale de la mesure de placement."
+                                                },
+                                                {
+                                                    "article_number": "3.2.4",
+                                                    "article_title": "ARTICLE 35: Confiscation du « Corpus Delicti »",
+                                                    "content": "(1) - En cas de condamnation pour crime ou délit, la juridiction compétente peut ordonner la confiscation de tous les biens meubles ou immeubles appartenant au condamné et saisis, lorsque ceux-ci ont servi d’instrument pour commettre l’infraction ou qu’ils en sont le produit.\n\n(2) - En matière de contravention, cette confiscation ne peut être ordonnée que dans les cas déterminés par la loi."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "3.1",
+                                            "section_title": "Section I: Des déchéances",
+                                            "articles": [
+                                                {
+                                                    "article_number": "3.1.1",
+                                                    "article_title": "ARTICLE 30: Définitions",
+                                                    "content": ""
+                                                },
+                                                {
+                                                    "article_number": "3.1.2",
+                                                    "article_title": "ARTICLE 31: Application",
+                                                    "content": ""
+                                                },
+                                                {
+                                                    "article_number": "3.1.3",
+                                                    "article_title": "ARTICLE 32: Déchéances et condamnation par défaut",
+                                                    "content": "."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "chapter_number": 4,
+                                    "chapter_title": "Chapître IV: Des mesures de surêté",
+                                    "sections": [
+                                        {
+                                            "section_number": "4.1",
+                                            "section_title": "Section I: De l'interdiction de la profession",
+                                            "articles": [
+                                                {
+                                                    "article_number": "4.1.1",
+                                                    "article_title": "ARTICLE 36: Interdiction de la profession",
+                                                    "content": "(1) - L’interdiction d’exercer une profession peut être prononcée par décision motivée contre les condamnés pour crime ou délit de droit commun, lorsqu’il est constaté que l’infraction commise a une relation directe avec l’exercice de la profession et qu’il y a de graves craintes que cet exercice ne constitue un danger de rechute pour le condamné.\n\n(2) - Cette interdiction est prononcée pour une durée qui ne peut être inférieure à un (01) - an ni supérieure à cinq (05) - ans, à compter du jour où la peine a été subie, sauf les cas où la loi en dispose autrement.\n\n(3) - Pour les personnes morales, l’interdiction visée aux alinéas 1 et 2 ci-dessus correspondent à l’interdiction, pour une durée déterminée, de s’investir directement ou indirectement dans l’une ou plusieurs des activités prévues pas son objet social.\n\n(4) - En cas de récidive dans les conditions prévues à l’alinéa 1 ci-dessus et à l’article 88 du présent Code, pour crime ou délit, l’interdiction devient perpétuelle."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "4.2",
+                                            "section_title": "Section II: De la relégation",
+                                            "articles": [
+                                                {
+                                                    "article_number": "4.2.1",
+                                                    "article_title": "ARTICLE 37: Définition de la relégation",
+                                                    "content": "(1) - La relégation est l'internement, pour une durée de (05) - à (20) - ans, sous un régime de travail et de réadaptation sociale pendant laquelle les relégués sont, à défaut d'établissement spécial, séparés des condamnés qui exécutent leurs peines. \n\n (2) - Des décrets règlent les conditions de fonctionnement de l'établissement,du régime de travail et de la réadaptation sociale des relégués."
+                                                },
+                                                {
+                                                    "article_number": "4.2.2",
+                                                    "article_title": "ARTICLE 38: Personnes exclues de la relégation",
+                                                    "content": "Ne peuvent être relégué, les condamnés qui seraient âgés de moins de vingt-cinq (25) - ans ou de plus de soixante (60) - ans à l’expiration de la peine principale."
+                                                },
+                                                {
+                                                    "article_number": "4.2.3",
+                                                    "article_title": "ARTICLE 39: Conditions de la relégation",
+                                                    "content": "(1) - Peut-être relégué, le récidiviste qui, dans l’intervalle de dix (10) ans, non compris les peines subies et les mesures de sûreté privatives de liberté, a encouru, compte tenu de la condamnation prononcée pour la nouvelle infraction commise, soit :\n\na) - Deux (02) condamnations à l’emprisonnement pour crime ou la peine de mort originellement commuée en emprisonnement ;\n\nb) - Une des condamnations prévues au paragraphe (a) et deux (02) condamnations pour délit à plus d’un (01) an d’emprisonnement ;\n\nc) - Quatre (04) condamnations pour délit à plus d’un (01) an d’emprisonnement.\n\n(2) - Le point de départ de la période décennale susvisée est la date de la dernière infraction susceptible d’entraîner la relégation.\n\n(3) - Les condamnations retenues pour la relégation doivent être définitives et chacun des faits motivant ces condamnations doit être postérieur à la condamnation précédente devenue définitive.\n\n(4) - Il est tenu compte des condamnations qui ont fait l’objet de grâce, de commutation ou de réduction de peine.\n\n(5) - Il n’est pas tenu compte de celles qui ont été effacées par la réhabilitation ou par l’amnistie.\n\n(6) - Il n’est pas tenu compte des condamnations prononcées contre les mineurs âgés de moins de dix-huit (18) ans lors de la commission des faits."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "4.3",
+                                            "section_title": "Section III: De la surveillance et de l'assistance post-pénales",
+                                            "articles": [
+                                                {
+                                                    "article_number": "4.3.1",
+                                                    "article_title": "ARTICLE 40: Définition et durée",
+                                                    "content": "(1) - Tout condamné à une peine privative de liberté supérieure à un (01) an peut, compte tenu des faits de la cause et par décision motivée, être placé par la juridiction qui le condamne et, pour une durée maximum de cinq (05) ans, sous le régime de surveillance et d’assistance post-pénales comprenant des obligations générales et, le cas échéant, des obligations spéciales.\n\n(2) - L’observation de ces obligations par le condamné est contrôlée par un magistrat désigné à cet effet, assisté de surveillants bénévoles ou rétribués.\n\nToutefois, ce contrôle est exercé par les autorités de police lorsqu’il s’agit d’un individu condamné pour crime ou d’un récidiviste condamné pour délit.\n\n(3) - Un décret détermine les conditions d’application du présent article."
+                                                },
+                                                {
+                                                    "article_number": "4.3.2",
+                                                    "article_title": "ARTICLE 41: Obligations générales",
+                                                    "content": "Les obligations générales qui s’imposent de plein droit au condamné sont les suivantes :\n\n1. Etablir son domicile en un lieu déterminé ;\n\n2. Répondre aux convocations de l’autorité chargée de la mission de surveillance et d’assistance ;\n\n3. Recevoir les visites du surveillant et lui communiquer les renseignements ou documents de nature à permettre le contrôle de ses moyens d’existence ;\n\n4. Informer le surveillant ou justifier auprès de lui les motifs de ses changements d’emploi ou de résidence ;\n\n5. Prévenir le surveillant de toute absence excédant quinze (15) jours et l’aviser de son retour ;\n\n6. Obtenir l’autorisation préalable de l’autorité chargée de cette mission avant tout déplacement à l’étranger."
+                                                },
+                                                {
+                                                    "article_number": "4.3.3",
+                                                    "article_title": "ARTICLE 42: Obligations spéciales",
+                                                    "content": "Outre les obligations générales imposées par l’article 41 ci-dessus, la juridiction peut imposer au condamné tout ou partie des obligations suivantes :\n\n1. Etablir sa résidence en un ou plusieurs lieux déterminés ;\n\n2. Ne pas paraître en certains lieux déterminés, sauf autorisation spéciale et temporaire ;\n\n3. Exercer une activité professionnelle, suivre un enseignement ou recevoir une formation professionnelle ;\n\n4. Se soumettre à des mesures de contrôle, de traitement ou de soins, même sous le régime de l’hospitalisation, notamment aux fins de désintoxication ;\n\n5. Contribuer aux charges familiales ou acquitter régulièrement les pensions alimentaires ;\n\n6. Réparer les dommages causés par l’infraction ;\n\n7. Ne pas conduire certains véhicules déterminés par les catégories de permis en vigueur ;\n\n8. Ne pas fréquenter certains lieux tels que les débits de boisson, champs de courses, maisons de jeux ;\n\n9. Ne pas engager de paris ;\n\n10. S’abstenir de tout excès de boissons alcoolisés ;\n\n11. Ne pas fréquenter certains condamnés, notamment les coauteurs ou complices de l’infraction ;\n\n12. S’abstenir de recevoir ou d’héberger à son domicile certaines personnes."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "4.4",
+                                            "section_title": "Section IV: De l'internement dans une maison de santé",
+                                            "articles": [
+                                                {
+                                                    "article_number": "4.4.1",
+                                                    "article_title": "ARTICLE 43: Malade mental",
+                                                    "content": "(1) - En cas d’acquittement pour démence de l’auteur d’un crime ou d’un délit passible d’une peine d’emprisonnement de deux (02) ans au moins, et lorsque la liberté de l’inculpé est reconnue dangereuse pour l’ordre public par la juridiction saisie, celle-ci ordonne son internement dans une maison spéciale de santé.\n\n(2) - Cette juridiction peut seule mettre fin à l’internement, après avis de l’autorité médicale compétente attestant que la liberté de l’interné ne présente plus aucun danger pour l’ordre public."
+                                                },
+                                                {
+                                                    "article_number": "4.4.2",
+                                                    "article_title": "ARTICLE 44: Infirmité mental",
+                                                    "content": "(1) - Lorsqu’une personne alcoolique, toxicomane ou atteinte d’une infirmité mentale est condamnée pour crime ou délit passible d’une peine d’emprisonnement de deux (02) ans au moins, en rapport avec ses habitudes ou son état mental, et que sa liberté est reconnue dangereuse pour l’ordre public, la juridiction saisie peut ordonner son internement dans une maison spéciale de santé.\n\n(2) - L’internement ne peut excéder deux (02) ans pour le traitement d’un alcoolique ou d’un toxicomane et cinq (05) ans pour le traitement d’un infirme mental.\n\n(3) - Cette juridiction peut abréger le délai qu’elle avait fixé, après avis de l’autorité médicale compétente attestant que la liberté de l’interné ne présente plus aucun danger pour l’ordre public."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "4.5",
+                                            "section_title": "Section V: De la confiscation",
+                                            "articles": [
+                                                {
+                                                    "article_number": "4.5.1",
+                                                    "article_title": "ARTICLE 45: Confiscation",
+                                                    "content": "Les choses dont la fabrication, la détention, la vente ou l’usage sont illicites sont confisquées même si elles n’appartiennent pas au condamné ou que la poursuite n’a pas été suivie de condamnation."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "chapter_number": 5,
+                                    "chapter_title": "Chapître V: De l'engagement préventif",
+                                    "sections": [
+                                        {
+                                            "section_number": "5.1",
+                                            "section_title": "",
+                                            "articles": [
+                                                {
+                                                    "article_number": "5.1.1",
+                                                    "article_title": "ARTICLE 46: Conditions",
+                                                    "content": "(1) - Il peut être imposé par le Président du Tribunal à toute personne qui, par sa conduite, manifeste son intention non équivoque de commettre une infraction susceptible de troubler la paix publique, de s’engager personnellement et, le cas échéant, avec des garants solvables, à payer la somme fixée si elle commet une infraction de cette nature pendant la période déterminée.\n\n(2) - La somme est fixée en fonction des possibilités de l’engagé"
+                                                },
+                                                {
+                                                    "article_number": "5.1.2",
+                                                    "article_title": "ARTICLE 47: Durée",
+                                                    "content": "Cet engagement peut être imposé pour une période d’un (01) - an pouvant être portée à trois (03) - ans lorsqu’il s’agit d’un délinquant d’habitude."
+                                                },
+                                                {
+                                                    "article_number": "5.1.3",
+                                                    "article_title": "ARTICLE 48: Engagement des parents ou tuteur",
+                                                    "content": "Au cas où le mineur de dix-huit (18) ans a commis des faits qualifiés d’infraction, le Président du Tribunal peut imposer ses père, mère, tuteur ou responsable coutumier, l’engagement prévu à l’article 46 ci-dessus pour le cas où le mineur commettrait des faits de même nature dans le délai d’un (01) ans sans que l’engagé rapporte la preuve qu’il a pris toutes mesures utiles pour les mineur ne commette pas l’infraction."
+                                                },
+                                                {
+                                                    "article_number": "5.1.4",
+                                                    "article_title": "ARTICLE 49: Refus de l'engagememnt",
+                                                    "content": "(1) - Toute personne qui ne s’est pas soumise à l’engagement qui lui est imposé ou qui n’a pas fourni les garants requis, peut être immédiatement incarcérée jusqu’à son acceptation ou jusqu’à la désignation du ou des garants, sans que la durée de cette mesure puisse excéder la durée de la période prévue dans l’engagement.\n\n(2) - Sauf dans le cas prévu à l’article 48 ci-dessus, les obligations spéciales visées à l’article 42 (1) et (2) ci-dessus peuvent remplacer l’incarcération."
+                                                },
+                                                {
+                                                    "article_number": "5.1.5",
+                                                    "article_title": "ARTICLE 50: Inobservation",
+                                                    "content": "(1) - Si l’engagement n’a pas été respecté, la juridiction saisie de l’infraction ordonne, en cas de condamnation, le paiement de la somme fixée, sans préjudice des pénalités afférentes à l’infraction.\n\n(2) - A l’égard de l’engagé, cette somme est recouvrée par les mêmes moyens que l’amende et à l’égard du ou des garants par toute voie civile."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "chapter_number": 6,
+                                    "chapter_title": "Chapître VI: Du non-cumul des peines",
+                                    "sections": [
+                                        {
+                                            "section_number": "6.1",
+                                            "section_title": "",
+                                            "articles": [
+                                                {
+                                                    "article_number": "6.1.1",
+                                                    "article_title": "ARTICLE 51: Non-cumul",
+                                                    "content": "(1) - Au cas où un individu fait l’objet d’une même poursuite pour plusieurs crimes ou délits ou contraventions connexes, la peine la plus rigoureuse est seule prononcée.\n\n(2) - Au cas où un individu fait l’objet de plusieurs condamnations pour crimes ou délits résultant de poursuites diverses, la confusion des peines principales peut être ordonnée par la juridiction saisie des dernières poursuites. En cas de cumul, l’ensemble des peines prononcées ne peut dépasser le maximum de la peine encourue pour l’infraction la plus grave.\n\n(3) - Lorsqu’une peine principale fait l’objet d’une remise gracieuse, il y a lieu de tenir compte, pour le cumul des peines, de la peine commuée et non de la peine initialement prononcée.\n\n(4) - La règle du non cumul des peines ne s’applique pas à deux (02) - condamnations dont la première était devenue définitive avant la commission des faits qui ont motivé la seconde.\n\n(5) - En matière de contravention, les peines sont toujours cumulées, sauf si le Tribunal en décide autrement.\n\n(6) - En cas de conviction de plusieurs infrastructures,les peines principales, ainsi que les mesures de sûreté se cumulent, sauf décision contraire de la juridiction saisie."
+                                                },
+                                                {
+                                                    "article_number": "6.1.2",
+                                                    "article_title": "ARTICLE 52: Ordre d'exécution",
+                                                    "content": "(1) - Les peines privatives de liberté s’exécutent dans l’ordre chronologique de la notification des titres de détention au condamné.\n\n(2) - Les peines accessoires ainsi que l’internement prévu à l’article 43 ci-dessus sont immédiatement applicables, tandis que les autres mesures de sûreté le sont dès l’expiration de la peine principale ou de sa suspension.\n\n(3) - Lorsque plusieurs mesures de sûreté doivent s’exécuter cumulativement, leur ordre d’exécution est le suivant :\n\na) - L’internement dans une maison de santé ;\n\nb) - La relégation ;\n\nc) - Les mesures post-pénales.\n\n(4) - Si, au cours de l’exécution d’une de ces mesures, le condamné encourt pour un autre crime ou délit une peine privative de liberté, l’exécution de la mesure de sûreté est suspendue et la nouvelle peine est d’abord subie."
+                                                },
+                                                {
+                                                    "article_number": "6.1.3",
+                                                    "article_title": "ARTICLE 53: Détention provisoire",
+                                                    "content": "(1) - En cas de détention provisoire, la durée de celle-ci est intégralement déduite de la peine privative de liberté prononcée.\n\n(2) - Lorsqu’il y a détention provisoire et que la peine prononcée est une amende, la juridiction saisie peut exonérée le condamné du paiement de tout ou partie de l’amende."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "chapter_number": 7,
+                                    "chapter_title": "Chapître VII: Des causes qui mettent obstacle à l'exécution des peines",
+                                    "sections": [
+                                        {
+                                            "section_number": "7.1",
+                                            "section_title": "Section I: Du sursis simple",
+                                            "articles": [
+                                                {
+                                                    "article_number": "7.1.1",
+                                                    "article_title": "ARTICLE 54: Conditions d'application et effets",
+                                                    "content": "(1) - En cas de condamnation pour crime ou délit à une peine d’emprisonnement inférieure ou égale à cinq (05) - ans ou à une amende, sauf dans le cas prévu à l’article 92 (2) - ci-dessous et si le condamné n’a pas fait l’objet de condamnation antérieure et non effacée à l’emprisonnement, la juridiction saisie peut ordonner, sauf disposition contraire de la loi, qu’il est sursis à l’exécution de la peine principale pendant un délai de trois (03) - à cinq (05) - ans.\n\n(2) - Le sursis est sans effet sur les peines accessoires et sur les mesures résultant de la condamnation.\n\n(3) - Si pendant le délai ainsi fixé, comptant du jour où le jugement ou l’arrêt est devenu définitif, le condamné commet un autre crime ou délit suivi d’une condamnation à l’emprisonnement non assortie de la probation, la peine suspendue est exécutée en priorité et sans confusion avec la seconde peine.\n\n(4) - Dans le cas contraire, l’expiration du délai produit les effets de la réhabilitation prévus à l’article 676 du Code de Procédure Pénale."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "7.2",
+                                            "section_title": "Section II: Du sursis avec probation",
+                                            "articles": [
+                                                {
+                                                    "article_number": "7.2.1",
+                                                    "article_title": "ARTICLE 55: Conditions d'application",
+                                                    "content": "(1) - Le sursis avec probation peut être prononcé dans les mêmes conditions que le sursis simple, lorsque la peine est égale ou supérieure à six (06) - mois d’emprisonnement.\n\n(2) - Il peut également être accordé aux individus condamnés antérieurement à une peine d’emprisonnement assortie du sursis simple ou à une peine d’emprisonnement sans sursis inférieure à six (06) - mois.\n\n(3) - La période d’épreuve ne peut être inférieure à trois (03) - ans ni supérieur à cinq (05) - ans.\n\n(4) - Sous réserve des dispositions des alinéas 1 et 2 du présent article, l’article 54 ci-dessus est applicable au sursis avec probation."
+                                                },
+                                                {
+                                                    "article_number": "7.2.2",
+                                                    "article_title": "ARTICLE 56: Le régime de probation",
+                                                    "content": "(1) - Le régime de probation comprend des obligations générales et, le cas échéant, spéciales, de surveillance et d’assistance.\n\n(2) - L’observation de ces obligations par le condamné est contrôlée par un magistrat désigné à cet effet, assisté de délégués à la probation, bénévoles ou rétribués.\n\n(3) - La désignation du délégué à la probation est faite par le magistrat chargé du contrôle, qui peut le modifier.\n\n(4) - Le magistrat de la résidence du condamné chargé du contrôle peut, à tout moment et par décision motivée, suspendre tout ou partie des obligations spéciales ou les modifier sans aggravation."
+                                                },
+                                                {
+                                                    "article_number": "7.2.3",
+                                                    "article_title": "ARTICLE 57: Obligations générales",
+                                                    "content": "Les obligations générales imposées par l’article 41 du présent Code au condamné, à l’égard du surveillant, s’imposent de plein droit au condamné placé sous le régime de la probation à l’égard du délégué à la probation."
+                                                },
+                                                {
+                                                    "article_number": "7.2.4",
+                                                    "article_title": "ARTICLE 58: Obligations spéciales",
+                                                    "content": "Outre les obligations générales imposées par l’article 57 ci-dessus, le jugement ou l’arrêt peut imposer au condamné, avec probation, l’observation de tout ou partie des obligations, l’observation de tout ou partie des obligations visées à l’article 42 du Présent Code."
+                                                },
+                                                {
+                                                    "article_number": "7.2.5",
+                                                    "article_title": "ARTICLE 59: Obligations du délégué",
+                                                    "content": "(1) - Le délégué à la probation doit s’assurer que le condamné respecte les obligations générales et spéciales auxquelles il est soumis. Il est également tenu de susciter et de seconder les efforts du condamné en vue de son reclassement social, notamment en ce qui concerne sa réadaptation familiale et professionnelle.\n\n(2) - Il est tenu de lui apporter toute son aide morale et, au cas où le condamné aurait besoin d’une aide matérielle, il lui appartient d’en référer au magistrat désigné pour qu’un secours puisse lui être apporté par tout organisme d’assistance ou d’aide sociale.\n\n(3) - Il doit tenir régulièrement informé ce magistrat de l’exercice de sa mission et lui en référer en cas de difficultés."
+                                                },
+                                                {
+                                                    "article_number": "7.2.6",
+                                                    "article_title": "ARTICLE 60: Violation des obligations",
+                                                    "content": "(1) - Au cas où, pendant la période d’épreuve, le condamné ne respecte pas l’une des obligations générales ou spéciales de sa probation, la juridiction qui a prononcé la condamnation peut ordonner l’exécution de la peine suspendue.\n\n(2) - L’exécution de cette peine n’entraîne pas la révocation d’un sursis simple précédemment accordé.\n\n(3) - Si le sursis n’a pas été révoqué en application du présent article ou de l’article 54 ci-dessus, l’expiration du délai produit les effets de l’article 676 du Code de Procédure Pénale."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "7.3",
+                                            "section_title": "Section III: De la libération conditionnelle",
+                                            "articles": [
+                                                {
+                                                    "article_number": "7.3.1",
+                                                    "article_title": "ARTICLE 61: Définition",
+                                                    "content": "(1) - La libération conditionnelle est la mise en liberté anticipée du condamné à une peine privative de liberté, ou soumis, par la décision de condamnation, à une mesure de sûreté de même nature. Elle est accordée et révoquée par décret.\n\n(2) - Un décret fixe les conditions générales et les modalités de l’octroi et de la révocation de la libération conditionnelle.\n\n(3) - La mise en liberté anticipée du condamné, si elle n’a pas été révoquée, devient définitive à l’expiration de la durée de la peine."
+                                                },
+                                                {
+                                                    "article_number": "7.3.2",
+                                                    "article_title": "ARTICLE 62: Suspension des mesures",
+                                                    "content": "(1) - Le décret de libération conditionnelle peut surseoir à l’exécution des mesures d’internement dans une maison spéciale de santé, de relégation, de surveillance et d’assistance post-pénales ou d’interdiction de l’exercice d’une profession, qui font suite à la peine principale.\n\n(2) - Cette suspension devient définitive cinq (05) - ans après l’expiration de la peine principale."
+                                                },
+                                                {
+                                                    "article_number": "7.3.3",
+                                                    "article_title": "ARTICLE 63: Delai pour l'octroi",
+                                                    "content": "(1) - La libération conditionnelle ne peut être accordée au condamné qu’après l’accomplissement de la moitié de sa peine ou de la moitié de l’ensemble des peines en cas de cumul, compte tenu, le cas échéant, des mesures de grâce. Elle ne peut être accordée au récidiviste qu’après l’accomplissement des deux tiers de sa peine.\n\n(2) - La libération conditionnelle ne peut être accordée au relégué qu’après cinq (05) ans."
+                                                },
+                                                {
+                                                    "article_number": "7.3.4",
+                                                    "article_title": "ARTICLE 64: Révocation",
+                                                    "content": "La libération conditionnelle peut être révoquée en cas de condamnation pour crime ou délit commis ultérieurement ou d’inobservation des conditions générales ou spéciales sur le reste de la peine à subir."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "7.4",
+                                            "section_title": "Section IV: De la Suspension des mesures post-pénales",
+                                            "articles": [
+                                                {
+                                                    "article_number": "7.4.1",
+                                                    "article_title": "ARTICLE 65: Suspension des mesures post-pénales",
+                                                    "content": "(1) - Sur proposition de l’autorité visées à l’article 40 (2) - du présent Code, la juridiction qui a ordonné les mesures post-pénales peut, à tout moment et par décision motivée, suspendre en tout ou en partie les mesures spéciales ou les modifier sans aggravation.\n\n(2) - La suspension est révocable à tout moment dans les formes prévues pour son control.\n\n(3) - La durée de la suspension de ces mesures, même révoquées, est comptée dans la durée des mesures post-pénales."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "7.5",
+                                            "section_title": "Section V: De la grâce - De la prescription de la mort",
+                                            "articles": [
+                                                {
+                                                    "article_number": "7.5.1",
+                                                    "article_title": "ARTICLE 66: Grâce",
+                                                    "content": "La grâce est la commutation ou la remise, partielle ou totale, conditionnelle ou non, des peines, des mesures de sûreté et des obligations de probation."
+                                                },
+                                                {
+                                                    "article_number": "7.5.2",
+                                                    "article_title": "ARTICLE 67: Prescription",
+                                                    "content": "(1) - La peine principale non subie, ainsi que les peines accessoires et les mesure de sûreté qui l’accompagnent, ne peuvent plus être exécutées après l’expiration des délais ci-après déterminés à compter de la date du jugement ou de l’arrêt devenu définitf :\n\na) - Pour crime vingt (20) ans ;\n\nb) - Pour délit et contravention connexe : cinq (05) ans ;\n\nc) - Pour toute autre contravention : deux (02) - ans ;\n\n(2) - La prescription est suspendue toutes les fois qu’un obstacle de droit ou de fait, hors celui résultant de la volonté du condamné, empêche l’exécution de la peine.\n\nElle est interrompue par tout acte d’exécution de la peine avant l’expiration du délai.\n\nUne fois la prescription de la peine acquise, le condamné par défaut ne peut plus se présenter pour la purger."
+                                                },
+                                                {
+                                                    "article_number": "7.5.3",
+                                                    "article_title": "ARTICLE 68: Mort",
+                                                    "content": "La mort du condamné n’empêche pas l’exécution sur ses biens, des condamnations pécuniaires ni la fermeture de l’établissement, ni la confiscation"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "chapter_number": 8,
+                                    "chapter_title": "Chapître VIII: Des causes qui effacent la condamnation",
+                                    "sections": [
+                                        {
+                                            "section_number": "8.1",
+                                            "section_title": "Section I: De la réhabilitation",
+                                            "articles": [
+                                                {
+                                                    "article_number": "8.1.1",
+                                                    "article_title": "ARTICLE 69: Définition et effets",
+                                                    "content": "(1) - La réhabilitation est une mesure qui, sauf disposition contraire de la loi, efface la condamnation pour crime ou délit et met fin à toute peine accessoire et à toute mesure de sûreté, à l’exception de l’internement dans une maison de santé et de la fermeture de l’établissement.\n\n(2) - Lorsqu’une personne a fait l’objet de plusieurs condamnations, la réhabilitation doit porter sur l’ensemble des condamnations.\n\n(3) - La réhabilitation est acquise soit de plein droit, soit par décision de justice.\n\n(4) - (a) - Pour être réhabilité, le condamné doit justifier du paiement des frais de justice. Il doit en outre justifier du paiement des dommages-intérêts ou de la remise de ceux-ci. A défaut, il doit établir qu’il a subi la contrainte par corps au titre de la condamnation civile.\n\n(b) - Le condamné pour banqueroute frauduleuse doit justifier du paiement du passif de la faillite en capital, intérêts et frais ou de la remise qui lui ont faite.\n\n(c) - Si la partie civile ne peut être retrouvée, les sommes qui lui sont dues sont payées au compte des dépôts et consignations.\n\n(d) - Si le condamné prétend que la partie civile a refusé de recevoir les sommes qui lui sont dues, il doit rapporter la preuve du refus et verser lesdites sommes au compte des dépôts et consignations.\n\n(e) - La prescription quadriennale n’est pas applicable en cette matière.\n\n(5) - (a) - La réhabilitation ne restitue pas de plein droit les décorations et ne réintègre pas d’office dans les ordres dont le réhabilité aurait été échu.\n\n(b) - Les mesures de police et de sûreté frappant le condamné ne sont pas effacées.\n\n(c) - Les sommes payées par le réhabilité au titre des condamnations pécuniaires et des confiscations restent acquises au Trésor Public.\n\n(d) - La réhabilitation ne réintègre pas de plein droit dans les fonctions ou emplois publics, grades, offices publics ou ministériels, ni ne donne lieu à reconstitution de carrière.\n\nToutefois, la personne réhabilitée retrouve, si elle en a été déchue, les droits suivants : autorité parentale, droit de tutelle, droits électoraux et droit de témoigner en justice.\n\n(e) - La réhabilitation ne fait pas obstacle aux demandes de révision tendant à établir l’innocence du réhabilité."
+                                                },
+                                                {
+                                                    "article_number": "8.1.2",
+                                                    "article_title": "ARTICLE 70: Réhabilitation de plein droit",
+                                                    "content": "(1) - La réhabilitation de plein droit est acquise au condamné qui n’a pas fait l’objet d’aucune condamnation nouvelle à l’emprisonnement pour crime ou délit dans les délais ci-après :\n\n– Cinq (05) ans pour une peine d’amende ;\n\n– Dix (10) ans pour une peine unique d’emprisonnement inférieure ou égale à six (06) mois ;\n\n– Quinze (15) ans pour une peine unique d’emprisonnement inférieure ou égale à deux (02) ans ;\n\n– Vingt (20) ans pour une peine unique d’emprisonnement inférieure ou égale à cinq (05) ans ;\n\n(2) - Le délai est de quinze (15) ans, si l’ensemble des condamnations est supérieur à un (01) an mais inférieur à deux (02) ans.\n\n(3) - Les condamnations prononcées avec confusion des peines sont considérées comme étant une condamnation unique.\n\n(4) - En matière d’amende, les délais courent du jour de son paiement ou de la prescription acquise. Ils courent pour les condamnations privatives de liberté, du jour de l’expiration de la peine subie compte tenu, le cas échéant, des remises gracieuses ou du jour de la prescription acquise.\n\n(5) - La remise totale ou partielle d’une peine équivaut à son exécution partielle ou totale."
+                                                },
+                                                {
+                                                    "article_number": "8.1.3",
+                                                    "article_title": "ARTICLE 71: Réhabilitation judiciaire",
+                                                    "content": "(1) - La réhabilitation peut être demandée en justice par le condamné.\n\n(2) - La réhabilitation ne peut être demandée qu’après un délai de cinq (05) - ans en cas de condamnation pour crime e de trois (03) ans en cas de condamnation pour délit. Ces délais courent du lendemain du jour de la libération en cas de condamnation à une peine privative de liberté, ou du lendemain du jour du paiement de l’amende.\n\n(3) - En cas de récidive, les délais prévus à l’alinéa 2 ci-dessus sont doublés."
+                                                },
+                                                {
+                                                    "article_number": "8.1.4",
+                                                    "article_title": "ARTICLE 72: Réhabilitation post-mortem",
+                                                    "content": "(1) - En cas de décès du condamné, la demande peut être suivie et même introduite par son conjoint, ses ascendants ou descendants.\n\n(2) - Le Ministère Public peut, en cas de décès du demandeur, suivre une demande de réhabilitation déjà formulée."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "8.2",
+                                            "section_title": "Section II: De l'amnistie",
+                                            "articles": [
+                                                {
+                                                    "article_number": "8.2.1",
+                                                    "article_title": "ARTICLE 73: Effets",
+                                                    "content": "(1) - Sous réserve des intérêts civils, l’amnistie efface le condamnation et mit fin à toute peine principale et accessoire et à toute mesure de sûreté, à l’exception de l’internement dans une maison de santé et de la fermeture de l’établissement.\n\n(2) - Sauf disposition contraire, elle empêche ou arrête les poursuites non intentées ou déjà en cours.\n\n(3) - Sauf disposition contraire, l’amnistie n’est pas applicable aux frais dus au Trésor, si la condamnation est devenue définitive.\n\n(4) - Sauf disposition contraire, les frais et amendes déjà versés par le condamné restent acquis au Trésor.\n\n(5) - Sauf disposition contraire, elle ne restitue pas d’office les décorations et ne réintègre pas de plein droit dans les ordres dont l’amnistie serait déchu.\n\n(6) - Sauf disposition contraire, elle ne réintègre pas de plein droit dans les fonctions ou emplois publics, grades, offices publics ou ministériels, et ne donne pas lieu à reconstitution de carrière.\n\n(7) - Elle ne met pas obstacle aux demandes de révision tendant à établir l’innocence du condamné amnistié."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title_number": 3,
+                            "title_title": "Titre III: De la responsabilité pénale des personnes physiques et morales",
+                            "chapters": [
+                                {
+                                    "chapter_number": 1,
+                                    "chapter_title": "Chapître I: Dispositions générales",
+                                    "sections": [
+                                        {
+                                            "section_number": "1.1",
+                                            "section_title": "",
+                                            "articles": [
+                                                {
+                                                    "article_number": "1.1.1",
+                                                    "article_title": "ARTICLE 74: Peine et responsabilité",
+                                                    "content": "(1) - Aucune peine ne peut être prononcée qu’à l’encontre d’une personne pénalement responsable.\n\n(2) - Est pénalement responsable, celui qui, volontairement commet les faits caractérisant les éléments constitutifs d’une infraction avec l’intention que ces faits aient pour conséquence la réalisation de l’infraction.\n\n(3) - Sauf lorsque la loi en dispose autrement, la conséquence même voulue d’une omission n’entraîne pas de responsabilité pénale.\n\n(4) - Sauf lorsque la loi en dispose autrement, il ne peut exister de responsabilité pénale que si les conditions de l’alinéa 2 ci-dessus sont remplies\n\nToutefois, en matière contraventionnelle, la responsabilité pénale existe alors même que l’acte ou l’omission ne sont pas intentionnels ou que la conséquence n’en a pas été voulue."
+                                                },
+                                                {
+                                                    "article_number": "1.1.2",
+                                                    "article_title": "ARTICLE 74-1: Personnes morales pénalement responsables",
+                                                    "content": "(1) - Aucune peine ne peut être prononcée qu’à l’encontre d’une personne pénalement responsable.\n\n(2) - Est pénalement responsable, celui qui, volontairement commet les faits caractérisant les éléments constitutifs d’une infraction avec l’intention que ces faits aient pour conséquence la réalisation de l’infraction.\n\n(3) - Sauf lorsque la loi en dispose autrement, la conséquence même voulue d’une omission n’entraîne pas de responsabilité pénale.\n\n(4) - Sauf lorsque la loi en dispose autrement, il ne peut exister de responsabilité pénale que si les conditions de l’alinéa 2 ci-dessus sont remplies\n\nToutefois, en matière contraventionnelle, la responsabilité pénale existe alors même que l’acte ou l’omission ne sont pas intentionnels ou que la conséquence n’en a pas été voulue."
+                                                },
+                                                {
+                                                    "article_number": "1.1.3",
+                                                    "article_title": "ARTICLE 75: Ignorance et mobil",
+                                                    "content": "L’ignorance de la loi et le mobile n’influent pas sur la responsabilité pénale."
+                                                },
+                                                {
+                                                    "article_number": "1.1.4",
+                                                    "article_title": "ARTICLE 76: Exécution de la loi",
+                                                    "content": "Ne constitue aucunément une infraction, le fait ordonné ou autorisé par la loi et accompli conformément à la loi."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "chapter_number": 2,
+                                    "chapter_title": "Chapître II: Des causes qui suppriment ou atténuent la responsabilité pénale des personnes physiques",
+                                    "sections": [
+                                        {
+                                            "section_number": "2.1",
+                                            "section_title": "",
+                                            "articles": [
+                                                {
+                                                    "article_number": "2.1.1",
+                                                    "article_title": "ARTICLE 77: Cas fortuit et contrainte matérielle",
+                                                    "content": "La responsabilité pénale ne peut résulter ni du cas fortuit, ni de la contrainte matérielle irrésistible."
+                                                },
+                                                {
+                                                    "article_number": "2.1.2",
+                                                    "article_title": "ARTICLE 78: Démence",
+                                                    "content": "(1) - La responsabilité pénale ne peut résulter du fait d’un individu atteint d’une maladie mentale telle que sa volonté a été abolie ou qu’il n’a pu avoir conscience du caractère répréhensible de son acte.\n\n(2) - Au cas où la démence n’est pas totale, elle constitue une excuse atténuante."
+                                                },
+                                                {
+                                                    "article_number": "2.1.3",
+                                                    "article_title": "ARTICLE 79: Intoxication",
+                                                    "content": "L’intoxication qui n’est pas volontaire est assimilée à la maladie mentale."
+                                                },
+                                                {
+                                                    "article_number": "2.1.4",
+                                                    "article_title": "ARTICLE 80: Minorité",
+                                                    "content": "(1) - Le mineur de dix (10) - ans n’est pas pénalement responsable.\n\n(2) - Le mineur de dix (10) ans à quatorze (14) ans, pénalement responsable, ne peut faire l’objet que de l’une des mesures spéciales prévue par la loi.\n\n(3) - Le mineur âgé de plus de quatorze (14) ans et de moins de dix-huit (18) - ans, pénalement responsable, bénéficie de l’excuse atténuante.\n\n(4) - Le majeur de dix-huit (18) ans est pleinement responsable.\n\n(5) - L’âge de l’auteur se calcule à la date de la commission de l’infraction."
+                                                },
+                                                {
+                                                    "article_number": "2.1.5",
+                                                    "article_title": "ARTICLE 81: Menaces",
+                                                    "content": "(1) - La responsabilité pénale ne peut résulter du fait d’un individu soumis à une menace imminente et non autrement évitable de mort ou de blessures graves telles que prévues au Présent Code.\n\nToutefois, si le fait est une infraction punissable de la peine de mort ou s’il a eu pour effet de provoquer la mort ou les blessures susvisées, l’auteur ne bénéficie que d’excuse atténuante.\n\n(2) - Le présent article n’est pas applicable à celui qui s’expose volontairement au risque de telles menaces."
+                                                },
+                                                {
+                                                    "article_number": "2.1.6",
+                                                    "article_title": "ARTICLE 82: Crainte révérencielle",
+                                                    "content": "L’excuse atténuante est applicable :\n\na) - Aux mineurs de dix-huit (18) - ans ayant agi sous la contrainte de ses parents, des personnes en ayant la garde ou la responsabilité coutumière ;\n\nb) - Aux salariés, employés, fonctionnaires ayant agis sous la contrainte de leurs chefs ou patrons."
+                                                },
+                                                {
+                                                    "article_number": "2.1.7",
+                                                    "article_title": "ARTICLE 83: Obéissance à l'autorité légale",
+                                                    "content": "(1) - La responsabilité pénale ne peut résulter d’un acte accompli sur les ordres d’une autorité compétente à laquelle l’obéissance est légitimement due.\n\n(2) - Les dispositions de l’alinéa 1er ci-dessus ne sont toutefois pas applicables si l’ordre est manifestement illégitime."
+                                                },
+                                                {
+                                                    "article_number": "2.1.8",
+                                                    "article_title": "ARTICLE 84: Légitime défense",
+                                                    "content": "(1) - La responsabilité pénale ne peut résulter d’un acte commandé par la nécessité immédiate de la défense de soi-même ou d’autrui, ou à autrui contre une atteinte illégitime, à condition que la défense soit proportionnée à la gravité de l’atteinte.\n\n(2) - Il y a toujours juste proportion entre l’homicide et l’atteinte qui donne lieu de craindre soit la mort, soit les blessures graves telles que prévues au présent Code, soit le viol ou la sodomie."
+                                                },
+                                                {
+                                                    "article_number": "2.1.9",
+                                                    "article_title": "ARTICLE 82: Provocation",
+                                                    "content": "(1) - Bénéficie de l’excuse atténuante, s’il n’y a pas disproportion entre la provocation et la réaction, tout auteur d’une infraction immédiatement provoquée par l’acte illégitime d’autrui contre lui-même ou en sa présence, contre son conjoint, son descendant ou ascendant, son frère ou sa sœur, son employeur ou son employé, le mineur ou l’incapable dont il a la garde.\n\n(2) - L’homicide ainsi que les blessures sont excusables s’ils sont provoqués par des coups ou violences graves envers les personnes.\n\n(3) - Ils sont également excusables s’ils ont été commis par l’un des époux sur son conjoint ou sur son complice surpris en flagrant délit d’adultère.\n\n(4) - L’infraction n’est excusable que lorsque la provocation est de nature à priver une personne normale de la maîtrise de soi."
+                                                },
+                                                {
+                                                    "article_number": "2.1.10",
+                                                    "article_title": "ARTICLE 82: Etat de nécessité",
+                                                    "content": "Indépendamment de la défense légitime prévue à l’article 84 ci-dessus, la responsabilité pénale ne peut résulter de l’atteinte faite à un bien dans le but de détourner de soi-même ou d’autrui, un péril grave, imminent et non autrement évitable, à condition qu’il n’ y avait pas disproportion entre le mal à écarter et la mesure prise pour le prévenir."
+                                                },
+                                                {
+                                                    "article_number": "2.1.11",
+                                                    "article_title": "ARTICLE 87: Effet de l'excuse atténuante",
+                                                    "content": "(1) - Lorsque la loi prévoit une excuse atténuante, les peines sont réduites comme suit :\na) - Si la peine de mort ou une peine perpétuelle sont encourues, la peine est réduite à une peine privative de liberté de deux (02) à dix (10) ans ;\nb) - Si une peine est encourue en cas de crime, elle est réduite à une peine privative de liberté de un (01) à cinq (05) ans ;\nc) - En cas de délit, le maximum des peines privatives de liberté et d’amende est réduit de moitié, et le minimum est celui de l’article 92 (1) du présent Code.\n\n(2) - En cas de cumul d’excuses atténuantes ou d’excuses atténuantes et de circonstances atténuantes, le minimum de la peine est celui de l’article 92 (1) du présent Code."
+                                                },
+                                                {
+                                                    "article_number": "2.1.12",
+                                                    "article_title": "ARTICLE 88: Récidive des personnes physiques et morales",
+                                                    "content": "(1) - Est récidiviste :\n\na) - toute personne physique ou morale qui, après avoir été condamnée pour crime ou délit, commet une nouvelle infraction qualifiée crime ou délit dans un délai qui commence à courir à compter de la date de la condamnation devenue définitive, et qui expire cinq (05) ans après l’exécution de la peine prononcée ou sa prescription ;\n\nb) - toute personne physique ou morale qui, après avoir été condamnée pour contravention, commet une nouvelle contravention dans un délai qui commence à courir à compter de la date de la condamnation devenue définitive, et qui expire douze (12) mois après l’exécution de la peine prononcée ou sa prescription.\n\n(2) - En cas de récidive, le maximum de la peine prévue est doublé."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "chapter_number": 3,
+                                    "chapter_title": "Chapître III: Des causes qui aggravent la responsabilité pénale des personnes physiques et morales",
+                                    "sections": [
+                                        {
+                                            "section_number": "3.1",
+                                            "section_title": "",
+                                            "articles": [
+                                                
+                                                {
+                                                    "article_number": "3.1.1",
+                                                    "article_title": "ARTICLE 88: Récidive des personnes physiques et morales",
+                                                    "content": "(1) - Est récidiviste :\n\na) - toute personne physique ou morale qui, après avoir été condamnée pour crime ou délit, commet une nouvelle infraction qualifiée crime ou délit dans un délai qui commence à courir à compter de la date de la condamnation devenue définitive, et qui expire cinq (05) ans après l’exécution de la peine prononcée ou sa prescription ;\n\nb) - toute personne physique ou morale qui, après avoir été condamnée pour contravention, commet une nouvelle contravention dans un délai qui commence à courir à compter de la date de la condamnation devenue définitive, et qui expire douze (12) mois après l’exécution de la peine prononcée ou sa prescription.\n\n(2) - En cas de récidive, le maximum de la peine prévue est doublé."
+                                                },
+                                                {
+                                                    "article_number": "3.1.2",
+                                                    "article_title": "ARTICLE 89: Fonctionnaires",
+                                                    "content": "(1) - La qualité de fonctionnaire national, étranger ou international, d’officier public national, étranger ou international ou d’agent national, étranger ou international, chargé d’un service public, est une circonstance aggravante de la responsabilité pénale contre ceux d’entre eux qui, hors les cas où la loi règle spécialement les peines encourues pour les crimes et les délits par eux commis, se sont rendus coupables d’autres crimes et délits qu’ils sont chargés de prévenir ou de réprimer.\n\n(2) - En cas de circonstances aggravantes, le maximum de la peine est doublé."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "chapter_number": 4,
+                                    "chapter_title": "Chapître IV: Des circonstances atténuantes et du choix de la peine",
+                                    "sections": [
+                                        {
+                                            "section_number": "4.1",
+                                            "section_title": "",
+                                            "articles": [
+                                                
+                                                {
+                                                    "article_number": "4.1.1",
+                                                    "article_title": "ARTICLE 90: Circonstances atténuantes",
+                                                    "content": "Les circonstances atténuantes peuvent être admises par décision motivée en faveur d’un condamné, sauf dans les matières où la loi les exclut formellement."
+                                                },
+                                                {
+                                                    "article_number": "4.1.2",
+                                                    "article_title": "ARTICLE 91: Effets en cas de crime",
+                                                    "content": "(1) - Les peines prévues par la loi contre celui ou ceux des accusés reconnus coupables d’un crime et en faveur de qui les circonstances atténuantes ont été accordées, peuvent être réduite à dix (10) - ans de privation de liberté si le crime est passible de la peine de mort, à cinq (05) ans de privation de liberté si le crime est passible d’une peine perpétuelle, à un (01) an de privation de liberté dans les autres cas.\n\n(2) - Si, en application des dispositions de l’alinéa 1 ci-dessus, une peine égale ou inférieure à dix (10) ans de privation de liberté est prononcée, la juridiction peut infliger au condamné une amende qui ne peut excéder deux millions (2 000 000) de francs."
+                                                },
+                                                {
+                                                    "article_number": "4.1.3",
+                                                    "article_title": "ARTICLE 92: Effets en cas de délit ou de contravention",
+                                                    "content": "(1) - Lorsque les circonstances atténuantes sont accordées en cas de délit ou de contravention, la juridiction peut réduire la peine privative de liberté à cinq (05) jours et l’amende à un (01) - franc ou prononcer une de ces deux peines.\n\n(2) - Lorsque la loi n’édicte qu’une peine privative de liberté, la juridiction peut y substituer une amende dont le maximum est de un million (1 000 000) de francs en cas de délit et de vingt-cinq mille (25 000) francs en cas de contravention"
+                                                },
+                                                {
+                                                    "article_number": "4.1.4",
+                                                    "article_title": "ARTICLE 93: Effets en cas de crime",
+                                                    "content": ""
+                                                },
+                                            ]
+                                        }
+                                    ]
+                                },
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "book_number": 2,
+                    "book_title": "Livre II",
+                    "titles": [
+                        {
+                            "title_number": 1,
+                            "title_title": "Titre I: De l'application de la loi pénale",
+                            "chapters": [
+                                {
+                                    "chapter_number": 1,
+                                    "chapter_title": "Getting Started",
+                                    "sections": [
+                                        {
+                                            "section_number": "1.1",
+                                            "section_title": "Introduction to Programming",
+                                            "articles": [
+                                                {
+                                                    "article_number": "1.1.1",
+                                                    "article_title": "What is Programming?",
+                                                    "article_subtitle": "What is Programming?",
+                                                    "content": "Programming is the process of creating instructions..."
+                                                },
+                                                {
+                                                    "article_number": "1.1.2",
+                                                    "article_title": "Choosing Your First Language",
+                                                    "article_subtitle": "Choosing Your First Language",
+                                                    "content": "When starting out, consider languages like Python..."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "1.2",
+                                            "section_title": "Setting Up Your Environment",
+                                            "articles": [
+                                                {
+                                                    "article_number": "1.2.1",
+                                                    "article_title": "Installing a Text Editor",
+                                                    "article_subtitle": "Installing a Text Editor",
+                                                    "content": "Popular editors include VS Code, Sublime Text..."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "chapter_number": 2,
+                                    "chapter_title": "Basic Concepts",
+                                    "sections": [
+                                        {
+                                            "section_number": "2.1",
+                                            "section_title": "Variables and Data Types",
+                                            "articles": [
+                                                {
+                                                    "article_number": "2.1.1",
+                                                    "article_title": "Understanding Variables",
+                                                    "article_subtitle": "Understanding Variables",
+                                                    "content": "Variables are containers for storing data values..."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "collection_name": "Code Electoral",
+            "titles":[
+                {
+                    "title_number": 1,
+                    "title_title": "",
+                    "chapters":[
+                        {
+                            "chapter_number":1,
+                            "chapter_title": "",
+                            "articles":[
+                                {
+                                    "article_number":"1.1.1",
+                                    "article_title": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "collection_name": "Constitution",
+            "titles":[
+                {
+                    "title_number": 1,
+                    "title_title": "",
+                    "chapters":[
+                        {
+                            "chapter_number":1,
+                            "chapter_title": "",
+                            "articles":[
+                                {
+                                    "article_number":"1.1.1",
+                                    "article_title": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

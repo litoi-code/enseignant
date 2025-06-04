@@ -207,10 +207,19 @@ export const createCourse = async (courseData: Omit<Course, 'id' | 'createdAt' |
       objectives, materials, homework, status, created_at, updated_at
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     [
-      id, courseData.title, courseData.description || null, courseData.classId,
-      courseData.date, courseData.startTime, courseData.endTime,
-      JSON.stringify(courseData.objectives || []), JSON.stringify(courseData.materials || []),
-      courseData.homework || null, courseData.status, now, now
+      id,
+      courseData.title,
+      courseData.description || null,
+      courseData.classId,
+      courseData.date,
+      courseData.startTime,
+      courseData.endTime,
+      JSON.stringify(courseData.objectives || []),
+      JSON.stringify(courseData.materials || []),
+      courseData.homework || null,
+      courseData.status,
+      now,
+      now
     ]
   );
 
@@ -587,4 +596,24 @@ export const getStudentAttendanceRate = async (studentId: string, classId?: stri
   if (!result || (result as any).total === 0) return 0;
 
   return ((result as any).present / (result as any).total) * 100;
+};
+
+// ============ DATA MANAGEMENT ============
+
+export const clearAllData = async (): Promise<void> => {
+  const db = getDatabase();
+
+  try {
+    // Delete in reverse order of dependencies to avoid foreign key constraints
+    await db.runAsync(`DELETE FROM ${DB_TABLES.ATTENDANCE}`);
+    await db.runAsync(`DELETE FROM ${DB_TABLES.GRADES}`);
+    await db.runAsync(`DELETE FROM ${DB_TABLES.COURSES}`);
+    await db.runAsync(`DELETE FROM ${DB_TABLES.STUDENTS}`);
+    await db.runAsync(`DELETE FROM ${DB_TABLES.CLASSES}`);
+
+    console.log('All data cleared successfully');
+  } catch (error) {
+    console.error('Error clearing all data:', error);
+    throw error;
+  }
 };

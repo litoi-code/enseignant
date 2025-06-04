@@ -1,4 +1,5 @@
 import { useAppStore } from '@/lib/store';
+import { TrialManager } from '@/lib/trialManager';
 import { FRENCH_EDUCATION_LEVELS, FRENCH_SUBJECTS } from '@/types';
 import React, { useState } from 'react';
 import {
@@ -20,7 +21,7 @@ interface ClassCreationModalProps {
 }
 
 export default function ClassCreationModal({ visible, onClose, onClassCreated }: ClassCreationModalProps) {
-  const { createClass } = useAppStore();
+  const { createClass, classes } = useAppStore();
 
   const [formData, setFormData] = useState({
     name: '',
@@ -61,6 +62,28 @@ export default function ClassCreationModal({ visible, onClose, onClassCreated }:
 
     if (!formData.subject.trim()) {
       Alert.alert('Erreur', 'La matière est obligatoire');
+      return;
+    }
+
+    // Check trial limitations before creating class
+    const currentClassCount = classes.length;
+    const canAdd = await TrialManager.canPerformAction('add_class', currentClassCount);
+
+    if (!canAdd.allowed) {
+      Alert.alert(
+        'Limite atteinte',
+        canAdd.reason || 'Limite d\'essai atteinte',
+        [
+          { text: 'OK', style: 'default' },
+          {
+            text: 'Débloquer',
+            onPress: () => {
+              // You can add navigation to premium unlock here if needed
+              console.log('Navigate to premium unlock');
+            }
+          }
+        ]
+      );
       return;
     }
 
