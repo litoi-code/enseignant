@@ -87,10 +87,10 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.litoicode.enseignant'
+    namespace 'com.litoicode.classcm'
     defaultConfig {
-        applicationId 'com.litoicode.enseignant'
-        minSdkVersion rootProject.ext.minSdkVersion
+        applicationId 'com.litoicode.classcm'
+        minSdkVersion 21
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0.0"

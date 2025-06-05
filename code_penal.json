@@ -900,56 +900,228 @@
                                                 },
                                                 {
                                                     "article_number": "4.1.4",
-                                                    "article_title": "ARTICLE 93: Effets en cas de crime",
-                                                    "content": ""
-                                                },
+                                                    "article_title": "ARTICLE 93: Choix de la peine",
+                                                    "content": "La peine ou la mesure prononcée dans les limites fixées ou autorisée par la loi doit toujours être fonction des circonstances de l’infraction, du danger qu’elle présente pour l’ordre public, de la personnalité du condamné et de ses possibilités de reclassement, et des possibilités pratiques d’exécution."
+                                                }
                                             ]
                                         }
                                     ]
                                 },
+                                {
+                                    "chapter_number": 5,
+                                    "chapter_title": "Chapître V: De la tentative et de la conspiration",
+                                    "sections": [
+                                        {
+                                            "section_number": "5.1",
+                                            "section_title": "",
+                                            "articles": [
+                                                
+                                                {
+                                                    "article_number": "5.1.1",
+                                                    "article_title": "ARTICLE 94: Tentative",
+                                                    "content": "(1) - Toute tentative manifestée par un acte tendant à l’exécution d’un crime ou d’un délit et impliquant sans équivoque l’intention irrévocable de son auteur de commettre l’infraction, si elle n’a pas été suspendue ou si elle n’a manqué son effet que par des circonstances indépendantes de la volonté de son auteur, est considérée comme le crime ou le délit lui-même.\n\n(2) - La tentative est punissable alors même que le but recherché ne pouvait être atteint à la raison d’une circonstance de fait ignorée de l’auteur.\n\n(3) - L’acte préparatoire ne constitue pas une infraction."
+                                                },
+                                                {
+                                                    "article_number": "5.1.2",
+                                                    "article_title": "ARTICLE 95: Conspiration",
+                                                    "content": "(1) - Il y a conspiration dès que la résolution de commettre une infraction est concertée et arrêtée entre deux (02) - ou plusieurs personnes.\n\n(2) - Il ne peut y avoir conspiration entre mari et femme.\n\n(3) - La conspiration en vue de commettre un crime ou délit, si elle n’a pas été suspendue ou si elle n’a manqué son effet que par des circonstances indépendantes de la volonté de ses auteurs, est considérée comme le crime ou le délit lui-même.\n\n(4) - Bénéficie de l’excuse atténuante celui qui, volontairement, se retire de la conspiration avant tout commencement d’exécution.\n\n(5) - Est exempt de peine, le conspirateur qui empêche l’exécution ou qui, avant toute tentative d’exécution, donne connaissance de la conspiration aux autorités administratives ou judiciaires."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "chapter_number": 6,
+                                    "chapter_title": "Chapître VI: De la coaction et de la complicité",
+                                    "sections": [
+                                        {
+                                            "section_number": "6.1",
+                                            "section_title": "",
+                                            "articles": [
+                                                
+                                                {
+                                                    "article_number": "6.1.1",
+                                                    "article_title": "ARTICLE 96: Coaction",
+                                                    "content": "Est coauteur, celui qui participe avec autrui et en accord avec lui à la commission d’une infraction."
+                                                },
+                                                {
+                                                    "article_number": "6.1.2",
+                                                    "article_title": "ARTICLE 97: Complicité",
+                                                    "content": "(1) - Est complice d’une infraction qualifiée crime ou délit :\nCelui qui provoque, de quelque manière que ce soit, la commission de l’infraction ou donne des instructions pour la commettre ;\nCelui qui aide ou facilite la préparation ou la consommation de l’infraction.\n(2) - La tentative de complicité est considérée comme la complicité elle-même."
+                                                },
+                                                {
+                                                    "article_number": "6.1.3",
+                                                    "article_title": "ARTICLE 98: Peines",
+                                                    "content": "(1) - Les coauteurs et complice sont passibles de la même peine que l’auteur principal, sauf dans les cas où la loi en dispose autrement.\n(2) - Les circonstances personnelles d’où résultent exonération de responsabilité, exemption, atténuation ou aggravation de peine, n’ont d’effet qu’à l’égard de l’auteur ou du complice en la personne de qui elles se rencontrent.\nLes circonstances réelles n’ont d’effets à l’égard du coauteur ou du complice que s’il pouvait les prévoir."
+                                                },
+                                                {
+                                                    "article_number": "6.1.4",
+                                                    "article_title": "ARTICLE 99: Responsabilité pour les conséquences prévisibles",
+                                                    "content": "(1) - Les coauteurs et les complices d’un crime ou d’un délit ou d’une tentative de crime ou de délit sont également responsables de toute autre infraction dont la commission ou la tentative est une conséquence prévisible de l’accord ou de la complicité.\n(2) - Sont également punis comme complice ceux qui, connaissant la conduite criminelle des malfaiteurs, leur fournissent habituellement lieux de retraite ou de réunion."
+                                                },
+                                                {
+                                                    "article_number": "6.1.5",
+                                                    "article_title": "ARTICLE 100: Recel",
+                                                    "content": "(1) - Est receleur celui qui, après la commission d’un crime ou d’un délit, soustrait le malfaiteur ou ses complices à l’arrestation ou aux recherches, ou qui détient ou dispose des choses enlevées, détournées ou obtenues à l’aide de l’infraction.\n(2) - Ces dispositions ne sont pas applicables entre les époux.\n(3) - Les peines du recel sont prévues par des dispositions spéciales de la loi."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                            ]
+                        },
+                        {
+                            "title_number": 4,
+                            "title_title": "Titre IV: Des lois fédérées",
+                            "chapters": [
+                                {
+                                    "chapter_number": 1,
+                                    "chapter_title": "",
+                                    "sections": [
+                                        {
+                                            "section_number": "1.1",
+                                            "section_title": "",
+                                            "articles": [
+                                                {
+                                                    "article_number": "1.1.1",
+                                                    "article_title": "ARTICLE 101: Infractions aux textes des ex-Etats fédérés",
+                                                    "content": "(1) - Les infractions aux lois des Etats Fédérés, non prévus ni sanctionnées par le présent Code ou par d’autres lois fédérales sont punies, si la loi fédérée le décide expressément, de peines égales ou inférieures à un (01) an d’emprisonnement et d’une amende de vingt-cinq mille (25 000) francs, ou de l’une ou l’autre peine seulement.\n(2) - Les infractions aux décrets ou arrêtés légalement pris en exécution des lois des Etats Fédérés constituent des contraventions."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
                             ]
                         }
                     ]
                 },
                 {
                     "book_number": 2,
-                    "book_title": "Livre II",
+                    "book_title": "Livre II: Des crimes, des délits et des contraventions",
                     "titles": [
                         {
                             "title_number": 1,
-                            "title_title": "Titre I: De l'application de la loi pénale",
+                            "title_title": "Titre I: Des crimes et des délits contre la chose publique",
                             "chapters": [
                                 {
                                     "chapter_number": 1,
-                                    "chapter_title": "Getting Started",
+                                    "chapter_title": "Chapître I: Des atteintes à la surêté de l'Etat",
                                     "sections": [
                                         {
                                             "section_number": "1.1",
-                                            "section_title": "Introduction to Programming",
+                                            "section_title": "Section I: De la surêté de l'Etat",
                                             "articles": [
                                                 {
                                                     "article_number": "1.1.1",
-                                                    "article_title": "What is Programming?",
-                                                    "article_subtitle": "What is Programming?",
-                                                    "content": "Programming is the process of creating instructions..."
+                                                    "article_title": "Article 102: Hostilité contre la Patrie",
+                                                    "article_subtitle": "Est coupable de trahison et puni de mort, tout citoyen qui :\na) - participe à des hostilités contre la République ;\n\nb) - favorise ou offre de favoriser lesdites hostilités."
                                                 },
                                                 {
                                                     "article_number": "1.1.2",
-                                                    "article_title": "Choosing Your First Language",
-                                                    "article_subtitle": "Choosing Your First Language",
-                                                    "content": "When starting out, consider languages like Python..."
+                                                    "article_title": "Article 103: Autres crimes punis de mort",
+                                                    "article_subtitle": "Est coupable de trahison et puni de mort, tout citoyen, et est coupable d’espionnage et également puni de mort, tout étranger qui :\na) - incite une puissance étrangère à des hostilités contre la République ;\nb) - livre ou offre de livrer à une puissance étrangère ou à ses agents, des troupes, des territoires, des installations ou du matériel affectés à la défense nationale ou des secrets de la défense nationale ou s’assure par quelque moyen que ce soit la possession d’un secret de la défense nationale en vue de le livrer à une puissance étrangère ;\nc) - en vue de nuire à la défense nationale, détériore des constructions, des installations ou matériels, ou pratique soit avant, soit après leur achèvement des malfaçons de nature à les empêcher de fonctionner normalement ou à provoquer un accident."
+                                                },
+                                                {
+                                                    "article_number": "1.1.3",
+                                                    "article_title": "Article 104: Peine de droit commun",
+                                                    "article_subtitle": "En cas de réduction de la peine prévue par les articles 102 et 103 ci-dessus, la peine privative de liberté est celle de l’emprisonnement à vie."
+                                                },
+                                                {
+                                                    "article_number": "1.1.4",
+                                                    "article_title": "Article 105: Atteintes punies d'un maximum de dix ans",
+                                                    "article_subtitle": "Est puni d’un emprisonnement de un (01) à dix (10) ans et d’une amende de cent mille (100 000) à dix millions (10 000 000) de francs ou de l’une de ces deux peines seulement, celui qui, en temps de paix :\n1. dans un but autre que de le livrer à une puissance étrangère, s’assure la possession d’un secret de la défense nationale ou le révèle à une personne non qualifiée ;\n2. dans l’intention de les livrer à une puissance étrangère, rassemble des renseignements, objets, documents ou procédés dont la réunion et l’exploitation sont de nature à nuire à la défense nationale ;\n3. s’introduit, à l’aide de moyens frauduleux, dans une installation, un navire, un aéronef ou un véhicule affectés à la défense nationale.\n4. exécute des dessins, levées ou opérations photographiques ou topographiques à l’intérieur des installations militaires ou autour d’elles dans une zone d’interdiction fixée par les autorités militaires et sans leur autorisation.\n5. séjourne, au mépris d’une interdiction édictée par l’autorité compétente, dans un rayon déterminé autour d’une installation militaire.\n6. survole sans autorisation le territoire de la République dans un aéronef étranger.\n7. organise, d’une manière occulte, un moyen de correspondance ou de transmission à distance susceptible de nuire à la défense nationale.\n8. par des actes non approuvés par le Gouvernement, expose la République à des représailles.\n9. s’engage ou s’entraîne, sans autorisation préalable des autorités camerounaises habilitées, dans les forces armées ou de police étrangères, et se livre à des activités susceptibles d’exposer éventuellement la République à une rébellion ou à une insurrection."
+                                                },
+                                                {
+                                                    "article_number": "1.1.5",
+                                                    "article_title": "Article 106: Atteintes punies d'un maximum de cinq ans",
+                                                    "article_subtitle": "Est puni d’un emprisonnement de un (01) à cinq (05) ans et d’une amende de cinquante mille (50 000) à cinq millions (5 000 000) de francs ou de l’une de ces deux peines seulement, celui qui, en temps de paix :\n1. entretient avec les agents d’une puissance étrangère, des intelligences susceptibles de nuire à la situation militaire ou diplomatique de la République ;\n2. recrute ou enrôle, sur le territoire de la République et sans l’autorisation du Gouvernement des individus pour le compte d’une force armée étrangère ;\n3. expose, par des actes non approuvés par le Gouvernement, des citoyens à des représailles ;\n4. sans autorisation du Gouvernement, livre ou communique à une puissance étrangère ou à ses agents ou à une application industrielle intéressant la défense nationale ;\n5. par imprudence, négligence ou inobservation des règlements, laisse soustraire ou prendre connaissance en tout ou en partie et même momentanément, des objets, matériels, documents ou renseignements qui lui sont confiés ou dont il a la garde, et dont la connaissance pourrait conduire à la découverte d’un secret de la défense nationale ;\n6. par imprudence, négligence ou inobservation des règlements, laisse détériorer ou détruire des objets, matériels ou documents qui lui sont confiés ou dont il a la garde, et dont la détérioration ou la perte porte atteinte à la défense nationale ;\n7. etant chargé de fournitures, entreprises ou régies pour le compte d’un fournisseur des forces armées, ou étant agent d’un fournisseur ou sous-traitant, fait manquer le service ou provoque son retard, même par suite d’une simple négligence ;\n8. etant chargé de fournitures, entreprises ou régies pour le compte des forces armées, commet une fraude sur la nature, la qualité ou la quantité des travaux ou de la main-d’œuvre ou des choses fournies ;\n9. s’engage ou s’entraîne, sans autorisation préalable des autorités camerounaises habilitées, dans les forces armées ou de police étrangères."
+                                                },
+                                                {
+                                                    "article_number": "1.1.6",
+                                                    "article_title": "Article 107: Non-dénonciation",
+                                                    "article_subtitle": "Est puni des peines prévues à l’article 106 ci-dessus, le citoyen qui, en temps de paix, n’avertit pas les autorités militaires, administratives ou judiciaires dès le moment où il a connaissance, de toute activité de nature à nuire à la défense nationale."
+                                                },
+                                                {
+                                                    "article_number": "1.1.7",
+                                                    "article_title": "Article 108: Temps de guerre",
+                                                    "article_subtitle": "(1) - Est puni d’un emprisonnement de dix (10) - à vingt (20) - ans, tout citoyen ou tout résident qui, en temps de guerre et sans l’autorisation de l’autorité compétente :\n\na) - entretient une correspondance ou des relations avec les sujets ou les agents d’une puissance étrangère ennemie ;\n\nb) - fait, même indirectement, un acte de commerce avec un sujet ou un agent d’une puissance ennemie ou avec une personne résident sur son territoire.\n\n(2) - est puni d’un emprisonnement de dix (10) - à vingt (20) - ans celui qui, en temps de guerre :\n\na) - participe à une entreprise de démoralisation de l’armée ou de la nation ayant pour objet de nuire à la défense nationale ;\n\nb) - commet une des infractions visées aux articles 105, 106 et 107 ci-dessus.\n\n(3) - est puni d’un emprisonnement de un (01) - à cinq (05) - ans et d’une amende de cinquante mille (50 000) - à cinq millions (5 000 000) - de francs, ou de l’une de ces deux peines seulement, celui qui, en temps de guerre, commet un acte quelconque de nature à nuire à la défense nationale et non autrement puni.\n\n(4) - pour l’application des alinéas 2 et 3 ci-dessus, sont assimilés au temps de guerre l’état d’urgence et l’état d’exception."
+                                                },
+                                                {
+                                                    "article_number": "1.1.8",
+                                                    "article_title": "Article 109: Définition du secret de la défense nationale",
+                                                    "article_subtitle": "Est réputé secret de la défense nationale, pour l’application du présent Code, tout renseignement de toute nature susceptible d’aider des entreprises hostiles à la République et qui n’a pas déjà été rendu public."
+                                                },
+                                                {
+                                                    "article_number": "1.1.9",
+                                                    "article_title": "Article 110: Extension aux puissances étrangères",
+                                                    "article_subtitle": "Les dispositions de la présente section s’appliquent également aux actes commis au préjudice des puissances étrangères auxquelles elles ont été étendues par décret."
                                                 }
                                             ]
                                         },
                                         {
                                             "section_number": "1.2",
-                                            "section_title": "Setting Up Your Environment",
+                                            "section_title": "Section II: De la surêté intérieure de l'Etat",
                                             "articles": [
                                                 {
                                                     "article_number": "1.2.1",
-                                                    "article_title": "Installing a Text Editor",
-                                                    "article_subtitle": "Installing a Text Editor",
-                                                    "content": "Popular editors include VS Code, Sublime Text..."
+                                                    "article_title": "ARTICLE 111: Sécession",
+                                                    "content": "(1) - Est puni de l’emprisonnement à vie, celui qui, en temps de paix, entreprend par quelque moyen que ce soit de porter atteinte à l’intégrité du territoire.\n\n(2) - En temps de guerre, d’état d’urgence ou d’exception, la peine est celle de mort."
+                                                },
+                                                {
+                                                    "article_number": "1.2.2",
+                                                    "article_title": "ARTICLE 112: Guerre civile",
+                                                    "content": "Est puni de mort celui qui excite à la guerre civile en armant ou poussant les habitants à s’armer les uns contre les autres.."
+                                                },
+                                                {
+                                                    "article_number": "1.2.3",
+                                                    "article_title": "ARTICLE 113: Propagation de fausses nouvelles",
+                                                    "content": "Est puni d’un emprisonnement de trois (03) mois à trois (03) ans et d’une amende de cent mille (100 000) à deux millions (2 000 000) de francs, celui qui émet ou propage des nouvelles mensongères, lorsque ces nouvelles sont susceptibles de nuire aux autorités publiques ou à la cohésion nationale.\nEn cas de réduction de la peine prévue aux articles 111 (2) et 112 ci-dessus, la peine privative est celle de l’emprisonnement."
+                                                },
+                                                {
+                                                    "article_number": "1.2.4",
+                                                    "article_title": "ARTICLE 114: Révolution",
+                                                    "content": "Est puni de l’emprisonnement à vie, celui qui tente par la violence, soit de modifier les lois constitutionnelles, soit de renverser les autorités politiques instituées par lesdites lois ou de les mettre dans l’impossibilité d’exercer leurs pouvoirs."
+                                                },
+                                                {
+                                                    "article_number": "1.2.5",
+                                                    "article_title": "ARTICLE 115: Bande armée",
+                                                    "content": "(1) - Est puni de l’emprisonnement à vie tout individu qui, dans le but de commettre l’un des crimes prévus aux articles 111, 112 et 114 ci-dessus, ou pour empêcher l’action de la force publique contre les auteurs de ces crimes, organise une bande armée ou y exerce une fonction ou un commandement quelconque ou participe avec cette bande à l’exécution ou à la tentative d’exécution de ces crimes.\n\n(2) - Est puni d’un emprisonnement de dix (10) à vingt (20) ans, tout individu ayant seulement participé à la réunion de cette bande.\n\n(3) - Constitue une bande armée pour l’application du présent article, tout rassemblement d’au moins cinq (05) personnes dont l’une au moins est porteuse d’une arme, apparente ou cachée.\n\n(4) - Les dispositions de l’article 95 (5) du présent Code sont applicables au présent article."
+                                                },
+                                                {
+                                                    "article_number": "1.2.6",
+                                                    "article_title": "ARTICLE 116: Insurrection",
+                                                    "content": "Est puni d’un emprisonnement de dix (10) - à vingt (20) - ans celui qui, dans un mouvement insurrectionnel :\n\na) - provoque ou facilite le rassemblement des insurgés par quelque moyen que ce soit ;\n\nb) - empêche par quelque moyen que ce soit, la convocation, la réunion ou l’exercice de la force publique ou s’en empare ;\n\nc) - envahit ou détruit des édifices publics ou privés ;\n\nd) - détient ou s’empare d’armes, de munitions ou d’explosifs ;\n\ne) - porte un uniforme, un costume ou autres insignes officiels, civils ou militaires."
+                                                },
+                                                {
+                                                    "article_number": "1.2.7",
+                                                    "article_title": "ARTICLE 117: Definition des armes",
+                                                    "content": "En dehors des armes proprement dites, sont considérées comme armes pour l’application du présent article, tous les objets portés avec l’intention d’en faire usage pour causer des dommages corporels ou matériels."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "1.3",
+                                            "section_title": "Section III: Des peines accessoires",
+                                            "articles": [
+                                                {
+                                                    "article_number": "1.3.1",
+                                                    "article_title": "ARTICLE 118: Sécession",
+                                                    "content": ""
+                                                },
+                                                {
+                                                    "article_number": "1.3.2",
+                                                    "article_title": "ARTICLE 119: Confiscation des biens illégitimes",
+                                                    "content": "(1) - En cas de condamnation pour l’un des crimes ou délits prévus au présent chapitre, la juridiction peut prononcer la confiscation des biens du condamné de quelque nature qu’ils soient, divis ou indivis, dont il ne peut établir l’origine légitime.\n\n(2) - En temps de guerre, cette confiscation est toujours prononcée."
+                                                },
+                                                {
+                                                    "article_number": "1.3.3",
+                                                    "article_title": "ARTICLE 120: Confiscation générale",
+                                                    "content": "En cas de condamnation pour l’un des crimes prévus au présent chapitre, la juridiction peut également prononcer la confiscation totale ou partielle des biens légitimement acquis."
+                                                },
+                                                {
+                                                    "article_number": "1.3.4",
+                                                    "article_title": "ARTICLE 121: Déchéances",
+                                                    "content": "(1) - En cas de condamnation pour crime prévu au présent chapitre, la durée des déchéances énumérées à l’article 30 du présent Code ne peut être réduite à moins de cinq (05) ans.\n\n(2) - En cas de condamnation à une peine privative de liberté pour délit, prononcée en application du présent chapitre, la juridiction peut y ajouter ces déchéances pour une durée de cinq (05) ans au moins et de dix (10) - ans au plus.\n\n(3) - Les mesures post-pénales prévues à l’article 40 du présent Code peuvent être portées jusqu’à dix (10) ans.\n\n(4) - En cas de crime ou délit commis par un fonctionnaire, par un agent ou employé d’un service public ou par un militaire, l’interdiction d’exercer une fonction publique peut être perpétuelle."
                                                 }
                                             ]
                                         }
@@ -957,6 +1129,228 @@
                                 },
                                 {
                                     "chapter_number": 2,
+                                    "chapter_title": "Chapître II: Des atteintes à la Constitution",
+                                    "sections": [
+                                        {
+                                            "section_number": "2.1",
+                                            "section_title": "Section I: Des délits électoraux",
+                                            "articles": [
+                                                {
+                                                    "article_number": "2.1.1",
+                                                    "article_title": "Article 122: Fraudes électorales",
+                                                    "content": "(1) - Est puni d’un emprisonnement de trois (03) - mois à deux (02) - ans et d’une amende de cinquante mille (50 000) - à cinq cent mille (500 000) - francs ou de l’une de ces deux peines seulement, celui qui :\n\na) - se fait inscrire sur les listes électorales sous une fausse identité ou qui, en se faisant inscrire, dissimule qu’il :\n– est condamné pour crime, même par défaut ;\n– est condamné à une peine privative de liberté sans sursis supérieure à trois (03) - mois ;\n– est condamné à une peine privative de liberté assortie de sursis simple ou avec probation supérieure à six (06) - mois ;\n– fait l’objet d’un mandat d’arrêt ;\n– Est failli non réhabilité et dont la faillite a été déclarée, soit par les tribunaux camerounais, soit par un jugement rendu à l’étranger et exécutoire au Cameroun ;\n\nb) - A l’aide des déclarations mensongères ou de faux certificats, se fait inscrire indûment sur une liste électorale ou qui, à l’aide des mêmes moyens, inscrit ou raye indûment un citoyen ;\n\nc) - déchu du droit de vote, participe au scrutin ;\n\nd) - vote soit en vertu d’une inscription frauduleuse, soit en prenant les noms et qualités d’autres électeurs inscrits ;\n\ne) - à la suite des inscriptions multiples, vote plus d’une fois ;\n\nf) - étant chargé dans un scrutin de recevoir, compter, dépouiller les bulletins contenant les suffrages des citoyens, soustrait, ajoute ou altère des bulletins, ou indique un autre nom que celui inscrit ;\n\ng) - à l’aide de fausses nouvelles, de propos calomnieux ou autres manœuvres frauduleuses, supprime ou détourne des suffrages, détermine un ou plusieurs électeurs à s’abstenir de voter ;\n\nh) - avant, pendant ou après un scrutin, par inobservation des dispositions législative ou réglementaires, ou par tout autre acte frauduleux, viole le secret, porte atteinte à la sincérité, empêche les opérations du scrutin ou en modifie le résultat ;\n\ni) - se rend coupable de manœuvres frauduleuses dans la délivrance ou la production des certificats d’inscription ou de radiation des listes électorales ;\n\nj) - utilise à des fins autres qu’électorales, les données personnelles contenues dans le fichier électoral ;\n\nk) - le jour du scrutin, avec violence ou non, se rend auteur ou complice d’un enlèvement frauduleux de l’urne ou de tout autre matériel électoral.\n\n(2) - Si l’auteur ou son complice est fonctionnaire au sens de l’article 131 du présent Code, il est passible d’un emprisonnement de un (01) - à cinq (05) - ans."
+                                                },
+                                                {
+                                                    "article_number": "2.1.2",
+                                                    "article_title": "Article 123: Corruption et violence en matière électorale",
+                                                    "content": "Est puni d’un emprisonnement de trois (03) - mois à deux (02) - ans et d’une amende de dix mille (10 000) - à cent mille (100 000) - francs ou de l’une de ces deux peines seulement, celui qui :\na) - par attroupement, par clameurs ou démonstrations menaçantes, trouble les opérations électorales ou porte atteinte à l’exercice du droit ou à la liberté du vote ;\nb) - le jour du scrutin, se rend coupable d’outrage ou de violences envers un de ses membres, ou qui, par voies de fait ou de menaces, retarde ou empêche les opérations électorales ;\nc) - par dons, libéralités, faveurs, promesses d’octroi d’emplois publics ou privés ou d’autres avantages particuliers faits en vue d’influencer le vote d’un ou de plusieurs électeurs, obtient leur suffrage soit directement, soit par l’entremise d’un tiers ;\nd) - directement ou par l’entremise d’un tiers, accepte ou sollicite des candidats des dons, libéralités, faveurs ou avantages cités au paragraphe (c) - ci-dessus ;\ne) - par voies de fait, violences ou menace contre un électeur, soit en lui faisant craindre de perdre son emploi, soit d’exposer à un dommage sa personne, sa famille ou sa fortune, influence son vote."
+                                                },
+                                                {
+                                                    "article_number": "2.1.3",
+                                                    "article_title": "Article 123-1: Port d'arme en période électorale",
+                                                    "content": "(1) - Est puni d’un emprisonnement de dix (10) ours à deux (02) mois et d’une amende de vingt-cinq mille (25 000) à deux cent cinquante mille (250 000) francs ou de l’une de ces deux peines seulement, celui qui entre dans un bureau de vote avec une arme apparente.\n(2) - La peine d’emprisonnement peut être portée à quatre (04) mois et l’amende à cinq cent mille (500 000) francs si l’arme était cachée."
+                                                },
+                                                {
+                                                    "article_number": "2.1.4",
+                                                    "article_title": "Article 123-2: Activité ou manifestation à caractère politique en période électorale",
+                                                    "content": "(1) - Toute activité ou manifestation à caractère politique est interdite au sein des établissements publics ainsi que dans les établissements scolaires ou universitaires.\n\n(2) - Toute infraction aux dispositions de l’alinéa 1er ci-dessus est punie d’un emprisonnement de dix (10) jour à quatre (04) mois et d’une amende de vingt-cinq mille (25 000) à deux cent cinquante mille (250 000) francs ou de l’une de ces deux peines seulement."
+                                                },
+                                                {
+                                                    "article_number": "2.1.5",
+                                                    "article_title": "Article 123-3: Détournement de fonds publics en matière électorale",
+                                                    "content": "Est puni des peines prévues par l’article 184 du présent Code, toute personne qui, agissant en son nom ou pour le compte d’un parti politique, utilise les fonds reçus dans le cadre du financement public à des fins autres que celles prévues par la loi portant Code Electoral."
+                                                },
+                                                {
+                                                    "article_number": "2.1.6",
+                                                    "article_title": "Article 123-4: Poursuites pénales en matière électorale",
+                                                    "content": "Hors le cas de flagrant délit, aucune poursuite pénale contre un candidat pour infraction aux dispositions de la présente Section ne peut être intentée avant la proclamation des résultats."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "2.2",
+                                            "section_title": "Section II: De la coalition",
+                                            "articles": [
+                                                {
+                                                    "article_number": "2.2.1",
+                                                    "article_title": "Article 124: Coalition contre les lois, le fonctionnement d'un service et la surêté de l'Etat",
+                                                    "content": "(1) - Est puni d’un emprisonnement de six (06) mois à trois (03) ans, tout individu dépositaire de quelque partie de l’autorité publique et tout fonctionnaire qui, avec d’autres dépositaires ou fonctionnaires, concerte ou délibère :\n– des mesures contraires aux lois ou aux textes d’application légalement pris ;\n– des mesures, y compris des démissions collectives, ayant pour objet principal d’empêcher ou de suspendre l’exécution d’un service public.\n(2) - Si ce concert a lieu entre les autorités civiles et militaires, l’emprisonnement est de un (01) à dix (10) ans.\n(3) - Si le concert visé à l’alinéa 2 ci-dessus a pour objet un crime contre la sûreté de l’Etat, la peine est celle de mort."
+                                                }                                             
+                                                
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "2.3",
+                                            "section_title": "Section III: Des empiètements",
+                                            "articles": [
+                                                {
+                                                    "article_number": "2.3.1",
+                                                    "article_title": "Article 125: Empiètements sur le pouvoir législatif",
+                                                    "content": "Est puni d’un emprisonnement de six (06) mois à cinq (05) ans, tout fonctionnaire qui :\na) - s’immisce dans l’exercice du pouvoir législatif ;\nb) - refuse d’exécuter des dispositions législatives."
+                                                },
+                                                {
+                                                    "article_number": "2.3.2",
+                                                    "article_title": "Article 126: Empiètements sur le pouvoir exécutif et sur le pouvoir judiciaire",
+                                                    "content": "Est puni d’un emprisonnement de six (06) mois à cinq (05) ans :\n– le représentant de l’autorité exécutive qui intime des ordres ou des défenses à des Cours de Tribunaux ;\n– le Magistrat qui intime des ordres ou des défenses à des autorités exécutives ou administratives."
+                                                },
+                                                {
+                                                    "article_number": "2.3.3",
+                                                    "article_title": "Article 127: Empiètements du judiciaire sur certaines immunités.",
+                                                    "content": "Est puni d’un emprisonnement de un (01) à cinq (05) ans, le Magistrat ou l’Officier de Police Judiciaire qui poursuit, arrête ou juge quiconque, en violation des lois sur les immunités."
+                                                }                                             
+                                                
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "2.4",
+                                            "section_title": "Section IV: De l'utilisation irrégulière de la force publique",
+                                            "articles": [
+                                                {
+                                                    "article_number": "2.4.1",
+                                                    "article_title": "Article 128: Emploi illégal de la force",
+                                                    "content": "Est puni d’un emprisonnement de trois (03) à dix (10) ans et d’une amende de vingt mille (20 000) - à deux cent mille (200 000) francs, celui qui requiert ou ordonne l’action ou l’emploi de la force publique contre l’exécution d’une disposition législative ou réglementaire ou d’un ordre légitime soit de la justice, soit de l’Administration."
+                                                },
+                                                {
+                                                    "article_number": "2.4.2",
+                                                    "article_title": "Article 129: Inexécution de réquisition",
+                                                    "content": "Est puni d’un emprisonnement de six (06) mois à deux (02) ans, le commandant de la force publique qui n’obtempère pas à une réquisition légale de l’autorité civile."
+                                                }                                          
+                                                
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "2.5",
+                                            "section_title": "Section V: Des peines accessoires",
+                                            "articles": [
+                                                {
+                                                    "article_number": "2.5.1",
+                                                    "article_title": "Article 130: Déchéances",
+                                                    "content": "En cas de condamnation pour l’un des délits prévus au présent chapitre, la juridiction peut prononcer, pour une durée de cinq (05) à dix (10) ans, la déchéance de l’article 30 du présent Code."
+                                                },
+                                                {
+                                                    "article_number": "2.4.2",
+                                                    "article_title": "Article 129: Inexécution de réquisition",
+                                                    "content": "Est puni d’un emprisonnement de six (06) mois à deux (02) ans, le commandant de la force publique qui n’obtempère pas à une réquisition légale de l’autorité civile."
+                                                }                                          
+                                                
+                                            ]
+                                        },
+                                    ]
+                                },
+                                {
+                                    "chapter_number": 3,
+                                    "chapter_title": "Chapître III: Des infractions commises par les fonctionnaires dans l'exercice de leur fonction",
+                                    "sections": [
+                                        {
+                                            "section_number": "3.1",
+                                            "section_title": "Section I: Dispositions préliminaires",
+                                            "articles": [
+                                                {
+                                                    "article_number": "3.1.1",
+                                                    "article_title": "Article 131: Définition du fonctionnaire",
+                                                    "content": "Est considéré comme fonctionnaire, pour l’application de toute loi pénale, \ntout Magistrat, \ntout Officier Public ou Ministériel, \ntout Préposé ou Commis de l’Etat ou toute personne morale de droit public, d’une société d’Etat ou d’Economie Mixte, d’un Officier Public ou Ministériel, \ntout Militaire des forces armées ou de gendarmerie, tout Agent de la sûreté nationale ou de l’administration pénitentiaire et toute personne chargée, même occasionnellement, d’un service, d’une mission ou d’un mandat public, agissant dans l’exercice ou à l’occasion de l’exercice de ses fonctions."
+                                                },
+                                                {
+                                                    "article_number": "3.1.2",
+                                                    "article_title": "Article 131-1: Agent public étranger ou international",
+                                                    "content": "Est considérée comme agent public étranger ou international, pour l’application du présent Code, toute personne détenant un mandat législatif, exécutif, administratif ou judiciaire d’un pays étranger, ou d’une organisation internationale publique pour un pays étranger, y compris pour un organisme public ou une entreprise publique."
+                                                },
+                                                {
+                                                    "article_number": "3.1.3",
+                                                    "article_title": "Article 132: Aggravation pour les fonctionnaires",
+                                                    "content": "(1) - Sous réserve des peines plus sévères s’il échet, est puni d’un emprisonnement de six (06) mois à cinq (05) ans, le fonctionnaire coupable de violences contre autrui.\n\n(2) - Les peines prévues aux articles 189 (copie de documents administratifs), 206 (documents et permis), 207 (certificats officiels), 291 (1) (arrestation illégale), 292 (travail forcé), 299 (violation de domicile), 300 (violation de correspondance), 310 (secret professionnel), 315 (contrefaçon de certificat) - du présent Code, sont doublées lorsque le coupable est un fonctionnaire."
+                                                },
+                                                {
+                                                    "article_number": "3.1.4",
+                                                    "article_title": "Article 133: Déchéances, confiscation et publicité",
+                                                    "content": "(1) - Les déchéances de l’article 30 du présent Code peuvent être prononcées contre les fonctionnaires coupables des infractions prévues au présent chapitre ou condamnés en application de l’article 89 du présent Code.\nToutefois, dans le cas des articles 134, 134-1, 135, 136 et 161 du présent Code, la juridiction est tenue de prononcer la confiscation prévue à l’article 35 du présent Code, et d’ordonner la publication de sa décision par voie de presse écrite, cybernétique, de radio ou de télévision."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "3.2",
+                                            "section_title": "Section II: Des avantages illégitimes",
+                                            "articles": [
+                                                {
+                                                    "article_number": "3.2.1",
+                                                    "article_title": "Article 134: Corruption active",
+                                                    "content": "(1) - Est puni d’un emprisonnement de cinq (05) à dix (10) ans et d’une amende de deux cent mille (200 000) à deux millions (2 000 000) de francs, tout fonctionnaire ou agent public national, étranger ou international qui, pour lui-même ou pour un tiers sollicite, agrée ou reçoit des offres, promesses, dons ou présents pour faire, s’abstenir de faire ou ajourner un acte de sa fonction.\n\n(2) - La peine prévue à l’alinéa 1 ci-dessus est un emprisonnement de un (01) à cinq (05) ans et une amende de cent mille (100 000) à un million (1 000 000) de francs si l’acte n’entre pas dans les attributions de la personne corrompue, mais a été facilité par sa fonction.\n\n(3) - Est puni des peines prévues à l’alinéa 2 ci-dessus, tout agent public national ou international qui sollicite ou accepte une rétribution en espèce ou en nature pour lui-même ou pour un tiers, en rémunération d’un acte déjà accompli ou une abstention passée.\n\n(4) - Les peines prévues aux alinéas 1, 2 et 3 ci-dessus sont doublés si le fonctionnaire ou l’agent public incriminé est un Magistrat, un Officier de Police Judiciaire, un Agent d’une institution de lutte contre la corruption, un Chef d’Unité Administrative ou tout autre fonctionnaire ou agent public assermentés."
+                                                },
+                                                {
+                                                    "article_number": "3.2.2",
+                                                    "article_title": "Article 134-1: Corruption passive",
+                                                    "content": "(1) - Quiconque, pour obtenir soit l’accomplissement, l’ajournement ou le refus d’accomplissement d’un acte, soit des faveurs ou des avantages tels que prévus à l’article 134 ci-dessus, fait des promesses, offres, dons, présents ou cède à des sollicitations tendant à la corruption, est puni des peines prévues à l’article 134 alinéa 1 ci-dessus, que la corruption ait ou non produit son effet.\n\n(2) - Est puni des peines prévues à l’alinéa 2 de l’article 134 ci-dessus, celui qui fait des dons, présents ou cède aux sollicitations tendant rémunérer un acte déjà accompli ou une abstention passée."
+                                                },
+                                                {
+                                                    "article_number": "3.2.3",
+                                                    "article_title": "Article 134-2: Exemption des poursuites",
+                                                    "content": "(1) - Sous réserve des peines plus sévères s’il échet, est puni d’un emprisonnement de six (06) mois à cinq (05) ans, le fonctionnaire coupable de violences contre autrui.\n\n(2) - Les peines prévues aux articles 189 (copie de documents administratifs), 206 (documents et permis), 207 (certificats officiels), 291 (1) (arrestation illégale), 292 (travail forcé), 299 (violation de domicile), 300 (violation de correspondance), 310 (secret professionnel), 315 (contrefaçon de certificat) - du présent Code, sont doublées lorsque le coupable est un fonctionnaire."
+                                                },
+                                                {
+                                                    "article_number": "3.2.4",
+                                                    "article_title": "Article 135: Déchéances, confiscation et publicité",
+                                                    "content": "(1) - Est puni d’un emprisonnement de un (01) à cinq (05) ans et d’une amende de deux cent mille (200 000) à deux millions (2 000 000) de francs, tout fonctionnaire ou agent public qui, directement ou indirectement, prend ou reçoit un intérêt :\na) - Dans les actes ou adjudications soumis à son avis, ou dont il avait la surveillance, le contrôle, l’administration ou la passation ;\nb) - Dans les entreprises privées, les coopératives, les sociétés d’économie mixte ou participation financière de l’Etat, les régies, les concessions soumises à sa surveillance ou à son contrôle ;\nc) - Dans les marchés ou contrats passés au nom de l’Etat ou d’une collectivité publique, avec une personne physique ou morale ;\nd) - Dans une affaire pour laquelle il est chargé d’ordonner le paiement ou d’opérer la liquidation.\n(2) - Les dispositions du présent article sont applicables aux anciens fonctionnaires et agents publics tels que définis à l’article 131 du présent Code qui, dans les cinq (05) - ans à compter de la cessation de leurs fonctions par suite de démission, destitution, congé, mise en disponibilité ou à la retraite, ou pour toute autre cause, prennent un intérêt quelconque dans les actes, opérations ou entreprises susvisés et précédemment soumis à leur surveillance, contrôle, administration ou dont ils assuraient le paiement ou la liquidation."
+                                                },
+                                                {
+                                                    "article_number": "3.2.5",
+                                                    "article_title": "Article 135-1: Délit d'initié",
+                                                    "content": "Est puni d’un emprisonnement de six (06) - mois à deux (02) - ans et d’une amende de un million (1 000 000) - à dix millions (10 000 000) - de francs, le fait :\na) - Pour les dirigeants d’une société commerciale ou industrielle et pour les personnes disposant, à l’occasion de l’exercice de leur profession ou de leurs fonctions ou les perspectives d’un émetteur dont les valeurs mobilières sont négociées sur le marché, de réaliser, directement ou par personne interposée, une ou plusieurs opérations avant que le public ait connaissance de ces informations et avec pour but de réaliser un profit indu ;\nb) - Pour toute personne disposant à l’occasion de l’exercice de sa profession ou de ses fonctions, d’informations privilégiées sur la situation ou les perspectives d’un émetteur dont les valeurs mobilières sont négociées sur un marché, de les communiquer à un tiers en dehors du cadre normal de sa profession ou de ses fonctions et avec pour but de réaliser un profit indu ;\nc) - Le fait que toute personne disposant à l’occasion de l’exercice de ses fonctions, d’informations privilégiées et soumises au secret professionnel, relatives à la réalisation d’un projet par l’Etat, une collectivité décentralisée ou toute autre personne morale de droit public, d’utiliser lesdites informations pour se permettre ou permettre à autrui, de poser des actes à son profit de manière à faire retarder le projet envisagé ou dele grever des charges supplémentaires ;\nd) - Les peines sont doublées si l’auteur des faits est un fonctionnaire ou un agent public au sens du présent Code."
+                                                },
+                                                {
+                                                    "article_number": "3.2.6",
+                                                    "article_title": "Article 135-2: Entraves au fonctionnement du marché financier",
+                                                    "content": "(1) - Est punie d’une amende de cinq cent mille (500 000) - à cinq millions (5 000 000) - de francs, toute personne physique ou morale qui :\n– fausse le fonctionnement du marché ;\n– porte atteinte à l’égalité d’information et de traitement des investisseurs ou à leurs intérêts ;\n– fait bénéficier aux émetteurs et investisseurs de pratiques contraires à leurs obligations ;\n– fournit des services d’investissement à des tiers, à titre de profession habituelle, sans y être autorisée ;\n– effectue des négociations ou échanges, autres que ceux prévus par la réglementation en vigueur, sur des valeurs mobilières admises aux négociations sur un marché, sans recourir à un prestataire de service d’investissement.\n\n(2) - Est punie d’un emprisonnement de six (06) - mois à deux (02) - ans et d’une amende de un million (1 000 000) - à dix (10 000 000) - de francs ou de l’une des deux peines seulement, toute personne physique ou morale qui diffuse sciemment, dans le public, des informations fausses ou trompeuses sur la situation ou les perspectives d’un émetteur dont les valeurs mobilières sont négociées sur le marché, de nature à agir sur les cours, ou qui entrave ou tente d’entraver, par manœuvre de toute nature, le bon fonctionnement du marché.\n\n(3) - Les peines accessoires prévues aux articles 33, 34 et 35 du présent Code peuvent également être prononcées par la juridiction compétente.\n\n(4) - La juridiction compétente peut, en outre, le cas échéant, prononcer une amende d’un montant supérieur à ceux prévus par l’alinéa 1 ci-dessus jusqu’au décuple du profit réalisé ; le montant retenu ne peut être inférieur audit profit."
+                                                },
+                                                {
+                                                    "article_number": "3.2.7",
+                                                    "article_title": "Article 136: Participation dans une affaire",
+                                                    "content": "(1) - Est punie d’une amende de cinq cent mille (500 000) - à cinq millions (5 000 000) - de francs, toute personne physique ou morale qui :\n– fausse le fonctionnement du marché ;\n– porte atteinte à l’égalité d’information et de traitement des investisseurs ou à leurs intérêts ;\n– fait bénéficier aux émetteurs et investisseurs de pratiques contraires à leurs obligations ;\n– fournit des services d’investissement à des tiers, à titre de profession habituelle, sans y être autorisée ;\n– effectue des négociations ou échanges, autres que ceux prévus par la réglementation en vigueur, sur des valeurs mobilières admises aux négociations sur un marché, sans recourir à un prestataire de service d’investissement.\n\n(2) - Est punie d’un emprisonnement de six (06) - mois à deux (02) - ans et d’une amende de un million (1 000 000) - à dix (10 000 000) - de francs ou de l’une des deux peines seulement, toute personne physique ou morale qui diffuse sciemment, dans le public, des informations fausses ou trompeuses sur la situation ou les perspectives d’un émetteur dont les valeurs mobilières sont négociées sur le marché, de nature à agir sur les cours, ou qui entrave ou tente d’entraver, par manœuvre de toute nature, le bon fonctionnement du marché.\n\n(3) - Les peines accessoires prévues aux articles 33, 34 et 35 du présent Code peuvent également être prononcées par la juridiction compétente.\n\n(4) - La juridiction compétente peut, en outre, le cas échéant, prononcer une amende d’un montant supérieur à ceux prévus par l’alinéa 1 ci-dessus jusqu’au décuple du profit réalisé ; le montant retenu ne peut être inférieur audit profit."
+                                                },
+                                                {
+                                                    "article_number": "3.2.8",
+                                                    "article_title": "Article 136-1: Prise d'emploi prohibée",
+                                                    "content": "Est puni d’un emprisonnement de six (06) mois à deux (02) ans et d’une amende de vingt mille (20 000) à deux millions (2 000 000) de francs ou de l’une de ces deux peines seulement, tout agent public qui, chargé d’une mission d’administration, même provisoire, ou de contrôle, de surveillance ou de conseil d’une entreprise privée, exerce avant un délai de trois (03) ans à compter de la cessation de ses fonctions, un mandat social ou se livre, même en vertu d’un contrat, à une activité rémunérée par cette entreprise."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "3.3",
+                                            "section_title": "Section III: Des infractions contre l'intérêt public",
+                                            "articles": [
+                                                {
+                                                    "article_number": "3.1.1",
+                                                    "article_title": "Article 137: Concussion au détriment de l'Etat",
+                                                    "content": "Est puni d’un emprisonnement de deux (02) à dix (10) ans et d’une amende de vingt mille (20 000) à deux millions (2 000 000) de francs, tout fonctionnaire ou agent public qui accorde des exonérations de droits, taxes, redevances, impôts ou contributions, délivre à un prix inférieur à celui qui est prescrit, les produits de l’Etat, d’une coopérative, d’une collectivité ou établissement public ou soumis à la tutelle administrative de l’Etat ou dont l’Etat détient, directement ou indirectement, la majorité du capital."
+                                                },
+                                                {
+                                                    "article_number": "3.1.2",
+                                                    "article_title": "Article 138: Déficit non signalé",
+                                                    "content": "Est puni d’un emprisonnement d'un (01) à dix (05) ans et d’une amende de cent mille (100 000) à un million (1 000 000) de francs, tout fonctionnaire ou agent public étranger qui, ayant connaissance d'un déficit de caisse ou d'un déficit comptable dans la gestion d'un agent public placé sous ses ordres ou sous surveillance, ne le dénonce pas à l'autorité judiciaire la plus proche ou à son supérieur hiérarchique."
+                                                },
+                                                {
+                                                    "article_number": "3.1.3",
+                                                    "article_title": "Article 139: Négligence du gardien",
+                                                    "content": "Le gardien négligent est puni :\n– En cas de destruction, dégradation ou soustraction des biens visés à l’article 187 du présent Code, d’un emprisonnement de un (01) mois à un (01) an et d’une amende de dix mille (10 000) à cinquante mille (50 000) francs ;\n– En cas de soustraction, enlèvement ou destructions prévus à l’article 188 du présent Code, d’un emprisonnement de trois (03) mois à un (01) an et d’une amende de dix mille (10 000) à cinquante mille (50 000) francs ;\n– En cas de bris de scellés, tel que prévu à l’article 191 du présent Code, d’un emprisonnement de six (06) jours à six (06) mois ;\n– En cas d’évasion ou de libération, telles que prévues à l’article 193 du présent Code, d’un emprisonnement de deux (02) mois à deux (02) ans."
+                                                }
+                                        
+                                            ]
+                                        },
+                                        {
+                                            "section_number": "3.4",
+                                            "section_title": "Section IV: Des infractions contre l'intérêt des particuliers",
+                                            "articles": [
+                                                {
+                                                    "article_number": "3.4.1",
+                                                    "article_title": "Abus de fonctions",
+                                                    "content": "Variables are containers for storing data values..."
+                                                }
+                                            ]
+                                        }
+                                        
+                                    ]
+                                },
+                                {
+                                    "chapter_number": 4,
                                     "chapter_title": "Basic Concepts",
                                     "sections": [
                                         {
@@ -966,13 +1360,12 @@
                                                 {
                                                     "article_number": "2.1.1",
                                                     "article_title": "Understanding Variables",
-                                                    "article_subtitle": "Understanding Variables",
                                                     "content": "Variables are containers for storing data values..."
                                                 }
                                             ]
                                         }
                                     ]
-                                }
+                                },
                             ]
                         }
                     ]

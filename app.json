@@ -3,7 +3,7 @@
     "name": "ClassCM",
     "slug": "classcm",
     "version": "1.0.0",
-    "description": "ClassCM - Assistant pédagogique intelligent pour enseignants camerounais. Gestion complète de classe avec fonctionnalités premium. © 2024 Litoi Code.",
+    "description": "ClassCM - Assistant pédagogique intelligent pour enseignants. Gestion complète de classe avec fonctionnalités premium. © 2024 Litoi Code.",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "classcm",
@@ -15,23 +15,19 @@
     "android": {
       "package": "com.litoicode.classcm",
       "versionCode": 1,
+      "minSdkVersion": 21,
       "compileSdkVersion": 34,
       "targetSdkVersion": 34,
-      "minSdkVersion": 23,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true,
       "permissions": [
         "android.permission.WRITE_EXTERNAL_STORAGE",
         "android.permission.READ_EXTERNAL_STORAGE",
         "android.permission.INTERNET",
         "android.permission.ACCESS_NETWORK_STATE"
-      ],
-      "allowBackup": true,
-      "softwareKeyboardLayoutMode": "pan",
-      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.litoicode.classcm"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -63,7 +59,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "45886a5f-cfa1-46a9-a8c2-de0c1b2c65de"
+        "projectId": "42967ec9-b94e-4e0d-bb8f-4aa6e0737ce8"
       }
     }
   }
